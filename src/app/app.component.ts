@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'wein';
+  constructor(private _router: Router){}
+
+  title = 'NEARSOL';
+  username:string = null;
+  password:string = null;
+
+
+  login(){
+    if(this.username == 'raul.ovalle' && this.password == 'hello'){
+      window.alert("Hello " + this.username);
+    }
+  }
 }

@@ -15,5 +15,52 @@
         </div>
       </li>
     </ul>
+    <form class="form-inline">
+      <div class="dropdown row col-md-12">
+        <button class="btn dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true"
+          aria-expanded="false" style="background-color: #003b71; color: white; font-weight: bold;">
+          SIGN IN
+        </button>
+        <div class="d-flex" style="width:1vw">
+          <form class="dropdown-menu p-2 row" aria-labelledby="dropdownMenuButton"
+            style="margin-left: -200%; background-color: #edeeee">
+            <div class="form-group" style="margin-top:25px">
+              <label for="exampleDropdownFormEmail2" class="col-md-3 col-form-label"
+                style="font-size: 12px;">USERNAME</label>
+              <input class="form-control col-sm-9" id="exampleDropdownFormEmail2" [(ngModel)]="username" [ngModelOptions]="{standalone: true}">
+            </div>
+            <div class="form-group" style="margin-top:25px">
+              <label for="exampleDropdownFormEmail2" class="col-md-3 col-form-label"
+                style="font-size: 12px;">PASSWORD</label>
+              <input type="password" class="form-control col-sm-9" id="exampleDropdownFormEmail2" [(ngModel)]="password" [ngModelOptions]="{standalone: true}">
+            </div>
+            <div class="d-flex justify-content-center" style="margin-top:25px">
+              <button type="submit" class="btn hover_blue" style="font-size: 12px;font-weight: bold;" (click)="login()">LOG IN</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </form>
   </div>
 </nav>
+<div class="row col-md-12" style="width: 100vw; height: 93.5vh;">
+  <div class="col-md-7" style="background-color: #003b71; color: white;">
+    <div class="row d-flex justify-content-start col-md-12" style="font-size: 50px; padding-top:25%;padding-left: 10%;">
+      <p style="font-weight: 900;">Welcome to NEARSOL</p>
+    </div>
+    <div class="row" style="width: 200px; border-bottom: 4px solid #F9423A; margin-left: 9%;">
+    </div>
+    <div class="row" style="padding-left: 10%; margin-top:15px">
+      <p style="font-size: 18px;">Always Customer Sercie is more than a policy: it is a culture manifested<br>
+      by upper management and transmitted throught the organization.<br>
+      We focus on delivering the best Customer Service and strive the exceed<br>
+      our customer expectations and needs. We are not just service providers,<br>
+      but allies to our partners as we are dedicated to delivering our promises<br>
+      and continously improving. NEARSOL belives in the power of cultivating<br>
+      great working relationships and promoting our culture of family.</p>
+    </div>
+  </div>
+  <div class="col-md-4">
+
+  </div>
+</div>
