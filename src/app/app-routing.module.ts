@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { GlobalHomepageComponent } from './global-homepage/global-homepage.component';
 import { LoginComponent } from './login/login.component'
 import { GuardGuard } from './guard.guard';
+import { HrHomepageComponent } from './hr-homepage/hr-homepage.component';
 
 const routes: Routes = [
   {
@@ -13,7 +14,13 @@ const routes: Routes = [
   {
     path:'login',
     component:LoginComponent,
+  },
+  {
+    path:'HrHomepage',
+    component:HrHomepageComponent,
+    canActivate: [GuardGuard]
   }
+
 ];
 
 @NgModule({

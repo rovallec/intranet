@@ -7,12 +7,14 @@ import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 import { GlobalHomepageComponent } from './global-homepage/global-homepage.component';
 import { LoginComponent } from './login/login.component';
+import { HrHomepageComponent } from './hr-homepage/hr-homepage.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     GlobalHomepageComponent,
     LoginComponent,
+    HrHomepageComponent,
   ],
   imports: [
     BrowserModule,
