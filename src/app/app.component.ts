@@ -58,7 +58,6 @@ export class AppComponent {
   }
 
   setCurrentSite(str: string) {
-    console.log(str);
     this.current_site = str;
   }
 
