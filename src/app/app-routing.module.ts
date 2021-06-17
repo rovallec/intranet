@@ -19,8 +19,12 @@ const routes: Routes = [
     path:'HrHomepage',
     component:HrHomepageComponent,
     canActivate: [GuardGuard]
+  },
+  {
+    path:'',
+    redirectTo:'/login',
+    pathMatch:'full'
   }
-
 ];
 
 @NgModule({
