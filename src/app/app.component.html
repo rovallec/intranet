@@ -11,10 +11,16 @@
     <ul class="navbar-nav mr-auto">
       <li class="no_background">
         <div style="width: 80px">
-
         </div>
       </li>
     </ul>
+    <div class="dropdown" *ngIf="getAuth()" style="margin-right:15px">
+      <button class="menu_button_1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-globe-asia" style="color:grey"></i>  {{current_site}}</button>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="background-color: #edeeee; font-weight: bolder; font-size: 20px; color: #F9423A;">
+        <a class="dropdown-item" *ngFor="let site of sites" (click)="setCurrentSite(site)"
+        [ngStyle]="{'color':current_site === site?'#F9423A':'black'}" style="text-align:center; cursor: pointer;">{{site}}</a>
+      </div>
+    </div>
     <button class="btn hover_blue" style="font-weight: bolder; font-size: 14px;" *ngIf="getAuth()">
       LOG OUT
     </button>
@@ -46,46 +52,6 @@
     </form>
   </div>
 </nav>
-<div class="container row col-auto justify-content-evenly">
-  <nav class="navbar navbar-expand-lg navbar-light bg-light w-100">
-    <div class="container-fluid ">
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0 w-100">
-          <li class="nav-item ">
-            <a class="nav-link" href="#">Admin</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Facilities</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="HrHomepage">HR</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">IT</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Marketing</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Operations</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Finance</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">QA</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Recruitment</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">WorkForce</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-</div>
-
+<div style="padding-right: 0%;">
 <router-outlet></router-outlet>
-<hr-homepage></hr-homepage>
+</div>
