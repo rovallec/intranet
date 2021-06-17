@@ -25,6 +25,9 @@ export class AppComponent {
     }]
   }
 
+  getAuth():boolean {
+    return this._authService.isAuthenticated();
+  }
 
   login(){
     this._authService.changeAuth(false);

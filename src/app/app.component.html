@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg navbar-light" style="background-color:white">
   <a class="navbar-brand">
     <img src="http://172.18.2.45/intranet/assets/Nearsol_logo.png" width="200" height="35"
-      class="d-inline-block align-top" alt="" style="margin-left: 30px">
+      class="d-inline-block align-top" alt="" style="margin-left: 0%">
   </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
     aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
@@ -15,10 +15,13 @@
         </div>
       </li>
     </ul>
-    <form class="form-inline">
+    <button class="btn hover_blue" style="font-weight: bolder; font-size: 14px;" *ngIf="getAuth()">
+      LOG OUT
+    </button>
+    <form class="form-inline" *ngIf="!getAuth()">
       <div class="dropdown row col-md-12">
         <button class="btn dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true"
-          aria-expanded="false" style="background-color: #003b71; color: white; font-weight: bold;">
+          aria-expanded="false" style="border-radius: 10px; background-color: #003b71; color: white; font-weight: bold;">
           SIGN IN
         </button>
         <div class="d-flex" style="width:1vw">
