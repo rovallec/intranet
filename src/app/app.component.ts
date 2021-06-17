@@ -14,8 +14,11 @@ export class AppComponent {
   title = 'NEARSOL';
   username:string = null;
   password:string = null;
+  current_site:string = 'Manila';
+  global_dir:string = 'Inactive';
 
   users:Users[] = [];
+  sites:string[] = [];
 
   ngOnInit(){
     this.users = [{
@@ -23,6 +26,8 @@ export class AppComponent {
         user_name:'Raul Ovalle',
         password:'hello'
     }]
+
+    this.sites = ['Guatemala', 'Manila', 'Iloilo', 'Colombia'];
   }
 
   getAuth():boolean {
@@ -40,4 +45,10 @@ export class AppComponent {
       }
     })
   }
+
+  setCurrentSite(str:string){
+    console.log(str);
+    this.current_site = str;
+  }
+
 }
