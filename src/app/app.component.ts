@@ -9,36 +9,46 @@ import { Users } from './users';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  constructor(private _router: Router, private _authService: AuthServiceService){}
+  constructor(private _router: Router, private _authService: AuthServiceService) { }
 
   title = 'NEARSOL';
-  username:string = null;
-  password:string = null;
-  current_site:string = 'Manila';
-  global_dir:string = 'Inactive';
+  username: string = null;
+  password: string = null;
+  current_site: string = 'Manila';
+  global_dir: string = 'Inactive';
 
-  users:Users[] = [];
-  sites:string[] = [];
+  users: Users[] = [];
+  sites: string[] = [];
 
-  ngOnInit(){
+  ngOnInit() {
     this.users = [{
-        username:'raul.ovalle',
-        user_name:'Raul Ovalle',
-        password:'hello'
+      username: 'raul.ovalle',
+      user_name: 'Raul Ovalle',
+      password: 'hello'
+    },
+    {
+      username: 'carl.villaluz',
+      user_name: 'Carl Villaluz',
+      password: 'Nearsol.2021'
+    },
+    {
+      username: 'violet.pereda',
+      user_name: 'Violet Pereda',
+      password: 'Marketing2021'
     }]
 
     this.sites = ['Guatemala', 'Manila', 'Iloilo', 'Colombia'];
   }
 
-  getAuth():boolean {
+  getAuth(): boolean {
     return this._authService.isAuthenticated();
   }
 
-  login(){
+  login() {
     this._authService.changeAuth(false);
-    this.users.forEach((user:Users)=>{
-      if(user.username == this.username){
-        if(user.password == this.password){
+    this.users.forEach((user: Users) => {
+      if (user.username == this.username) {
+        if (user.password == this.password) {
           this._authService.changeAuth(true);
           this._router.navigate(["./home"])
         }
@@ -46,7 +56,7 @@ export class AppComponent {
     })
   }
 
-  setCurrentSite(str:string){
+  setCurrentSite(str: string) {
     console.log(str);
     this.current_site = str;
   }
