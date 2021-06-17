@@ -17,7 +17,7 @@
         [ngStyle]="{'color':current_site === site?'#F9423A':'black'}" style="text-align:center; cursor: pointer;">{{site}}</a>
       </div>
     </div>
-    <button class="btn hover_blue" style="font-weight: bolder; font-size: 14px;" *ngIf="getAuth()">
+    <button class="btn hover_blue" style="font-weight: bolder; font-size: 14px;" *ngIf="getAuth()" routerLink="./" (click)="logOut()">
       LOG OUT
     </button>
     <form class="form-inline" *ngIf="!getAuth()">
