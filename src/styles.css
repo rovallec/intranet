@@ -46,3 +46,8 @@ body{
 .hover_gray:hover{
     color:#F9423A;
 }
+
+.row_card{
+    width:30%;
+    min-width: 200px;
+}
