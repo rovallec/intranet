@@ -12,7 +12,7 @@ const routes: Routes = [
     canActivate: [GuardGuard]
   },
   {
-    path:'login',
+    path:'/',
     component:LoginComponent,
   },
   {
