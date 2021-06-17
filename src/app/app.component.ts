@@ -45,6 +45,11 @@ export class AppComponent {
     return this._authService.isAuthenticated();
   }
 
+  logOut() {
+    this._authService.changeAuth(false);
+    console.log(this._authService.isAuthenticated());
+  }
+
   login() {
     this._authService.changeAuth(false);
     this.users.forEach((user: Users) => {

@@ -16,9 +16,7 @@
           style="text-align:center; cursor: pointer;">{{site}}</a>
       </div>
     </div>
-  </div>
-    <div style="padding:0%; margin:0%; margin-left:10px">
-    <button class="btn hover_blue" style="font-weight: bolder; font-size: 14px;" *ngIf="getAuth()">
+    <button class="btn hover_blue" style="font-weight: bolder; font-size: 14px;" *ngIf="getAuth()" routerLink="./" (click)="logOut()">
       LOG OUT
     </button>
     <form class="form-inline" *ngIf="!getAuth()">
