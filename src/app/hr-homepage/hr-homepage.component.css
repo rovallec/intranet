@@ -1,0 +1,11 @@
+.cards {
+  max-width: 350px;
+  min-width: 150px;
+  width: 26%;
+}
+
+.card_image {
+  max-width: 350px;
+  min-width: 150px;
+  height: 225px;
+}

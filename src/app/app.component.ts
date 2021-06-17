@@ -16,6 +16,7 @@ export class AppComponent {
   password:string = null;
   current_site:string = 'Manila';
   global_dir:string = 'Inactive';
+  selectedOption:string = 'HOME';
 
   users:Users[] = [];
   sites:string[] = [];
@@ -49,6 +50,10 @@ export class AppComponent {
   setCurrentSite(str:string){
     console.log(str);
     this.current_site = str;
+  }
+
+  SetSel(sel:string){
+    this.selectedOption = sel;
   }
 
 }

@@ -16,7 +16,7 @@ const routes: Routes = [
     component:LoginComponent,
   },
   {
-    path:'HrHomepage',
+    path:'hr-homepage',
     component:HrHomepageComponent,
     canActivate: [GuardGuard]
   }
@@ -24,9 +24,10 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes),
+  imports: [RouterModule.forRoot(routes, {enableTracing: true}),
   RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
+   
 })
 export class AppRoutingModule {
 

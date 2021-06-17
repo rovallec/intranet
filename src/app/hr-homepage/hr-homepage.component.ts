@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { AppComponent } from '../app.component';
+import { AuthServiceService } from '../auth-service.service';
 
 @Component({
   selector: 'app-hr-homepage',
@@ -7,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HrHomepageComponent implements OnInit {
 
-  constructor() { }
+  constructor(private _authService: AuthServiceService) { }
 
   ngOnInit(): void {
+  }
+
+  getAuth() {
+    return this._authService.isAuthenticated();
+
   }
 
 }
