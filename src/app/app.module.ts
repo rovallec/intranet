@@ -8,6 +8,7 @@ import { FormsModule } from '@angular/forms';
 import { GlobalHomepageComponent } from './global-homepage/global-homepage.component';
 import { LoginComponent } from './login/login.component';
 import { HrHomepageComponent } from './hr-homepage/hr-homepage.component';
+import { LocationHomepageComponent } from './location-homepage/location-homepage.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { HrHomepageComponent } from './hr-homepage/hr-homepage.component';
     GlobalHomepageComponent,
     LoginComponent,
     HrHomepageComponent,
+    LocationHomepageComponent,
   ],
   imports: [
     BrowserModule,

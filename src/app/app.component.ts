@@ -64,10 +64,15 @@ export class AppComponent {
 
   setCurrentSite(str: string) {
     this.current_site = str;
+    if(str != "Global"){
+    let ss:string = "../location/" + str;
+    this._router.navigate([ss]);
+    }else{
+      this._router.navigate(["./home"])
+    }
   }
 
   SetSel(sel:string){
     this.selectedOption = sel;
   }
-
 }

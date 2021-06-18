@@ -4,6 +4,7 @@ import { GlobalHomepageComponent } from './global-homepage/global-homepage.compo
 import { LoginComponent } from './login/login.component'
 import { GuardGuard } from './guard.guard';
 import { HrHomepageComponent } from './hr-homepage/hr-homepage.component';
+import { LocationHomepageComponent } from './location-homepage/location-homepage.component';
 
 const routes: Routes = [
   {
@@ -19,6 +20,11 @@ const routes: Routes = [
     path:'hr-homepage',
     component:HrHomepageComponent,
     canActivate: [GuardGuard]
+  },
+  {
+    path:'location/:id',
+    component:LocationHomepageComponent,
+    canActivate:[GuardGuard]
   },
   {
     path:'',
