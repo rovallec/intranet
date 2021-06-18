@@ -12,15 +12,28 @@ export class LocationHomepageComponent implements OnInit {
 
   selected_article:Articles = new Articles;
   articles: Articles[] = [];
+  img_foot: string = 'Sambsung Day';
 
   ngOnInit(): void {
     this.articles = [
       {
         location:"Global",
+        header:"Pride Month 2021",
+        byline: '',
+        multimedia:"http://181.114.12.81/intranet/assets/hr_image_5.png",
+        fragment: "June is PRIDE Month! It's time to celebrate our courageous and colorful brothers and sisters in the LGBTQIA+ community! Be proud of who you are and say #IAMINCLUDED",
+        article:"June is PRIDE Month! It's time to celebrate our courageous and colorful brothers and sisters in the LGBTQIA+ community! Be proud of who you are and say #IAMINCLUDED",
+        author:'HR',
+        date:'June, 17 2021',
+        url: '',
+        origin:'Manila'
+      },
+      {
+        location:"Global",
         header:"Father's Day at NEARSOL",
         byline: '',
         multimedia:"http://181.114.12.81/intranet/assets/hr_image_1.png",
-        fragment: "",
+        fragment: "It's time to honor and recognize our hardworking and awesome Fathers/Dads/Papas/Tatays/Papsy at NEARSOL.",
         article:"It's time to honor and recognize our hardworking and awesome Fathers/Dads/Papas/Tatays/Papsy at NEARSOL. Show your love and appreciation to all Dads by creating a TikTok video for a chance to win awesome prizes during the Father’s Day Virtual Party on June 18, 2021! #NearsolSuperDad.",
         author:'HR',
         date:'June, 17 2021',
@@ -28,12 +41,48 @@ export class LocationHomepageComponent implements OnInit {
         origin:'Manila'
       },
       {
-        location:'Global',
-        header:"NIA: NEARSOL Intelligence Automation",
+        location:"Global",
+        header:"Employee Referral Program",
         byline: '',
-        multimedia:"http://181.114.12.81/intranet/assets/recruitment_image_1.png",
+        multimedia:"http://181.114.12.81/intranet/assets/recruitment_image_2.png",
+        fragment: "Refer a friend and receive the payouts on the 3rd and 6th months of the applicant’s joining date.",
+        article:"Refer a friend and receive the payouts on the 3rd and 6th months of the applicant’s joining date.",
+        author:'HR',
+        date:'June, 17 2021',
+        url: 'https://nearsol.us/nia-manila/ ',
+        origin:'Manila'
+      },
+      {
+        location:'Global',
+        header:"Finance",
+        byline: '',
+        multimedia:"./assets/fn_image_1.png",
         fragment: "",
-        article:"We proudly present to you NIA, NEARSOL Recruitment Chatbot Recruitment Tool. NIA helps us with lead generation, process guidance and does all that while projecting our brand identity. She is not just a chatbot, she is so much more!",
+        article:"",
+        author:'HR',
+        date:"June 17, 2021",
+        url: '',
+        origin:'Manila'
+      },
+      {
+        location:'Global',
+        header:"Workforce",
+        byline: '',
+        multimedia:"./assets/wf_image_1.png",
+        fragment: "",
+        article:"",
+        author:'HR',
+        date:"June 17, 2021",
+        url: '',
+        origin:'Manila'
+      },
+      {
+        location:'Global',
+        header:"Annual Wellness",
+        byline: '',
+        multimedia:"./assets/an_image_1.png",
+        fragment: "",
+        article:"",
         author:'HR',
         date:"June 17, 2021",
         url: '',

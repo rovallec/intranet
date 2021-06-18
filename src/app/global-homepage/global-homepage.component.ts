@@ -86,7 +86,7 @@ export class GlobalHomepageComponent implements OnInit {
         author:'HR',
         date:"June 17, 2021",
         url: '',
-        origin:"Colomgia"
+        origin:"Colombia"
       }
     ]
   }
