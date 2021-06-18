@@ -1,5 +1,4 @@
-<div class="row col-md-12"
-    style="padding-top: 0.5rem; padding-bottom: 0.5rem; padding-left: 1rem; padding-right: 0%;">
+<div class="row col-md-12" style="padding-top: 0.5rem; padding-bottom: 0.5rem; padding-left: 1rem; padding-right: 0%;">
     <div class="row col-md-12" style="margin:0%; padding-right: 0%; height:50vh;">
         <div style="width: 100%; min-width: 836px; height:50vh; background-image: url(http://181.114.12.81/intranet/assets/homepage_image.png);
             background-size:100%; background-position-x: 0; background-position-y: 15%; padding-right: 0%;">
@@ -7,7 +6,7 @@
                 style="margin-top: 35vh; padding-right: 0%; width: 100%; background: rgb(0,0,0); background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(5,5,5,0.9331933456976541) 14%, rgba(31,31,31,0.748319396117822) 26%, rgba(255,255,255,0) 44%, rgba(255,255,255,0) 100%, rgba(70,70,70,1) 100%);">
                 <p _ngcontent-ppw-c16=""
                     style="margin-top: 9vh; height:6vh; color: white; font-family: Montserrat; font-size: 30px; font-weight: bolder; margin-bottom:0">
-                    Core Value of the Month: Results-Driven</p>
+                    {{ img_foot }}</p>
             </div>
         </div>
     </div>
@@ -32,8 +31,7 @@
             </div>
         </nav>
     </div>
-    <div class="row col-md-12"
-        style="margin:0%; padding-right:0%; padding-left: 0%; margin-right: 0%; width: 99%;">
+    <div class="row col-md-12" style="margin:0%; padding-right:0%; padding-left: 0%; margin-right: 0%; width: 99%;">
         <div style="margin-left:45%; width:10%;border-bottom: solid 1px #F9423A;height: 1%;">
         </div>
     </div>
@@ -43,119 +41,183 @@
             <h5 style="color:gray; font-size:34px; font-weight: bolder;">Our Current Reads</h5>
         </div>
     </div>
-    <div class="row col-md-12" style="margin:0%; padding-right:0%; padding-left: 1rem; margin-right: 0%; width: 99%; justify-content: space-between;">
+    <div class="row col-md-12"
+        style="margin:0%; padding-right:0%; padding-left: 1rem; margin-right: 0%; width: 99%; justify-content: space-between;">
         <div class="card row_card" style="background-color: #edeeee; padding:0%; margin:0%;">
-            <img src="http://181.114.12.81/intranet/assets/hr_image_1.png" class="card-img-top" style="padding:0%; margin:0%" alt="...">
+            <a class="link-primary" style="color:#003b71; font-size: 12px; font-weight: bolder;" href="#"
+                        (click)="setSelection(0)" data-toggle="modal" data-target="#setArticle">
+                <img [src]="articles[0].multimedia" class="card-img-top" style="padding:0%; margin:0%" alt="...">
+            </a>
             <div class="top-right justify-content-center" style="font-size: 12px; background-color: #F9423A; color: white; height: 20px">
-                <label style="position:absolute; padding:0px; margin:0px; top:2px; right:5%;">{{Manila}}</label>
+                <label style="position:absolute; padding:0px; margin:0px; top:2px; right:5%;">{{articles[0].location}}</label>
             </div>
             <div class="card-body" style="padding:0%; margin-top:25px; margin-left:10px ">
-              <h5 class="card-title" style="color: #003b71; font-weight: bolder; font-size: 30px">Father’s Day at NEARSOL</h5>
-              <p class="card-text" style="font-size: 11px;color: gray;">It's time to honor and recognize our  hardworking and awesome Fathers/Dads/Papas/Tatays/Papsy
-                  at NEARSOL. Show your love and appreciation to all Dads by creating a
-                  TikTok video for a chance to win awesome prizes during the Father’s
-                  Day Virtual Party on June 18, 2021! #NearsolSuperDad.<br><br>
+                <h5 class="card-title" style="color: #003b71; font-weight: bolder; font-size: 30px">
+                    {{ articles[0].header }}
+                </h5>
+                <p class="card-text" style="font-size: 11px;color: gray;">
+                    {{ articles[0].fragment }}
+                    <br><br>
                 </p>
             </div>
             <div class="card-footer" style="margin:0%; padding:0%; border:none">
                 <div class="row" style="margin:0%; padding:0%">
-                    <a class="link-primary" style="color:#003b71; font-size: 12px; font-weight: bolder;" href="#" (click)="setSelection(0)" data-toggle="modal" data-target="#setArticle">READ</a>
+                    <a class="link-primary" style="color:#003b71; font-size: 12px; font-weight: bolder;" href="#"
+                        (click)="setSelection(0)" data-toggle="modal" data-target="#setArticle">
+                        READ
+                    </a>
                 </div>
                 <div class="row" style="margin:0%; padding:0%; border-top: solid 1px #F9423A;">
-                    <p style="font-size: 10px; color:gray;">Author: HR June 16, 2021</p>
+                    <p style="font-size: 10px; color:gray;">
+                        Author: {{ articles[0].author }} {{ articles[0].date }}
+                    </p>
                 </div>
             </div>
-          </div>
-          <div class="card row_card" style="background-color: #edeeee; padding:0%; margin:0%;">
-            <img src="http://181.114.12.81/intranet/assets/recruitment_image_1.png" class="card-img-top" style="padding:0%; margin:0%" alt="...">
+        </div>
+        <div class="card row_card" style="background-color: #edeeee; padding:0%; margin:0%;">
+            <a class="link-primary" style="color:#003b71; font-size: 12px; font-weight: bolder;" href="#"
+                        (click)="setSelection(1)" data-toggle="modal" data-target="#setArticle">
+                <img [src]="articles[1].multimedia" class="card-img-top" style="padding:0%; margin:0%" alt="...">
+            </a>
             <div class="card-body" style="padding:0%; margin-top:25px; margin-left:10px ">
-              <h5 class="card-title" style="color: #003b71; font-weight: bolder; font-size: 30px;">NIA: NEARSOL Intelligence Automation</h5>
-              <p class="card-text" style="font-size: 11px;color: gray;">We proudly present to you NIA, NEARSOL Recruitment Chatbot Recruitment Tool. 
-                NIA helps us with lead generation, process 
-                guidance and does all that while projecting our brand identity. She is not just a chatbot, she is so much more!<br><br>
+                <h5 class="card-title" style="color: #003b71; font-weight: bolder; font-size: 30px">
+                    {{ articles[1].header }}
+                </h5>
+                <p class="card-text" style="font-size: 11px;color: gray;">
+                    {{ articles[1].fragment }}
+                    <br><br>
                 </p>
             </div>
             <div class="card-footer" style="margin:0%; padding:0%; border:none">
                 <div class="row" style="margin:0%; padding:0%">
-                    <a class="link-primary" style="color:#003b71; font-size: 12px; font-weight: bolder;" href="#">READ</a>
+                    <a class="link-primary" style="color:#003b71; font-size: 12px; font-weight: bolder;" href="#"
+                        (click)="setSelection(1)" data-toggle="modal" data-target="#setArticle">
+                        READ
+                    </a>
                 </div>
                 <div class="row" style="margin:0%; padding:0%; border-top: solid 1px #F9423A;">
-                    <p style="font-size: 10px; color:gray;">Author: HR June 16, 2021</p>
+                    <p style="font-size: 10px; color:gray;">
+                        Author: {{ articles[1].author }} {{ articles[1].date }}
+                    </p>
                 </div>
             </div>
-          </div>
-          <div class="card row_card" style="background-color: #edeeee; padding:0%; margin:0%;">
-            <img src="http://181.114.12.81/intranet/assets/hr_image_2.png" class="card-img-top" style="padding:0%; margin:0%" alt="...">
+        </div>
+        <div class="card row_card" style="background-color: #edeeee; padding:0%; margin:0%;">
+            <a class="link-primary" style="color:#003b71; font-size: 12px; font-weight: bolder;" href="#"
+                        (click)="setSelection(2)" data-toggle="modal" data-target="#setArticle">
+                <img [src]="articles[2].multimedia" class="card-img-top" style="padding:0%; margin:0%" alt="...">
+            </a>
             <div class="card-body" style="padding:0%; margin-top:25px; margin-left:10px ">
-              <h5 class="card-title" style="color: #003b71; font-weight: bolder; font-size: 30px;">Intranet Forms</h5>
-              <p class="card-text" style="font-size: 11px;color: gray;">You can now be part of NEARSOL's family posting information about our company, follow
-                me up to see how easly it is and be part of our new Nearsol's Experience<br><br>
+                <h5 class="card-title" style="color: #003b71; font-weight: bolder; font-size: 30px">
+                    {{ articles[2].header }}
+                </h5>
+                <p class="card-text" style="font-size: 11px;color: gray;">
+                    {{ articles[2].fragment }}
+                    <br><br>
                 </p>
             </div>
             <div class="card-footer" style="margin:0%; padding:0%; border:none">
                 <div class="row" style="margin:0%; padding:0%">
-                    <a class="link-primary" style="color:#003b71; font-size: 12px; font-weight: bolder;" href="#">READ</a>
+                    <a class="link-primary" style="color:#003b71; font-size: 12px; font-weight: bolder;" href="#"
+                        (click)="setSelection(2)" data-toggle="modal" data-target="#setArticle">
+                        READ
+                    </a>
                 </div>
                 <div class="row" style="margin:0%; padding:0%; border-top: solid 1px #F9423A;">
-                    <p style="font-size: 10px; color:gray;">Author: HR June 16, 2021</p>
+                    <p style="font-size: 10px; color:gray;">
+                        Author: {{ articles[2].author }} {{ articles[2].date }}
+                    </p>
                 </div>
             </div>
-          </div>
+        </div>
     </div>
 
-    <div class="row col-md-12" style="margin:0%; padding-right:0%; padding-left: 1rem; margin-right: 0%; width: 99%; justify-content: space-between; margin-top: 25px;">
+    <div class="row col-md-12"
+        style="margin:0%; padding-right:0%; padding-left: 1rem; margin-right: 0%; width: 99%; justify-content: space-between; margin-top: 25px;">
         <div class="card row_card" style="background-color: #edeeee; padding:0%; margin:0%;">
-            <img src="http://181.114.12.81/intranet/assets/hr_image_3.png" class="card-img-top" style="padding:0%; margin:0%" alt="...">
+            <a class="link-primary" style="color:#003b71; font-size: 12px; font-weight: bolder;" href="#"
+                        (click)="setSelection(3)" data-toggle="modal" data-target="#setArticle">
+                <img [src]="articles[3].multimedia" class="card-img-top" style="padding:0%; margin:0%" alt="...">
+            </a>
             <div class="card-body" style="padding:0%; margin-top:25px; margin-left:10px ">
-              <h5 class="card-title" style="color: #003b71; font-weight: bolder; font-size: 30px">Pride Month 2021</h5>
-              <p class="card-text" style="font-size: 11px;color: gray;">June is PRIDE Month! It's time to celebrate our courageous and colorful brothers and sisters
-                in the LGBTQIA+ community! Be proud of who you are and say #IAMINCLUDED<br><br>
+                <h5 class="card-title" style="color: #003b71; font-weight: bolder; font-size: 30px">
+                    {{ articles[3].header }}
+                </h5>
+                <p class="card-text" style="font-size: 11px;color: gray;">
+                    {{ articles[3].fragment }}
+                    <br><br>
                 </p>
             </div>
             <div class="card-footer" style="margin:0%; padding:0%; border:none">
                 <div class="row" style="margin:0%; padding:0%">
-                    <a class="link-primary" style="color:#003b71; font-size: 12px; font-weight: bolder;" href="#">READ</a>
+                    <a class="link-primary" style="color:#003b71; font-size: 12px; font-weight: bolder;" href="#"
+                        (click)="setSelection(3)" data-toggle="modal" data-target="#setArticle">
+                        READ
+                    </a>
                 </div>
                 <div class="row" style="margin:0%; padding:0%; border-top: solid 1px #F9423A;">
-                    <p style="font-size: 10px; color:gray;">Author: HR June 16, 2021</p>
+                    <p style="font-size: 10px; color:gray;">
+                        Author: {{ articles[3].author }} {{ articles[3].date }}
+                    </p>
                 </div>
             </div>
-          </div>
-          <div class="card row_card" style="background-color: #edeeee; padding:0%; margin:0%;">
-            <img src="http://181.114.12.81/intranet/assets/recruitment_image_2.png" class="card-img-top" style="padding:0%; margin:0%" alt="...">
+        </div>
+        <div class="card row_card" style="background-color: #edeeee; padding:0%; margin:0%;">
+            <a class="link-primary" style="color:#003b71; font-size: 12px; font-weight: bolder;" href="#"
+                        (click)="setSelection(4)" data-toggle="modal" data-target="#setArticle">
+                <img [src]="articles[4].multimedia" class="card-img-top" style="padding:0%; margin:0%" alt="...">
+            </a>
             <div class="card-body" style="padding:0%; margin-top:25px; margin-left:10px ">
-              <h5 class="card-title" style="color: #003b71; font-weight: bolder; font-size: 30px;">Employee Referral Program: Refer a friend and receive a P10,000 incentive</h5>
-              <p class="card-text" style="font-size: 11px;color: gray;">Refer a friend and receive the payouts on the 3rd and 6th months of the applicant’s joining date.<br><br>
+                <h5 class="card-title" style="color: #003b71; font-weight: bolder; font-size: 30px">
+                    {{ articles[4].header }}
+                </h5>
+                <p class="card-text" style="font-size: 11px;color: gray;">
+                    {{ articles[4].fragment }}
+                    <br><br>
                 </p>
             </div>
             <div class="card-footer" style="margin:0%; padding:0%; border:none">
                 <div class="row" style="margin:0%; padding:0%">
-                    <a class="link-primary" style="color:#003b71; font-size: 12px; font-weight: bolder;" href="#">READ</a>
+                    <a class="link-primary" style="color:#003b71; font-size: 12px; font-weight: bolder;" href="#"
+                        (click)="setSelection(4)" data-toggle="modal" data-target="#setArticle">
+                        READ
+                    </a>
                 </div>
                 <div class="row" style="margin:0%; padding:0%; border-top: solid 1px #F9423A;">
-                    <p style="font-size: 10px; color:gray;">Author: HR June 16, 2021</p>
+                    <p style="font-size: 10px; color:gray;">
+                        Author: {{ articles[4].author }} {{ articles[4].date }}
+                    </p>
                 </div>
             </div>
-          </div>
-          <div class="card row_card" style="background-color: #edeeee; padding:0%; margin:0%;">
-            <img src="http://181.114.12.81/intranet/assets/hr_image_4.png" class="card-img-top" style="padding:0%; margin:0%" alt="...">
+        </div>
+        <div class="card row_card" style="background-color: #edeeee; padding:0%; margin:0%;">
+            <a class="link-primary" style="color:#003b71; font-size: 12px; font-weight: bolder;" href="#"
+                        (click)="setSelection(5)" data-toggle="modal" data-target="#setArticle">
+                <img [src]="articles[5].multimedia" class="card-img-top" style="padding:0%; margin:0%" alt="...">
+            </a>
             <div class="card-body" style="padding:0%; margin-top:25px; margin-left:10px ">
-              <h5 class="card-title" style="color: #003b71; font-weight: bolder; font-size: 30px;">Employee Satisfaction Survey</h5>
-              <p class="card-text" style="font-size: 11px;color: gray;">We are running our periodic Employee Satisfaction Survey and we would like to invite everyone to participate.
-                Part of the results from the past surveys helped us improve some of our processes to enhance employee experience. Some of the changes we implemented<br>
-                after hearing employees reviews were...<br>
-                <br><br>
+                <h5 class="card-title" style="color: #003b71; font-weight: bolder; font-size: 30px">
+                    {{ articles[5].header }}
+                </h5>
+                <p class="card-text" style="font-size: 11px;color: gray;">
+                    {{ articles[5].fragment }}
+                    <br><br>
                 </p>
             </div>
             <div class="card-footer" style="margin:0%; padding:0%; border:none">
                 <div class="row" style="margin:0%; padding:0%">
-                    <a class="link-primary" style="color:#003b71; font-size: 12px; font-weight: bolder;" href="#">READ</a>
+                    <a class="link-primary" style="color:#003b71; font-size: 12px; font-weight: bolder;" href="#"
+                        (click)="setSelection(5)" data-toggle="modal" data-target="#setArticle">
+                        READ
+                    </a>
                 </div>
                 <div class="row" style="margin:0%; padding:0%; border-top: solid 1px #F9423A;">
-                    <p style="font-size: 10px; color:gray;">Author: HR June 16, 2021</p>
+                    <p style="font-size: 10px; color:gray;">
+                        Author: {{ articles[5].author }} {{ articles[5].date }}
+                    </p>
                 </div>
             </div>
-          </div>
+        </div>
     </div>
 </div>
 
@@ -164,21 +226,31 @@
     <div class="modal-dialog  modal-dialog-centered modal-lg">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="st-setPatronoLabel" style="color:#003b71; font-weight: bolder;">{{selected_article.header}}</h5>
+                <h5 class="card-title" id="st-setPatronoLabel" style="color:#003b71; font-weight: bolder;">
+                    {{selected_article.header + ": " + selected_article.byline }}
+                </h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
             <div class="modal-body">
                 <div class="row col-md-12">
-                    <img src="{{selected_article.multimedia}}" class="card-img-top" style="padding:0%; margin:0%" alt="...">
+                    <img src="{{selected_article.multimedia}}" class="card-img-top" style="padding:0%; margin:0%"
+                        alt="...">
                 </div>
                 <div class="row col-md-12" style="padding-top:25px">
                     <p>{{selected_article.article}}</p>
                 </div>
             </div>
-            <div class="modal-footer">
-                <div class="d-flex justify-content-center">
+            <div class="modal-footer d-flex">
+                <div class="mr-auto" *ngIf="selected_article.url!==''">
+                    Link:
+                    <a class="link-primary" style="color:#003b71; font-size: 12px; font-weight: bolder;"
+                        [href]="selected_article.url">
+                        {{ selected_article.url }}
+                    </a>
+                </div>
+                <div class="ml-auto">
                     <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Close</button>
                 </div>
             </div>
