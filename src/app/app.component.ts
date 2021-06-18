@@ -14,7 +14,7 @@ export class AppComponent {
   title = 'NEARSOL';
   username:string = null;
   password:string = null;
-  current_site:string = 'Manila';
+  current_site:string = 'Global';
   global_dir:string = 'Inactive';
   selectedOption:string = 'HOME';
 
@@ -38,7 +38,7 @@ export class AppComponent {
       password: 'Marketing2021'
     }]
 
-    this.sites = ['Guatemala', 'Manila', 'Iloilo', 'Colombia'];
+    this.sites = ['Global', 'Guatemala', 'Manila', 'Iloilo', 'Colombia'];
   }
 
   getAuth(): boolean {

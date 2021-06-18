@@ -51,3 +51,7 @@ body{
     width:30%;
     min-width: 200px;
 }
+
+.card-img-top:hover{
+    cursor:pointer;
+}
