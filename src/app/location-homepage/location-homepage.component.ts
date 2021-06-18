@@ -24,7 +24,8 @@ export class LocationHomepageComponent implements OnInit {
         article:"It's time to honor and recognize our hardworking and awesome Fathers/Dads/Papas/Tatays/Papsy at NEARSOL. Show your love and appreciation to all Dads by creating a TikTok video for a chance to win awesome prizes during the Father’s Day Virtual Party on June 18, 2021! #NearsolSuperDad.",
         author:'HR',
         date:'June, 17 2021',
-        url: ''
+        url: '',
+        origin:'Manila'
       },
       {
         location:'Global',
@@ -35,7 +36,8 @@ export class LocationHomepageComponent implements OnInit {
         article:"We proudly present to you NIA, NEARSOL Recruitment Chatbot Recruitment Tool. NIA helps us with lead generation, process guidance and does all that while projecting our brand identity. She is not just a chatbot, she is so much more!",
         author:'HR',
         date:"June 17, 2021",
-        url: ''
+        url: '',
+        origin:'Manila'
       }
     ]
   }

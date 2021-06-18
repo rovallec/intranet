@@ -8,6 +8,7 @@ export class Articles {
     author:string;
     date:string;
     url:string
+    origin:string;
 
     constructor(){
         this.location = null;
@@ -19,5 +20,6 @@ export class Articles {
         this.author = null;
         this.date = null;
         this.url = null;
+        this.origin = null;
     }
 }

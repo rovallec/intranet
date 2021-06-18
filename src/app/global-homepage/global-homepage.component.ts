@@ -25,7 +25,8 @@ export class GlobalHomepageComponent implements OnInit {
         article:"Being a person that is results-driven means that you are focused and obsessed with achieving a great outcome. You don’t want to just compete; you want to WIN!",
         author:'HR',
         date:'June 17, 2021',
-        url: 'https://nearsol.us/'
+        url: 'https://nearsol.us/',
+        origin:"Manila"
       },
       {
         location:"Global",
@@ -36,7 +37,8 @@ export class GlobalHomepageComponent implements OnInit {
         article:"June is PRIDE Month! It's time to celebrate our courageous and colorful brothers and sisters in the LGBTQIA+ community! Be proud of who you are and say #IAMINCLUDED",
         author:'HR',
         date:'June 17, 2021',
-        url: ''
+        url: '',
+        origin:"Manila"
       },
       {
         location:"Global",
@@ -47,7 +49,8 @@ export class GlobalHomepageComponent implements OnInit {
         article:"It's time to honor and recognize our hardworking and awesome Fathers/Dads/Papas/Tatays/Papsy at NEARSOL. Show your love and appreciation to all Dads by creating a TikTok video for a chance to win awesome prizes during the Father’s Day Virtual Party on June 18, 2021! #NearsolSuperDad.",
         author:'HR',
         date:'June 17, 2021',
-        url: ''
+        url: '',
+        origin:"Manila"
       },
       {
         location:'Global',
@@ -58,7 +61,8 @@ export class GlobalHomepageComponent implements OnInit {
         article:"We proudly present to you NIA, NEARSOL Recruitment Chatbot Recruitment Tool. NIA helps us with lead generation, process guidance and does all that while projecting our brand identity. She is not just a chatbot, she is so much more!",
         author:'HR',
         date:"June 17, 2021",
-        url: 'https://nearsol.us/nia-manila/'
+        url: 'https://nearsol.us/nia-manila/',
+        origin:"Manila"
       },
       {
         location:'Global',
@@ -69,7 +73,8 @@ export class GlobalHomepageComponent implements OnInit {
         article:"",
         author:'HR',
         date:"June 17, 2021",
-        url: ''
+        url: '',
+        origin:"Guatemala"
       },
       {
         location:'Global',
@@ -80,7 +85,8 @@ export class GlobalHomepageComponent implements OnInit {
         article:"",
         author:'HR',
         date:"June 17, 2021",
-        url: ''
+        url: '',
+        origin:"Colomgia"
       }
     ]
   }
