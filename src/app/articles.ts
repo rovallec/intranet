@@ -1,4 +1,5 @@
 export class Articles {
+    location:string;
     header:string;
     multimedia:string;
     article:string;
@@ -6,6 +7,7 @@ export class Articles {
     date:string;
 
     constructor(){
+        this.location = null;
         this.header = null;
         this.multimedia = null;
         this.article = null;
