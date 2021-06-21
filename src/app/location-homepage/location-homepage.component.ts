@@ -12,7 +12,7 @@ export class LocationHomepageComponent implements OnInit {
 
   selected_article:Articles = new Articles;
   articles: Articles[] = [];
-  img_foot: string = 'Sambsung Day';
+  img_foot: string = 'Pride Month';
 
   ngOnInit(): void {
     this.articles = [
