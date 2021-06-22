@@ -9,3 +9,33 @@ li .act{
   border-bottom: solid 3px #f9423a;
   text-decoration: blue;
 }
+
+.hover_gray{
+  background-color: white;
+  color: gray;
+  border: none;
+}
+
+.hover_gray_border{
+  background-color: white;
+  color: gray;
+  border: solid 1px gray;
+}
+
+.colored_row{
+  color:#003b71;
+  border: #F9423A;
+  background-color: #edeeee;
+}
+
+.hover_blue_gray:hover{
+  color: #003b71;
+  background-color: #edeeee;
+  cursor:pointer;
+}
+
+.hover_blue_gray{
+  background-color: #edeeee;
+  color:gray;
+  cursor:pointer;
+}

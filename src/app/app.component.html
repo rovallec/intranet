@@ -6,7 +6,22 @@
     </a>
   </div>
   <div class="ml-auto" style="padding:0%; margin:0%;">
-    <div class="row" style="margin-right:0px">
+    <div class="row justify-content-center" style="margin-right:0px">
+      <div *ngIf="getAuth() && !search" class="align-self-center" style="margin-right: 15px;">
+        <button class="menu_button_1"><i class="fas fa-search" (click)="setSearch()"></i></button>
+      </div>
+      <div class="row" *ngIf="getAuth() && search" style="margin-right:15px; height: 38px;">
+        <div class="input-group form-group" style="margin:0%; padding:0%;">
+          <div class="input-group-prepend" id="btn_search" (click)="searchNow()" data-toggle="modal"
+            data-target="#setSearch">
+            <span class="input-group-text hover_blue_gray"><i class="fas fa-search"></i></span>
+          </div>
+          <input type="text" class="form-control" [(ngModel)]="searchText" (keyup.enter)="keyupSearch()">
+          <div class="input-group-append">
+            <span class="input-group-text hover_blue_gray" (click)="setSearch()"><i class="fas fa-times"></i></span>
+          </div>
+        </div>
+      </div>
       <div class="dropdown" *ngIf="getAuth()" style="margin-right:15px">
         <button class="menu_button_1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i
             class="fas fa-globe-asia" style="color:grey"></i> {{current_site}}</button>
@@ -94,4 +109,89 @@
 </div>
 <div style="padding-right: 0px;">
   <router-outlet></router-outlet>
+</div>
+<!--------------------------------------------MODAL ARTICLES---------------------------------------------------------->
+<div class="modal fade" id="setSearch" tabindex="-1" aria-labelledby="setSearch" aria-hidden="true">
+  <div class="modal-dialog  modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="card-title" id="st-setPatronoLabel" style="color:#003b71; font-weight: bolder;">
+          SEARCH
+        </h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="row col-md-12" *ngFor="let article of searchRes" style="margin-left:0.1rem; border-radius:10px; margin-top:10px; border:solid #edeeee 1px; background-color: #edeeee;cursor: pointer; max-height: 186px;">
+          <div class="form-group col-md-4" style="margin-bottom:5px; margin-top:5px;">
+            <img src="{{article.multimedia}}" style="width: 100%; height: 100%; height: 170px;">
+          </div>
+          <div class="form-group col-md-8">
+            <div class="row col-md-12">
+              <label style="color: #003b71; font-weight: bolder; font-size: 20px;">{{article.header}}</label>
+            </div>
+            <div class="row col-md-12">
+              <label style="font-size: 14px;color: gray;">{{article.fragment}}</label>
+            </div>
+            <div class="row" style="margin:0%; padding:0%">
+              <a class="link-primary" style="color:#003b71; font-size: 12px; font-weight: bolder;" href="#"
+                  (click)="setSelection(article)" data-dismiss="modal" data-toggle="modal" data-target="#setArticleHome">
+                  READ
+              </a>
+          </div>
+            <div class="row col-md-12" style="margin:0%; padding:0%; border-top: solid 1px #F9423A; margin-top:5px;">
+              <div class="ml-auto"  >
+              <p style="font-size: 10px; color:gray;">
+                    Author: {{ article.author }} {{ article.date }} {{article.origin}}
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer d-flex">
+        <div class="ml-auto">
+          <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--------------------------------------------MODAL ARTICLES---------------------------------------------------------->
+<div class="modal fade" id="setArticleHome" tabindex="-1" aria-labelledby="setArticleHome" aria-hidden="true">
+  <div class="modal-dialog  modal-dialog-centered modal-lg">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="card-title" id="st-setPatronoLabel" style="color:#003b71; font-weight: bolder;">
+                  {{selected_article.header + ": " + selected_article.byline }}
+              </h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+              </button>
+          </div>
+          <div class="modal-body">
+              <div class="row col-md-12">
+                  <img src="{{selected_article.multimedia}}" class="card-img-top p-2" style="padding:0%; margin:0%"
+                      alt="...">
+              </div>
+              <div class="row col-md-12" style="padding-top:25px">
+                    <div [innerHTML]="selected_article.article">
+                    </div>
+              </div>
+          </div>
+          <div class="modal-footer d-flex">
+              <div class="mr-auto" *ngIf="selected_article.url!==''">
+                  Link:
+                  <a class="link-primary" style="color:#003b71; font-size: 12px; font-weight: bolder;"
+                      [href]="selected_article.url">
+                      {{ selected_article.url }}
+                  </a>
+              </div>
+              <div class="ml-auto">
+                  <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Close</button>
+              </div>
+          </div>
+      </div>
+  </div>
 </div>
