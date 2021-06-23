@@ -58,7 +58,6 @@ body{
 
 .top-right {
     position: absolute;
-    min-width: 83px;
     padding-top:10px;
     top: 8px;
     right: -1px;

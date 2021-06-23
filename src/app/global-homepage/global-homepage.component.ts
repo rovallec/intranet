@@ -20,7 +20,7 @@ export class GlobalHomepageComponent implements OnInit {
       {
         location:"Global",
         header:"Core Value of the Month",
-        byline: "Results-Driven",
+        byline: ": Results-Driven",
         multimedia:"http://181.114.12.81/intranet/assets/homepage_image.png",
         fragment: "Being a person that is results-driven means that you are focused and obsessed with achieving a great outcome.",
         article:"Being a person that is results-driven means that you are focused and obsessed with achieving a great outcome. You don’t want to just compete; you want to WIN!",
@@ -56,7 +56,7 @@ export class GlobalHomepageComponent implements OnInit {
       {
         location:'Global',
         header:"NIA",
-        byline: 'NEARSOL Intelligence Automation',
+        byline: ': NEARSOL Intelligence Automation',
         multimedia:"http://181.114.12.81/intranet/assets/recruitment_image_1.png",
         fragment: "We proudly present to you NIA, NEARSOL Recruitment Chatbot Recruitment Tool. NIA helps us with lead generation, process guidance and does all that while projecting our brand identity.",
         article:"We proudly present to you NIA, NEARSOL Recruitment Chatbot Recruitment Tool. NIA helps us with lead generation, process guidance and does all that while projecting our brand identity. She is not just a chatbot, she is so much more!",
@@ -88,6 +88,18 @@ export class GlobalHomepageComponent implements OnInit {
         date:"June 17, 2021",
         url: '',
         origin:"Colombia"
+      },
+      {
+        location:'Global',
+        header:"Iloilo",
+        byline: '',
+        multimedia:"./assets/il_image_1.png",
+        fragment: "",
+        article:"",
+        author:'HR',
+        date:"June 17, 2021",
+        url: '',
+        origin:"Iloilo"
       }
     ]
   }

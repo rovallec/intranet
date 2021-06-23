@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-light p-4" style="background-color:white">
+<nav class="navbar navbar-expand-lg navbar-light p-4" style="background-color:white; font-family: 'Montserrat Light';">
   <div class="mr-auto">
     <a class="navbar-brand">
       <img src="http://181.114.12.81/intranet/assets/Nearsol_logo.png" class="d-inline-block align-top" alt=""
@@ -26,13 +26,13 @@
         <button class="menu_button_1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i
             class="fas fa-globe-asia" style="color:grey"></i> {{current_site}}</button>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton"
-          style="background-color: #edeeee; font-weight: bolder; font-size: 20px; color: #F9423A;">
+          style="background-color: #edeeee;  font-size: 20px; color: #F9423A;">
           <a class="dropdown-item" *ngFor="let site of sites" (click)="setCurrentSite(site)"
             [ngStyle]="{'color':current_site === site?'#F9423A':'black'}"
             style="text-align:center; cursor: pointer;">{{site}}</a>
         </div>
       </div>
-      <button class="btn hover_blue" style="font-weight: bolder; font-size: 14px;" *ngIf="getAuth()" routerLink="./"
+      <button class="btn hover_blue" style=" font-size: 14px;" *ngIf="getAuth()" routerLink="./"
         (click)="logOut()">
         LOG OUT
       </button>
@@ -40,7 +40,7 @@
         <div class="dropdown">
           <button class="btn dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true"
             aria-expanded="false"
-            style="border-radius: 10px; background-color: #003b71; color: white; font-weight: bold; min-width:100px; max-width:115px;">
+            style="border-radius: 10px; background-color: #003b71; color: white;  min-width:100px; max-width:115px;">
             SIGN IN
           </button>
           <div class="d-flex" style="width:1vw">
@@ -59,7 +59,7 @@
                   [(ngModel)]="password" [ngModelOptions]="{standalone: true}">
               </div>
               <div class="d-flex justify-content-center" style="margin-top:25px">
-                <button type="submit" class="btn hover_blue" style="font-size: 12px;font-weight: bold;"
+                <button type="submit" class="btn hover_blue" style="font-size: 12px;"
                   (click)="login()" data-toggle="dropdown">LOG IN</button>
               </div>
             </form>
@@ -115,7 +115,7 @@
   <div class="modal-dialog  modal-dialog-centered modal-lg">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="card-title" id="st-setPatronoLabel" style="color:#003b71; font-weight: bolder;">
+        <h5 class="card-title" id="st-setPatronoLabel" style="color:#003b71; ">
           SEARCH
         </h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -129,13 +129,13 @@
           </div>
           <div class="form-group col-md-8">
             <div class="row col-md-12">
-              <label style="color: #003b71; font-weight: bolder; font-size: 20px;">{{article.header}}</label>
+              <label style="color: #003b71;  font-size: 20px;">{{article.header}}</label>
             </div>
             <div class="row col-md-12">
               <label style="font-size: 14px;color: gray;">{{article.fragment}}</label>
             </div>
             <div class="row" style="margin:0%; padding:0%">
-              <a class="link-primary" style="color:#003b71; font-size: 12px; font-weight: bolder;" href="#"
+              <a class="link-primary" style="color:#003b71; font-size: 12px; " href="#"
                   (click)="setSelection(article)" data-dismiss="modal" data-toggle="modal" data-target="#setArticleHome">
                   READ
               </a>
@@ -163,7 +163,7 @@
   <div class="modal-dialog  modal-dialog-centered modal-lg">
       <div class="modal-content">
           <div class="modal-header">
-              <h5 class="card-title" id="st-setPatronoLabel" style="color:#003b71; font-weight: bolder;">
+              <h5 class="card-title" id="st-setPatronoLabel" style="color:#003b71; ">
                   {{selected_article.header + ": " + selected_article.byline }}
               </h5>
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -183,7 +183,7 @@
           <div class="modal-footer d-flex">
               <div class="mr-auto" *ngIf="selected_article.url!==''">
                   Link:
-                  <a class="link-primary" style="color:#003b71; font-size: 12px; font-weight: bolder;"
+                  <a class="link-primary" style="color:#003b71; font-size: 12px; "
                       [href]="selected_article.url">
                       {{ selected_article.url }}
                   </a>
