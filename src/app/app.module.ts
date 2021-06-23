@@ -25,8 +25,7 @@ import { HashLocationStrategy, LocationStrategy } from '@angular/common'
     FormsModule,
     AppRoutingModule
   ],
-  providers: [
-    {provide:LocationStrategy, 
+  providers: [{provide:LocationStrategy, 
     useClass:HashLocationStrategy}],
   bootstrap: [AppComponent]
 })

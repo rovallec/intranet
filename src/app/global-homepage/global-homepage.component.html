@@ -1,7 +1,7 @@
 <div class="row col-md-12" style="padding-top: 0.5rem; padding-bottom: 0.5rem; padding-left: 1rem; padding-right: 0%;">
     <div class="row col-md-12" style="margin:0%; padding-right: 0%; height:60vh;">
         <div style="width: 100%; min-width: 836px; height:60vh; background-image: url(http://181.114.12.81/intranet/assets/homepage_image.png);
-            background-size:100%; background-position-x: 0; background-position-y: 15%; padding-right: 0%;">
+            background-size:100%; background-position-x: 0; background-position-y: 15%; padding-right: 0%; background-repeat: no-repeat;">
             <div _ngcontent-ppw-c16="" class="justify-self-end d-flex" style="margin-top: 45vh; height: 15vh;
                 width: 100%;
                 background-color: transparent;
@@ -40,7 +40,7 @@
         </div>
     </div>
     <div class="row col-md-12" style="margin:0%; padding-right:0%; padding-left: 0%; margin-right: 0%; width: 99%;margin-top:20px">
-        <nav class="navbar navbar-expand-lg navbar-light" style="background-color:white; width: 99%; height: 5vh;">
+        <nav class="navbar navbar-expand-lg navbar-light" style="background-color:white; width: 99%; height: 5vh; min-width: 836px">
             <div class="d-flex justify-content-between" style="margin-left:4%; width: 92%;">
                 <div class="p-2" class="hover_gray">
                     <a class="hover_gray">Core Values</a>
@@ -287,15 +287,22 @@
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <div class="modal-body">
-                <div class="row col-md-12">
-                    <img src="{{selected_article.multimedia}}" class="card-img-top" style="padding:0%; margin:0%"
-                        alt="...">
+            <div class="modal-body" style="margin-left:25px; padding:0px">
+                <div class="row col-md-12" style="height:80vh; margin-top:20px; max-height: 450px;">
+                  <div class="form-group col-md-12" style="margin-bottom:5px; margin-top:5px;
+                  margin-bottom: 5px;
+                  margin-top: 5px;
+                  background-image: url({{selected_article.multimedia}});
+                  background-position: center center;
+                  background-repeat: no-repeat;
+                  background-size: cover;">
+                  </div>
                 </div>
                 <div class="row col-md-12" style="padding-top:25px">
-                    <p>{{selected_article.article}}</p>
+                  <div [innerHTML]="selected_article.article">
+                  </div>
                 </div>
-            </div>
+              </div>
             <div class="modal-footer d-flex">
                 <div class="mr-auto" *ngIf="selected_article.url!==''">
                     Link:
