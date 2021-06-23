@@ -45,6 +45,30 @@ export class HrHomepageComponent implements OnInit {
       },
       {
         location:"Global",
+        header:"Payroll Update",
+        byline: "",
+        multimedia:"http://181.114.12.81/intranet/assets/fn_image_1.png",
+        fragment: "",
+        article:"",
+        author:'HR',
+        date:'June 17, 2021',
+        url: '',
+        origin
+      },
+      {
+        location:"Global",
+        header:"Annual Wellness Examination",
+        byline: "",
+        multimedia:"http://181.114.12.81/intranet/assets/an_image_1.png",
+        fragment: "",
+        article: '',
+        author:'HR',
+        date:'June 17, 2021',
+        url: '',
+        origin
+      },
+      {
+        location:"Global",
         header:"Forms",
         byline: "",
         multimedia:"http://181.114.12.81/intranet/assets/hr_image_2.png",
@@ -84,30 +108,6 @@ export class HrHomepageComponent implements OnInit {
         "<br>" +
         "Thank you and we look forward to your participation." +
         "</p>",
-        author:'HR',
-        date:'June 17, 2021',
-        url: '',
-        origin
-      },
-      {
-        location:"Global",
-        header:"",
-        byline: "",
-        multimedia:"http://181.114.12.81/intranet/assets/homepage_image.png",
-        fragment: "",
-        article:"",
-        author:'HR',
-        date:'June 17, 2021',
-        url: '',
-        origin
-      },
-      {
-        location:"Global",
-        header:"",
-        byline: "",
-        multimedia:"http://181.114.12.81/intranet/assets/homepage_image.png",
-        fragment: "",
-        article:"",
         author:'HR',
         date:'June 17, 2021',
         url: '',

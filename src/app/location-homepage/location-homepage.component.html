@@ -16,7 +16,7 @@
                 font-family: Montserrat;">
                         <p style="
                     font-size: 26px;
-                    font-weight: bold;
+                   font-family: 'Montserrat';
                     margin-bottom: 0;
                     padding-left: 24px;
                     position:absolute; bottom:-5px; cursor:pointer;
@@ -44,7 +44,7 @@
         <nav class="navbar navbar-expand-lg navbar-light" style="background-color:white; width: 99%; height: 5vh;">
             <div class="d-flex justify-content-between" style="margin-left:4%; width: 92%;">
                 <div class="p-2" class="hover_gray">
-                    <a class="hover_gray">Our Core Values</a>
+                    <a class="hover_gray">Core Values</a>
                 </div>
                 <div class="p-2" class="hover_gray">
                     <a class="hover_gray">Event Calendar</a>
@@ -68,91 +68,92 @@
     <div class="row col-md-12 d-flex justify-content-center"
         style="margin:0%; padding-right:0%; padding-left: 0%; margin-right: 0%; width: 99%;margin-top:20px">
         <div class="p-2">
-            <h5 style="color:gray; font-size:34px; font-weight: bolder;">Our Current Reads</h5>
+            <h5 style="color:gray; font-size:34px;font-family: 'Montserrat'er;">Our Current Reads</h5>
         </div>
     </div>
+
     <div class="row col-md-12"
         style="margin:0%; padding-right:0%; padding-left: 1rem; margin-right: 0%; width: 99%; justify-content: space-between;margin-top:20px">
         <div class="card row_card" style="background-color: #edeeee; padding:0%; margin:0%;">
-            <a class="link-primary" style="color:#003b71; font-size: 12px; font-weight: bolder;" href="#"
-                        (click)="setSelection(0)" data-toggle="modal" data-target="#setArticle">
-                <img [src]="articles[0].multimedia" class="card-img-top" style="padding:0%; margin:0%" alt="...">
-            </a>
-            <div class="card-body" style="padding:0%; margin-top:25px; margin-left:10px ">
-                <h5 class="card-title" style="color: #003b71; font-weight: bolder; font-size: 20px">
-                    {{ articles[0].header }}
-                </h5>
-                <p class="card-text" style="font-size: 14px;color: gray;">
-                    {{ articles[0].fragment }}
-                    <br><br>
-                </p>
-            </div>
-            <div class="card-footer" style="margin:0%; padding:0%; border:none">
-                <div class="row" style="margin:0%; padding:0%">
-                    <a class="link-primary" style="color:#003b71; font-size: 12px; font-weight: bolder;" href="#"
-                        (click)="setSelection(0)" data-toggle="modal" data-target="#setArticle">
-                        READ
-                    </a>
-                </div>
-                <div class="row" style="margin:0%; padding:0%; border-top: solid 1px #F9423A;">
-                    <p style="font-size: 10px; color:gray;">
-                        Author: {{ articles[0].author }} {{ articles[0].date }}
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div class="card row_card" style="background-color: #edeeee; padding:0%; margin:0%;">
-            <a class="link-primary" style="color:#003b71; font-size: 12px; font-weight: bolder;" href="#"
-                        (click)="setSelection(1)" data-toggle="modal" data-target="#setArticle">
+            <a class="link-primary" style="color:#003b71; font-size: 12px;font-family: 'Montserrat';" href="#"
+                (click)="setSelection(1)" data-toggle="modal" data-target="#setArticle">
                 <img [src]="articles[1].multimedia" class="card-img-top" style="padding:0%; margin:0%" alt="...">
             </a>
-            <div class="card-body" style="padding:0%; margin-top:25px; margin-left:10px ">
-                <h5 class="card-title" style="color: #003b71; font-weight: bolder; font-size: 20px">
-                    {{ articles[1].header }}
+            <div class="card-body" style="padding:0%; margin-top:25px; margin-left:20px; margin-right:20px">
+                <h5 class="card-title" style="color: #003b71;font-family: 'Montserrat'; font-size: 20px">
+                    {{ articles[1].header }}{{articles[1].byline}}
                 </h5>
                 <p class="card-text" style="font-size: 14px;color: gray;">
                     {{ articles[1].fragment }}
                     <br><br>
                 </p>
             </div>
-            <div class="card-footer" style="margin:0%; padding:0%; border:none">
+            <div class="card-footer" style="margin:0%; padding:0%; border:none; margin-left:20px; margin-right:20px;background-color: #edeeee">
                 <div class="row" style="margin:0%; padding:0%">
-                    <a class="link-primary" style="color:#003b71; font-size: 12px; font-weight: bolder;" href="#"
+                    <a class="link-primary" style="color:#003b71; font-size: 12px;font-family: 'Montserrat';" href="#"
                         (click)="setSelection(1)" data-toggle="modal" data-target="#setArticle">
-                        READ
+                        Read more
                     </a>
                 </div>
                 <div class="row" style="margin:0%; padding:0%; border-top: solid 1px #F9423A;">
                     <p style="font-size: 10px; color:gray;">
-                        Author: {{ articles[1].author }} {{ articles[1].date }}
+                        {{ articles[1].author }} | {{ articles[1].date }}
                     </p>
                 </div>
             </div>
         </div>
         <div class="card row_card" style="background-color: #edeeee; padding:0%; margin:0%;">
-            <a class="link-primary" style="color:#003b71; font-size: 12px; font-weight: bolder;" href="#"
-                        (click)="setSelection(2)" data-toggle="modal" data-target="#setArticle">
+            <a class="link-primary" style="color:#003b71; font-size: 12px;font-family: 'Montserrat';" href="#"
+                (click)="setSelection(2)" data-toggle="modal" data-target="#setArticle">
                 <img [src]="articles[2].multimedia" class="card-img-top" style="padding:0%; margin:0%" alt="...">
             </a>
-            <div class="card-body" style="padding:0%; margin-top:25px; margin-left:10px ">
-                <h5 class="card-title" style="color: #003b71; font-weight: bolder; font-size: 20px">
-                    {{ articles[2].header }}
+            <div class="card-body" style="padding:0%; margin-top:25px; margin-left:20px; margin-right:20px">
+                <h5 class="card-title" style="color: #003b71;font-family: 'Montserrat'; font-size: 20px">
+                    {{ articles[2].header }}{{articles[2].byline}}
                 </h5>
                 <p class="card-text" style="font-size: 14px;color: gray;">
                     {{ articles[2].fragment }}
                     <br><br>
                 </p>
             </div>
-            <div class="card-footer" style="margin:0%; padding:0%; border:none">
+            <div class="card-footer" style="margin:0%; padding:0%; border:none; margin-left:20px; margin-right:20px;background-color: #edeeee">
                 <div class="row" style="margin:0%; padding:0%">
-                    <a class="link-primary" style="color:#003b71; font-size: 12px; font-weight: bolder;" href="#"
+                    <a class="link-primary" style="color:#003b71; font-size: 12px;font-family: 'Montserrat';" href="#"
                         (click)="setSelection(2)" data-toggle="modal" data-target="#setArticle">
-                        READ
+                        Read more
                     </a>
                 </div>
                 <div class="row" style="margin:0%; padding:0%; border-top: solid 1px #F9423A;">
                     <p style="font-size: 10px; color:gray;">
-                        Author: {{ articles[2].author }} {{ articles[2].date }}
+                        {{ articles[2].author }} | {{ articles[2].date }}
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="card row_card" style="background-color: #edeeee; padding:0%; margin:0%;">
+            <a class="link-primary" style="color:#003b71; font-size: 12px;font-family: 'Montserrat';" href="#"
+                (click)="setSelection(3)" data-toggle="modal" data-target="#setArticle">
+                <img [src]="articles[3].multimedia" class="card-img-top" style="padding:0%; margin:0%" alt="...">
+            </a>
+            <div class="card-body" style="padding:0%; margin-top:25px; margin-left:20px; margin-right:20px">
+                <h5 class="card-title" style="color: #003b71;font-family: 'Montserrat'; font-size: 20px">
+                    {{ articles[3].header }}{{articles[3].byline}}
+                </h5>
+                <p class="card-text" style="font-size: 14px;color: gray;">
+                    {{ articles[3].fragment }}
+                    <br><br>
+                </p>
+            </div>
+            <div class="card-footer" style="margin:0%; padding:0%; border:none; margin-left:20px; margin-right:20px;background-color: #edeeee">
+                <div class="row" style="margin:0%; padding:0%">
+                    <a class="link-primary" style="color:#003b71; font-size: 12px;font-family: 'Montserrat';" href="#"
+                        (click)="setSelection(3)" data-toggle="modal" data-target="#setArticle">
+                        Read more
+                    </a>
+                </div>
+                <div class="row" style="margin:0%; padding:0%; border-top: solid 1px #F9423A;">
+                    <p style="font-size: 10px; color:gray;">
+                        {{ articles[3].author }} | {{ articles[3].date }}
                     </p>
                 </div>
             </div>
@@ -160,89 +161,114 @@
     </div>
 
     <div class="row col-md-12"
-        style="margin:0%; padding-right:0%; padding-left: 1rem; margin-right: 0%; width: 99%; justify-content: space-between; margin-top: 25px;">
-        <div class="card row_card" style="background-color: #edeeee; padding:0%; margin:0%;">
-            <a class="link-primary" style="color:#003b71; font-size: 12px; font-weight: bolder;" href="#"
-                        (click)="setSelection(3)" data-toggle="modal" data-target="#setArticle">
-                <img [src]="articles[3].multimedia" class="card-img-top" style="padding:0%; margin:0%" alt="...">
-            </a>
-            <div class="card-body" style="padding:0%; margin-top:25px; margin-left:10px ">
-                <h5 class="card-title" style="color: #003b71; font-weight: bolder; font-size: 20px">
-                    {{ articles[3].header }}
-                </h5>
-                <p class="card-text" style="font-size: 14px;color: gray;">
-                    {{ articles[3].fragment }}
-                    <br><br>
-                </p>
+    style="margin:0%; padding-right:0%; padding-left: 1rem; margin-right: 0%; width: 99%; justify-content: space-between;margin-top:20px">
+    <div class="card row_card" style="background-color: #edeeee; padding:0%; margin:0%;">
+        <a class="link-primary" style="color:#003b71; font-size: 12px;font-family: 'Montserrat';" href="#"
+            (click)="setSelection(4)" data-toggle="modal" data-target="#setArticle">
+            <img [src]="articles[4].multimedia" class="card-img-top" style="padding:0%; margin:0%" alt="...">
+        </a>
+        <div class="card-body" style="padding:0%; margin-top:25px; margin-left:20px; margin-right:20px">
+            <h5 class="card-title" style="color: #003b71;font-family: 'Montserrat'; font-size: 20px">
+                {{ articles[4].header }}{{articles[4].byline}}
+            </h5>
+            <p class="card-text" style="font-size: 14px;color: gray;">
+                {{ articles[4].fragment }}
+                <br><br>
+            </p>
+        </div>
+        <div class="card-footer" style="margin:0%; padding:0%; border:none; margin-left:20px; margin-right:20px;background-color: #edeeee">
+            <div class="row" style="margin:0%; padding:0%">
+                <a class="link-primary" style="color:#003b71; font-size: 12px;font-family: 'Montserrat';" href="#"
+                    (click)="setSelection(4)" data-toggle="modal" data-target="#setArticle">
+                    Read more
+                </a>
             </div>
-            <div class="card-footer" style="margin:0%; padding:0%; border:none">
-                <div class="row" style="margin:0%; padding:0%">
-                    <a class="link-primary" style="color:#003b71; font-size: 12px; font-weight: bolder;" href="#"
-                        (click)="setSelection(3)" data-toggle="modal" data-target="#setArticle">
-                        READ
-                    </a>
-                </div>
-                <div class="row" style="margin:0%; padding:0%; border-top: solid 1px #F9423A;">
-                    <p style="font-size: 10px; color:gray;">
-                        Author: {{ articles[3].author }} {{ articles[3].date }}
-                    </p>
-                </div>
+            <div class="row" style="margin:0%; padding:0%; border-top: solid 1px #F9423A;">
+                <p style="font-size: 10px; color:gray;">
+                    {{ articles[4].author }} | {{ articles[4].date }}
+                </p>
             </div>
         </div>
-        <div class="card row_card" style="background-color: #edeeee; padding:0%; margin:0%;">
-            <a class="link-primary" style="color:#003b71; font-size: 12px; font-weight: bolder;" href="#"
-                        (click)="setSelection(4)" data-toggle="modal" data-target="#setArticle">
-                <img [src]="articles[4].multimedia" class="card-img-top" style="padding:0%; margin:0%" alt="...">
-            </a>
-            <div class="card-body" style="padding:0%; margin-top:25px; margin-left:10px ">
-                <h5 class="card-title" style="color: #003b71; font-weight: bolder; font-size: 20px">
-                    {{ articles[4].header }}
-                </h5>
-                <p class="card-text" style="font-size: 14px;color: gray;">
-                    {{ articles[4].fragment }}
-                    <br><br>
-                </p>
+    </div>
+    <div class="card row_card" style="background-color: #edeeee; padding:0%; margin:0%;">
+        <a class="link-primary" style="color:#003b71; font-size: 12px;font-family: 'Montserrat';" href="#"
+            (click)="setSelection(5)" data-toggle="modal" data-target="#setArticle">
+            <img [src]="articles[5].multimedia" class="card-img-top" style="padding:0%; margin:0%" alt="...">
+        </a>
+        <div class="card-body" style="padding:0%; margin-top:25px; margin-left:20px; margin-right:20px">
+            <h5 class="card-title" style="color: #003b71;font-family: 'Montserrat'; font-size: 20px">
+                {{ articles[5].header }}{{articles[5].byline}}
+            </h5>
+            <p class="card-text" style="font-size: 14px;color: gray;">
+                {{ articles[5].fragment }}
+                <br><br>
+            </p>
+        </div>
+        <div class="card-footer" style="margin:0%; padding:0%; border:none; margin-left:20px; margin-right:20px;background-color: #edeeee">
+            <div class="row" style="margin:0%; padding:0%">
+                <a class="link-primary" style="color:#003b71; font-size: 12px;font-family: 'Montserrat';" href="#"
+                    (click)="setSelection(5)" data-toggle="modal" data-target="#setArticle">
+                    Read more
+                </a>
             </div>
-            <div class="card-footer" style="margin:0%; padding:0%; border:none">
-                <div class="row" style="margin:0%; padding:0%">
-                    <a class="link-primary" style="color:#003b71; font-size: 12px; font-weight: bolder;" href="#"
-                        (click)="setSelection(4)" data-toggle="modal" data-target="#setArticle">
-                        READ
-                    </a>
-                </div>
-                <div class="row" style="margin:0%; padding:0%; border-top: solid 1px #F9423A;">
-                    <p style="font-size: 10px; color:gray;">
-                        Author: {{ articles[4].author }} {{ articles[4].date }}
-                    </p>
-                </div>
+            <div class="row" style="margin:0%; padding:0%; border-top: solid 1px #F9423A;">
+                <p style="font-size: 10px; color:gray;">
+                    {{ articles[5].author }} | {{ articles[5].date }}
+                </p>
             </div>
         </div>
-        <div class="card row_card" style="background-color: #edeeee; padding:0%; margin:0%;">
-            <a class="link-primary" style="color:#003b71; font-size: 12px; font-weight: bolder;" href="#"
-                        (click)="setSelection(5)" data-toggle="modal" data-target="#setArticle">
-                <img [src]="articles[5].multimedia" class="card-img-top" style="padding:0%; margin:0%" alt="...">
-            </a>
-            <div class="card-body" style="padding:0%; margin-top:25px; margin-left:10px ">
-                <h5 class="card-title" style="color: #003b71; font-weight: bolder; font-size: 20px">
-                    {{ articles[5].header }}
-                </h5>
-                <p class="card-text" style="font-size: 14px;color: gray;">
-                    {{ articles[5].fragment }}
-                    <br><br>
+    </div>
+    <div class="card row_card" style="background-color: #edeeee; padding:0%; margin:0%;">
+        <a class="link-primary" style="color:#003b71; font-size: 12px;font-family: 'Montserrat';" href="#"
+            (click)="setSelection(6)" data-toggle="modal" data-target="#setArticle">
+            <img [src]="articles[6].multimedia" class="card-img-top" style="padding:0%; margin:0%" alt="...">
+        </a>
+        <div class="card-body" style="padding:0%; margin-top:25px; margin-left:20px; margin-right:20px">
+            <h5 class="card-title" style="color: #003b71;font-family: 'Montserrat'; font-size: 20px">
+                {{ articles[6].header }}{{articles[6].byline}}
+            </h5>
+            <p class="card-text" style="font-size: 14px;color: gray;">
+                {{ articles[6].fragment }}
+                <br><br>
+            </p>
+        </div>
+        <div class="card-footer" style="margin:0%; padding:0%; border:none; margin-left:20px; margin-right:20px;background-color: #edeeee">
+            <div class="row" style="margin:0%; padding:0%">
+                <a class="link-primary" style="color:#003b71; font-size: 12px;font-family: 'Montserrat';" href="#"
+                    (click)="setSelection(6)" data-toggle="modal" data-target="#setArticle">
+                    Read more
+                </a>
+            </div>
+            <div class="row" style="margin:0%; padding:0%; border-top: solid 1px #F9423A;">
+                <p style="font-size: 10px; color:gray;">
+                    {{ articles[6].author }} | {{ articles[6].date }}
                 </p>
             </div>
-            <div class="card-footer" style="margin:0%; padding:0%; border:none">
-                <div class="row" style="margin:0%; padding:0%">
-                    <a class="link-primary" style="color:#003b71; font-size: 12px; font-weight: bolder;" href="#"
-                        (click)="setSelection(5)" data-toggle="modal" data-target="#setArticle">
-                        READ
-                    </a>
-                </div>
-                <div class="row" style="margin:0%; padding:0%; border-top: solid 1px #F9423A;">
-                    <p style="font-size: 10px; color:gray;">
-                        Author: {{ articles[5].author }} {{ articles[5].date }}
-                    </p>
-                </div>
+        </div>
+    </div>
+    <div class="card row_card" style="background-color: #edeeee; padding:0%; margin:0%;">
+        <a class="link-primary" style="color:#003b71; font-size: 12px;font-family: 'Montserrat';" href="#"
+            >
+            <img [src]="'./assets/soon.png'" class="card-img-top" style="padding:0%; margin:0%" alt="...">
+        </a>
+        <div class="card-body" style="padding:0%; margin-top:25px; margin-left:20px; margin-right:20px">
+            <h5 class="card-title" style="color: #003b71;font-family: 'Montserrat'; font-size: 20px">
+                More Content Soon
+            </h5>
+            <p class="card-text" style="font-size: 14px;color: gray;">
+                <br><br>
+            </p>
+        </div>
+        <div class="card-footer" style="margin:0%; padding:0%; border:none; margin-left:20px; margin-right:20px;background-color: #edeeee">
+            <div class="row" style="margin:0%; padding:0%">
+                <a class="link-primary" style="color:#003b71; font-size: 12px;font-family: 'Montserrat';" href="#"
+                    >
+                </a>
+            </div>
+            <div class="row" style="margin:0%; padding:0%; border-top: solid 1px #F9423A;">
+                <p style="font-size: 10px; color:gray;">
+                    Admin | June 17, 2021
+                </p>
             </div>
         </div>
     </div>
@@ -253,7 +279,7 @@
     <div class="modal-dialog  modal-dialog-centered modal-lg">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="card-title" id="st-setPatronoLabel" style="color:#003b71; font-weight: bolder;">
+                <h5 class="card-title" id="st-setPatronoLabel" style="color:#003b71;font-family: 'Montserrat'er;">
                     {{selected_article.header + ": " + selected_article.byline }}
                 </h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -272,7 +298,7 @@
             <div class="modal-footer d-flex">
                 <div class="mr-auto" *ngIf="selected_article.url!==''">
                     Link:
-                    <a class="link-primary" style="color:#003b71; font-size: 12px; font-weight: bolder;"
+                    <a class="link-primary" style="color:#003b71; font-size: 12px;font-family: 'Montserrat'er;"
                         [href]="selected_article.url">
                         {{ selected_article.url }}
                     </a>

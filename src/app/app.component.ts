@@ -48,19 +48,7 @@ export class AppComponent {
 
     this.allArticles = [
       {
-        location:"Global",
-        header:"Core Value of the Month",
-        byline: "Results-Driven",
-        multimedia:"http://181.114.12.81/intranet/assets/homepage_image.png",
-        fragment: "Being a person that is results-driven means that you are focused and obsessed with achieving a great outcome.",
-        article:"Being a person that is results-driven means that you are focused and obsessed with achieving a great outcome. You don’t want to just compete; you want to WIN!",
-        author:'HR',
-        date:'June 17, 2021',
-        url: 'https://nearsol.us/',
-        origin:"Manila"
-      },
-      {
-        location:"Global",
+        location:"HR",
         header:"Pride Month 2021",
         byline: "",
         multimedia:"http://181.114.12.81/intranet/assets/hr_image_5.png",
@@ -69,70 +57,10 @@ export class AppComponent {
         author:'HR',
         date:'June 17, 2021',
         url: '',
-        origin:"Manila"
+        origin: 'Manila-HR'
       },
       {
-        location:"Global",
-        header:"Father's Day at NEARSOL",
-        byline: '',
-        multimedia:"http://181.114.12.81/intranet/assets/hr_image_1.png",
-        fragment: "It's time to honor and recognize our hardworking and awesome Fathers/Dads/Papas/Tatays/Papsy at NEARSOL.",
-        article:"It's time to honor and recognize our hardworking and awesome Fathers/Dads/Papas/Tatays/Papsy at NEARSOL. Show your love and appreciation to all Dads by creating a TikTok video for a chance to win awesome prizes during the Father’s Day Virtual Party on June 18, 2021! #NearsolSuperDad.",
-        author:'HR',
-        date:'June 17, 2021',
-        url: '',
-        origin:"Manila"
-      },
-      {
-        location:'Global',
-        header:"NIA",
-        byline: 'NEARSOL Intelligence Automation',
-        multimedia:"http://181.114.12.81/intranet/assets/recruitment_image_1.png",
-        fragment: "We proudly present to you NIA, NEARSOL Recruitment Chatbot Recruitment Tool. NIA helps us with lead generation, process guidance and does all that while projecting our brand identity.",
-        article:"We proudly present to you NIA, NEARSOL Recruitment Chatbot Recruitment Tool. NIA helps us with lead generation, process guidance and does all that while projecting our brand identity. She is not just a chatbot, she is so much more!",
-        author:'HR',
-        date:"June 17, 2021",
-        url: 'https://nearsol.us/nia-manila/',
-        origin:"Manila"
-      },
-      {
-        location:'Global',
-        header:"Guatemala",
-        byline: '',
-        multimedia:"./assets/gt_image_1.jpg",
-        fragment: "",
-        article:"",
-        author:'HR',
-        date:"June 17, 2021",
-        url: '',
-        origin:"Guatemala"
-      },
-      {
-        location:'Global',
-        header:"Colombia",
-        byline: '',
-        multimedia:"./assets/cl_image_1.png",
-        fragment: "",
-        article:"",
-        author:'HR',
-        date:"June 17, 2021",
-        url: '',
-        origin:"Colombia"
-      },
-      {
-        location:"Global",
-        header:"Pride Month 2021",
-        byline: "",
-        multimedia:"http://181.114.12.81/intranet/assets/hr_image_5.png",
-        fragment: "June is PRIDE Month! It's time to celebrate our courageous and colorful brothers and sisters in the LGBTQIA+ community! Be proud of who you are and say #IAMINCLUDED",
-        article:"June is PRIDE Month! It's time to celebrate our courageous and colorful brothers and sisters in the LGBTQIA+ community! Be proud of who you are and say #IAMINCLUDED",
-        author:'HR',
-        date:'June 17, 2021',
-        url: '',
-        origin:'HR'
-      },
-      {
-        location:"Global",
+        location:"HR",
         header:"Father’s Day at NEARSOL",
         byline: "",
         multimedia:"http://181.114.12.81/intranet/assets/hr_image_1.png",
@@ -141,10 +69,34 @@ export class AppComponent {
         author:'HR',
         date:'June 17, 2021',
         url: '',
-        origin:'HR'
+        origin: 'Manila-HR'
       },
       {
-        location:"Global",
+        location:"HR",
+        header:"Payroll Update",
+        byline: "",
+        multimedia:"http://181.114.12.81/intranet/assets/fn_image_1.png",
+        fragment: "",
+        article:"",
+        author:'HR',
+        date:'June 17, 2021',
+        url: '',
+        origin: 'Manila-HR'
+      },
+      {
+        location:"HR",
+        header:"Annual Wellness Examination",
+        byline: "",
+        multimedia:"http://181.114.12.81/intranet/assets/an_image_1.png",
+        fragment: "",
+        article: '',
+        author:'HR',
+        date:'June 17, 2021',
+        url: '',
+        origin: 'Manila-HR'
+      },
+      {
+        location:"HR",
         header:"Forms",
         byline: "",
         multimedia:"http://181.114.12.81/intranet/assets/hr_image_2.png",
@@ -153,10 +105,10 @@ export class AppComponent {
         author:'HR',
         date:'June 17, 2021',
         url: '',
-        origin:'HR'
+        origin: 'Manila-HR'
       },
       {
-        location:"Global",
+        location:"HR",
         header:"Employee Satisfaction Survey",
         byline: "",
         multimedia:"http://181.114.12.81/intranet/assets/hr_image_4.png",
@@ -187,34 +139,94 @@ export class AppComponent {
         author:'HR',
         date:'June 17, 2021',
         url: '',
-        origin:'HR'
+        origin: 'Manila-HR'
       },
       {
         location:"Global",
-        header:"",
-        byline: "",
+        header:"Core Value of the Month",
+        byline: ": Results-Driven",
         multimedia:"http://181.114.12.81/intranet/assets/homepage_image.png",
-        fragment: "",
-        article:"",
+        fragment: "Being a person that is results-driven means that you are focused and obsessed with achieving a great outcome.",
+        article:"Being a person that is results-driven means that you are focused and obsessed with achieving a great outcome. You don’t want to just compete; you want to WIN!",
+        author:'HR',
+        date:'June 17, 2021',
+        url: 'https://nearsol.us/',
+        origin:"Global Manila"
+      },
+      {
+        location:"Global",
+        header:"Pride Month 2021",
+        byline: "",
+        multimedia:"http://181.114.12.81/intranet/assets/hr_image_5.png",
+        fragment: "June is PRIDE Month! It's time to celebrate our courageous and colorful brothers and sisters in the LGBTQIA+ community! Be proud of who you are and say #IAMINCLUDED",
+        article:"June is PRIDE Month! It's time to celebrate our courageous and colorful brothers and sisters in the LGBTQIA+ community! Be proud of who you are and say #IAMINCLUDED",
         author:'HR',
         date:'June 17, 2021',
         url: '',
-        origin:'HR'
+        origin:"Global Manila"
       },
       {
         location:"Global",
-        header:"",
-        byline: "",
-        multimedia:"http://181.114.12.81/intranet/assets/homepage_image.png",
-        fragment: "",
-        article:"",
+        header:"Father's Day at NEARSOL",
+        byline: '',
+        multimedia:"http://181.114.12.81/intranet/assets/hr_image_1.png",
+        fragment: "It's time to honor and recognize our hardworking and awesome Fathers/Dads/Papas/Tatays/Papsy at NEARSOL.",
+        article:"It's time to honor and recognize our hardworking and awesome Fathers/Dads/Papas/Tatays/Papsy at NEARSOL. Show your love and appreciation to all Dads by creating a TikTok video for a chance to win awesome prizes during the Father’s Day Virtual Party on June 18, 2021! #NearsolSuperDad.",
         author:'HR',
         date:'June 17, 2021',
         url: '',
-        origin:'HR'
+        origin:"Global Manila"
       },
       {
-        location:"Global",
+        location:'Global',
+        header:"NIA",
+        byline: ': NEARSOL Intelligence Automation',
+        multimedia:"http://181.114.12.81/intranet/assets/recruitment_image_1.png",
+        fragment: "We proudly present to you NIA, NEARSOL Recruitment Chatbot Recruitment Tool. NIA helps us with lead generation, process guidance and does all that while projecting our brand identity.",
+        article:"We proudly present to you NIA, NEARSOL Recruitment Chatbot Recruitment Tool. NIA helps us with lead generation, process guidance and does all that while projecting our brand identity. She is not just a chatbot, she is so much more!",
+        author:'HR',
+        date:"June 17, 2021",
+        url: 'https://nearsol.us/nia-manila/',
+        origin:"Global Manila"
+      },
+      {
+        location:'Global',
+        header:"Guatemala",
+        byline: '',
+        multimedia:"./assets/gt_image_1.jpg",
+        fragment: "",
+        article:"",
+        author:'HR',
+        date:"June 17, 2021",
+        url: '',
+        origin:"Global Guatemala"
+      },
+      {
+        location:'Global',
+        header:"Colombia",
+        byline: '',
+        multimedia:"./assets/cl_image_1.png",
+        fragment: "",
+        article:"",
+        author:'HR',
+        date:"June 17, 2021",
+        url: '',
+        origin:"Global Colombia"
+      },
+      {
+        location:'Global',
+        header:"Iloilo",
+        byline: '',
+        multimedia:"./assets/il_image_1.png",
+        fragment: "",
+        article:"",
+        author:'HR',
+        date:"June 17, 2021",
+        url: '',
+        origin:"Global Iloilo"
+      },
+      {
+        location:"Manila",
         header:"Pride Month 2021",
         byline: '',
         multimedia:"http://181.114.12.81/intranet/assets/hr_image_5.png",
@@ -226,7 +238,7 @@ export class AppComponent {
         origin:'Manila'
       },
       {
-        location:"Global",
+        location:"Manila",
         header:"Father's Day at NEARSOL",
         byline: '',
         multimedia:"http://181.114.12.81/intranet/assets/hr_image_1.png",
@@ -238,44 +250,56 @@ export class AppComponent {
         origin:'Manila'
       },
       {
-        location:"Global",
-        header:"Employee Referral Program",
+        location:"Manila",
+        header:"Top Performers of the Month",
         byline: '',
-        multimedia:"http://181.114.12.81/intranet/assets/recruitment_image_2.png",
-        fragment: "Refer a friend and receive the payouts on the 3rd and 6th months of the applicant’s joining date.",
-        article:"Refer a friend and receive the payouts on the 3rd and 6th months of the applicant’s joining date.",
-        author:'HR',
+        multimedia:"http://181.114.12.81/intranet/assets/op_image_1.jpg",
+        fragment: "",
+        article:"",
+        author:'Opeartions',
         date:'June, 17 2021',
-        url: 'https://nearsol.us/nia-manila/ ',
+        url:'',
         origin:'Manila'
       },
       {
-        location:'Global',
-        header:"Finance",
+        location:'Manila',
+        header:"Employee Referral Program",
+        byline: 'Refer a friend and receive a P10,000 incentive',
+        multimedia:"./assets/fn_image_1.png",
+        fragment: "Refer a friend and receive the payouts on the 3rd and 6th months of the applicant’s joining date.",
+        article:"Refer a friend and receive the payouts on the 3rd and 6th months of the applicant’s joining date.",
+        author:'Recruitment',
+        date:"June 17, 2021",
+        url: '',
+        origin:'Manila'
+      },
+      {
+        location:'Manila',
+        header:"Payroll update",
         byline: '',
         multimedia:"./assets/fn_image_1.png",
         fragment: "",
         article:"",
-        author:'HR',
+        author:'Finance',
         date:"June 17, 2021",
         url: '',
         origin:'Manila'
       },
       {
-        location:'Global',
-        header:"Workforce",
+        location:'Manila',
+        header:"Timekeeper Reminders",
         byline: '',
         multimedia:"./assets/wf_image_1.png",
         fragment: "",
         article:"",
-        author:'HR',
+        author:'Workforce',
         date:"June 17, 2021",
         url: '',
         origin:'Manila'
       },
       {
-        location:'Global',
-        header:"Annual Wellness",
+        location:'Manila',
+        header:"Annual Wellness Examination",
         byline: '',
         multimedia:"./assets/an_image_1.png",
         fragment: "",

@@ -1,6 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 body{
-    font-family: 'Montserrat';
+    font-family: 'Montserrat Light';
 }
 
 .hover_blue{
@@ -62,3 +62,7 @@ body{
     top: 8px;
     right: -1px;
   }
+
+.card-img-top{
+    max-height: 321px;
+}
