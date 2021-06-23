@@ -15,6 +15,7 @@ export class HrHomepageComponent implements OnInit {
   selected_article:Articles = new Articles;
   articles: Articles[] = [];
   img_foot: string = 'Intranet Forms';
+  img_date:string = 'June 16, 2021';
   
   ngOnInit(): void {
     this.articles = [

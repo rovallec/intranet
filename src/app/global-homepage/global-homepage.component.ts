@@ -13,6 +13,7 @@ export class GlobalHomepageComponent implements OnInit {
   selected_article:Articles = new Articles;
   articles: Articles[] = [];
   img_foot: string = 'Core Value of the Month: Results-Driven';
+  img_date:string = 'June 16, 2021';
 
   ngOnInit(): void {
     this.articles = [

@@ -13,6 +13,7 @@ export class LocationHomepageComponent implements OnInit {
   selected_article:Articles = new Articles;
   articles: Articles[] = [];
   img_foot: string = 'Pride Month';
+  img_date:string = 'June 16, 2021';
 
   ngOnInit(): void {
     this.articles = [

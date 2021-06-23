@@ -1,152 +1,86 @@
 <div class="row col-md-12" style="padding-top: 0.5rem; padding-bottom: 0.5rem; padding-left: 1rem; padding-right: 0%;">
-    <div class="row col-md-12" style="margin:0%; padding-right: 0%; height:50vh;">
-        <div style="width: 100%; min-width: 836px; height:50vh; background-image: url(http://181.114.12.81/intranet/assets/homepage_image.png);
+    <div class="row col-md-12" style="margin:0%; padding-right: 0%; height:60vh;">
+        <div style="width: 100%; min-width: 836px; height:60vh; background-image: url(http://181.114.12.81/intranet/assets/homepage_image.png);
             background-size:100%; background-position-x: 0; background-position-y: 15%; padding-right: 0%;">
-            <div _ngcontent-ppw-c16="" class="justify-self-end d-flex"
-                style="margin-top: 35vh; padding-right: 0%; width: 100%; background: rgb(0,0,0); background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(5,5,5,0.9331933456976541) 14%, rgba(31,31,31,0.748319396117822) 26%, rgba(255,255,255,0) 44%, rgba(255,255,255,0) 100%, rgba(70,70,70,1) 100%);">
-                <p _ngcontent-ppw-c16=""
-                    style="margin-top: 9vh; height:6vh; color: white; font-family: Montserrat; font-size: 24px; font-weight: bolder; margin-bottom:0">
-                    {{ img_foot }}</p>
+            <div _ngcontent-ppw-c16="" class="justify-self-end d-flex" style="margin-top: 45vh; height: 15vh;
+                width: 100%;
+                background-color: transparent;
+                background-image: linear-gradient(180deg, #00000000 0%, #020000 100%);
+                opacity: 0.97;
+                transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
+                ">
+                <div class="row col-md-12" style="padding-left:10px;position:absolute; bottom:0px">
+                    <div class="row p-0 col-md-12" style="
+                height: 39px;
+                color: white;
+                font-family: Montserrat;">
+                        <p style="
+                    font-size: 26px;
+                    font-weight: bold;
+                    margin-bottom: 0;
+                    padding-left: 24px;
+                    position:absolute; bottom:-5px; cursor: pointer;
+                    " (click)="setSelection(0)" data-toggle="modal" data-target="#setArticle">
+                            {{ img_foot }}</p>
+                    </div>
+                    <div class="row p-0 col-md-12" style="
+                height: 30px;
+                color: white;
+                font-family: Montserrat;">
+                        <p _ngcontent-ppw-c16="" style="
+                    font-size: 20px;
+                    margin-bottom: 0;
+                    padding-left: 30px;
+                    position:absolute; bottom:0; cursor: pointer;
+                    " (click)="setSelection(0)" data-toggle="modal" data-target="#setArticle">
+                            {{ img_date }}</p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-    <div class="row col-md-12" style="margin:0%; padding-right:0%; padding-left: 0%; margin-right: 0%; width: 99%;">
+    <div class="row col-md-12" style="margin:0%; padding-right:0%; padding-left: 0%; margin-right: 0%; width: 99%;margin-top:20px">
         <nav class="navbar navbar-expand-lg navbar-light" style="background-color:white; width: 99%; height: 5vh;">
             <div class="d-flex justify-content-between" style="margin-left:4%; width: 92%;">
                 <div class="p-2" class="hover_gray">
-                    <a class="hover_gray">Our Core Values</a>
+                    <a class="hover_gray">Core Values</a>
                 </div>
                 <div class="p-2" class="hover_gray">
-                    <a class="hover_gray">Event Calendar</a>
+                    <a class="hover_gray">CSR</a>
                 </div>
                 <div class="p-2" class="hover_gray">
-                    <a class="hover_gray">Experience</a>
+                    <a class="hover_gray">Careers</a>
                 </div>
                 <div class="p-2" class="hover_gray">
-                    <a class="hover_gray">Benefits</a>
+                    <a class="hover_gray">Newsletter</a>
                 </div>
                 <div class="p-2" class="hover_gray">
-                    <a class="hover_gray">Greate Place To Work</a>
+                    <a class="hover_gray">Multimedia</a>
                 </div>
             </div>
         </nav>
     </div>
-    <div class="row col-md-12" style="margin:0%; padding-right:0%; padding-left: 0%; margin-right: 0%; width: 99%;">
+    <div class="row col-md-12" style="margin:0%; padding-right:0%; padding-left: 0%; margin-right: 0%; width: 99%;margin-top:20px">
         <div style="margin-left:45%; width:10%;border-bottom: solid 1px #F9423A;height: 1%;">
         </div>
     </div>
     <div class="row col-md-12 d-flex justify-content-center"
-        style="margin:0%; padding-right:0%; padding-left: 0%; margin-right: 0%; width: 99%;">
+        style="margin:0%; padding-right:0%; padding-left: 0%; margin-right: 0%; width: 99%;margin-top:20px">
         <div class="p-2">
             <h5 style="color:gray; font-size:34px; font-weight: bolder;">Our Current Reads</h5>
         </div>
     </div>
     <div class="row col-md-12"
-        style="margin:0%; padding-right:0%; padding-left: 1rem; margin-right: 0%; width: 99%; justify-content: space-between;">
+        style="margin:0%; padding-right:0%; padding-left: 1rem; margin-right: 0%; width: 99%; justify-content: space-between;margin-top:20px">
         <div class="card row_card" style="background-color: #edeeee; padding:0%; margin:0%;">
             <a class="link-primary" style="color:#003b71; font-size: 12px; font-weight: bolder;" href="#"
-                        (click)="setSelection(0)" data-toggle="modal" data-target="#setArticle">
-                <img [src]="articles[0].multimedia" class="card-img-top p-2" style="padding:0%; margin:0%" alt="...">
+                (click)="setSelection(3)" data-toggle="modal" data-target="#setArticle">
+                <img [src]="articles[3].multimedia" class="card-img-top" style="padding:0%; margin:0%" alt="...">
             </a>
-            <div class="top-right justify-content-center" style="font-size: 12px; background-color: #F9423A; color: white; height: 20px">
-                <label style="position:absolute; padding:0px; margin:0px; top:2px; right:5%;">{{articles[0].origin}}</label>
-            </div>
-            <div class="card-body" style="padding:0%; margin-top:25px; margin-left:10px ">
-                <h5 class="card-title" style="color: #003b71; font-weight: bolder; font-size: 20px">
-                    {{ articles[0].header }}
-                </h5>
-                <p class="card-text" style="font-size: 14px;color: gray;">
-                    {{ articles[0].fragment }}
-                    <br><br>
-                </p>
-            </div>
-            <div class="card-footer" style="margin:0%; padding:0%; border:none">
-                <div class="row" style="margin:0%; padding:0%">
-                    <a class="link-primary" style="color:#003b71; font-size: 12px; font-weight: bolder;" href="#"
-                        (click)="setSelection(0)" data-toggle="modal" data-target="#setArticle">
-                        READ
-                    </a>
-                </div>
-                <div class="row" style="margin:0%; padding:0%; border-top: solid 1px #F9423A;">
-                    <p style="font-size: 10px; color:gray;">
-                        Author: {{ articles[0].author }} {{ articles[0].date }}
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div class="card row_card" style="background-color: #edeeee; padding:0%; margin:0%;">
-            <a class="link-primary" style="color:#003b71; font-size: 12px; font-weight: bolder;" href="#"
-                        (click)="setSelection(1)" data-toggle="modal" data-target="#setArticle">
-                <img [src]="articles[1].multimedia" class="card-img-top p-2" style="padding:0%; margin:0%" alt="...">
-            </a>
-            <div class="top-right justify-content-center" style="font-size: 12px; background-color: #F9423A; color: white; height: 20px">
-                <label style="position:absolute; padding:0px; margin:0px; top:2px; right:5%;">{{articles[1].origin}}</label>
-            </div>
-            <div class="card-body" style="padding:0%; margin-top:25px; margin-left:10px ">
-                <h5 class="card-title" style="color: #003b71; font-weight: bolder; font-size: 20px">
-                    {{ articles[1].header }}
-                </h5>
-                <p class="card-text" style="font-size: 14px;color: gray;">
-                    {{ articles[1].fragment }}
-                    <br><br>
-                </p>
-            </div>
-            <div class="card-footer" style="margin:0%; padding:0%; border:none">
-                <div class="row" style="margin:0%; padding:0%">
-                    <a class="link-primary" style="color:#003b71; font-size: 12px; font-weight: bolder;" href="#"
-                        (click)="setSelection(1)" data-toggle="modal" data-target="#setArticle">
-                        READ
-                    </a>
-                </div>
-                <div class="row" style="margin:0%; padding:0%; border-top: solid 1px #F9423A;">
-                    <p style="font-size: 10px; color:gray;">
-                        Author: {{ articles[1].author }} {{ articles[1].date }}
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div class="card row_card" style="background-color: #edeeee; padding:0%; margin:0%;">
-            <a class="link-primary" style="color:#003b71; font-size: 12px; font-weight: bolder;" href="#"
-                        (click)="setSelection(2)" data-toggle="modal" data-target="#setArticle">
-                <img [src]="articles[2].multimedia" class="card-img-top p-2" style="padding:0%; margin:0%" alt="...">
-            </a>
-            <div class="top-right justify-content-center" style="font-size: 12px; background-color: #F9423A; color: white; height: 20px">
-                <label style="position:absolute; padding:0px; margin:0px; top:2px; right:5%;">{{articles[2].origin}}</label>
-            </div>
-            <div class="card-body" style="padding:0%; margin-top:25px; margin-left:10px ">
-                <h5 class="card-title" style="color: #003b71; font-weight: bolder; font-size: 20px">
-                    {{ articles[2].header }}
-                </h5>
-                <p class="card-text" style="font-size: 14px;color: gray;">
-                    {{ articles[2].fragment }}
-                    <br><br>
-                </p>
-            </div>
-            <div class="card-footer" style="margin:0%; padding:0%; border:none">
-                <div class="row" style="margin:0%; padding:0%">
-                    <a class="link-primary" style="color:#003b71; font-size: 12px; font-weight: bolder;" href="#"
-                        (click)="setSelection(2)" data-toggle="modal" data-target="#setArticle">
-                        READ
-                    </a>
-                </div>
-                <div class="row" style="margin:0%; padding:0%; border-top: solid 1px #F9423A;">
-                    <p style="font-size: 10px; color:gray;">
-                        Author: {{ articles[2].author }} {{ articles[2].date }}
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="row col-md-12"
-        style="margin:0%; padding-right:0%; padding-left: 1rem; margin-right: 0%; width: 99%; justify-content: space-between; margin-top: 25px;">
-        <div class="card row_card" style="background-color: #edeeee; padding:0%; margin:0%;">
-            <a class="link-primary" style="color:#003b71; font-size: 12px; font-weight: bolder;" href="#"
-                        (click)="setSelection(3)" data-toggle="modal" data-target="#setArticle">
-                <img [src]="articles[3].multimedia" class="card-img-top p-2" style="padding:0%; margin:0%" alt="...">
-            </a>
-            <div class="top-right justify-content-center" style="font-size: 12px; background-color: #F9423A; color: white; height: 20px">
-                <label style="position:absolute; padding:0px; margin:0px; top:2px; right:5%;">{{articles[3].origin}}</label>
+            <div class="top-right justify-content-center"
+                style="font-size: 12px; background-color: #F9423A; color: white; height: 20px">
+                <label
+                    style="position:absolute; padding:0px; margin:0px; top:2px; right:5%;">{{articles[3].origin}}</label>
             </div>
             <div class="card-body" style="padding:0%; margin-top:25px; margin-left:10px ">
                 <h5 class="card-title" style="color: #003b71; font-weight: bolder; font-size: 20px">
@@ -173,11 +107,82 @@
         </div>
         <div class="card row_card" style="background-color: #edeeee; padding:0%; margin:0%;">
             <a class="link-primary" style="color:#003b71; font-size: 12px; font-weight: bolder;" href="#"
-                        (click)="setSelection(4)" data-toggle="modal" data-target="#setArticle">
+                (click)="setSelection(1)" data-toggle="modal" data-target="#setArticle">
+                <img [src]="articles[1].multimedia" class="card-img-top" style="padding:0%; margin:0%" alt="...">
+            </a>
+            <div class="top-right justify-content-center"
+                style="font-size: 12px; background-color: #F9423A; color: white; height: 20px">
+                <label
+                    style="position:absolute; padding:0px; margin:0px; top:2px; right:5%;">{{articles[1].origin}}</label>
+            </div>
+            <div class="card-body" style="padding:0%; margin-top:25px; margin-left:10px ">
+                <h5 class="card-title" style="color: #003b71; font-weight: bolder; font-size: 20px">
+                    {{ articles[1].header }}
+                </h5>
+                <p class="card-text" style="font-size: 14px;color: gray;">
+                    {{ articles[1].fragment }}
+                    <br><br>
+                </p>
+            </div>
+            <div class="card-footer" style="margin:0%; padding:0%; border:none">
+                <div class="row" style="margin:0%; padding:0%">
+                    <a class="link-primary" style="color:#003b71; font-size: 12px; font-weight: bolder;" href="#"
+                        (click)="setSelection(1)" data-toggle="modal" data-target="#setArticle">
+                        READ
+                    </a>
+                </div>
+                <div class="row" style="margin:0%; padding:0%; border-top: solid 1px #F9423A;">
+                    <p style="font-size: 10px; color:gray;">
+                        Author: {{ articles[1].author }} {{ articles[1].date }}
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="card row_card" style="background-color: #edeeee; padding:0%; margin:0%;">
+            <a class="link-primary" style="color:#003b71; font-size: 12px; font-weight: bolder;" href="#"
+                (click)="setSelection(2)" data-toggle="modal" data-target="#setArticle">
+                <img [src]="articles[2].multimedia" class="card-img-top" style="padding:0%; margin:0%" alt="...">
+            </a>
+            <div class="top-right justify-content-center"
+                style="font-size: 12px; background-color: #F9423A; color: white; height: 20px">
+                <label
+                    style="position:absolute; padding:0px; margin:0px; top:2px; right:5%;">{{articles[2].origin}}</label>
+            </div>
+            <div class="card-body" style="padding:0%; margin-top:25px; margin-left:10px ">
+                <h5 class="card-title" style="color: #003b71; font-weight: bolder; font-size: 20px">
+                    {{ articles[2].header }}
+                </h5>
+                <p class="card-text" style="font-size: 14px;color: gray;">
+                    {{ articles[2].fragment }}
+                    <br><br>
+                </p>
+            </div>
+            <div class="card-footer" style="margin:0%; padding:0%; border:none">
+                <div class="row" style="margin:0%; padding:0%">
+                    <a class="link-primary" style="color:#003b71; font-size: 12px; font-weight: bolder;" href="#"
+                        (click)="setSelection(2)" data-toggle="modal" data-target="#setArticle">
+                        READ
+                    </a>
+                </div>
+                <div class="row" style="margin:0%; padding:0%; border-top: solid 1px #F9423A;">
+                    <p style="font-size: 10px; color:gray;">
+                        Author: {{ articles[2].author }} {{ articles[2].date }}
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row col-md-12"
+        style="margin:0%; padding-right:0%; padding-left: 1rem; margin-right: 0%; width: 99%; justify-content: space-between; margin-top: 25px;">
+        <div class="card row_card" style="background-color: #edeeee; padding:0%; margin:0%;">
+            <a class="link-primary" style="color:#003b71; font-size: 12px; font-weight: bolder;" href="#"
+                (click)="setSelection(4)" data-toggle="modal" data-target="#setArticle">
                 <img [src]="articles[4].multimedia" class="card-img-top" style="padding:0%; margin:0%" alt="...">
             </a>
-            <div class="top-right justify-content-center" style="font-size: 12px; background-color: #F9423A; color: white; height: 20px">
-                <label style="position:absolute; padding:0px; margin:0px; top:2px; right:5%;">{{articles[4].origin}}</label>
+            <div class="top-right justify-content-center"
+                style="font-size: 12px; background-color: #F9423A; color: white; height: 20px">
+                <label
+                    style="position:absolute; padding:0px; margin:0px; top:2px; right:5%;">{{articles[4].origin}}</label>
             </div>
             <div class="card-body" style="padding:0%; margin-top:25px; margin-left:10px ">
                 <h5 class="card-title" style="color: #003b71; font-weight: bolder; font-size: 20px">
@@ -204,11 +209,13 @@
         </div>
         <div class="card row_card" style="background-color: #edeeee; padding:0%; margin:0%;">
             <a class="link-primary" style="color:#003b71; font-size: 12px; font-weight: bolder;" href="#"
-                        (click)="setSelection(5)" data-toggle="modal" data-target="#setArticle">
-                <img [src]="articles[5].multimedia" class="card-img-top p-2" style="padding:0%; margin:0%" alt="...">
+                (click)="setSelection(5)" data-toggle="modal" data-target="#setArticle">
+                <img [src]="articles[5].multimedia" class="card-img-top" style="padding:0%; margin:0%" alt="...">
             </a>
-            <div class="top-right justify-content-center" style="font-size: 12px; background-color: #F9423A; color: white; height: 20px">
-                <label style="position:absolute; padding:0px; margin:0px; top:2px; right:5%;">{{articles[5].origin}}</label>
+            <div class="top-right justify-content-center"
+                style="font-size: 12px; background-color: #F9423A; color: white; height: 20px">
+                <label
+                    style="position:absolute; padding:0px; margin:0px; top:2px; right:5%;">{{articles[5].origin}}</label>
             </div>
             <div class="card-body" style="padding:0%; margin-top:25px; margin-left:10px ">
                 <h5 class="card-title" style="color: #003b71; font-weight: bolder; font-size: 20px">
@@ -250,7 +257,7 @@
             </div>
             <div class="modal-body">
                 <div class="row col-md-12">
-                    <img src="{{selected_article.multimedia}}" class="card-img-top p-2" style="padding:0%; margin:0%"
+                    <img src="{{selected_article.multimedia}}" class="card-img-top" style="padding:0%; margin:0%"
                         alt="...">
                 </div>
                 <div class="row col-md-12" style="padding-top:25px">
