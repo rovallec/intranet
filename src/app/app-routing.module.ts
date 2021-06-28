@@ -22,6 +22,26 @@ const routes: Routes = [
     canActivate: [GuardGuard]
   },
   {
+    path:'re-homepage',
+    component:HrHomepageComponent,
+    canActivate: [GuardGuard]
+  },
+  {
+    path:'admin-homepage',
+    component:HrHomepageComponent,
+    canActivate: [GuardGuard]
+  },
+  {
+    path:'marketing-homepage',
+    component:HrHomepageComponent,
+    canActivate: [GuardGuard]
+  },
+  {
+    path:'ops-homepage',
+    component:HrHomepageComponent,
+    canActivate: [GuardGuard]
+  },
+  {
     path:'location/:id',
     component:LocationHomepageComponent,
     canActivate:[GuardGuard]
