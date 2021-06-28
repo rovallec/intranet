@@ -1,93 +1,87 @@
 <div class="row col-md-12" style="padding-top: 0.5rem; padding-bottom: 0.5rem; padding-left: 1rem; padding-right: 0%;">
-  <div class="row col-md-12" style="margin:0%; padding-right: 0%; height:60vh;">
-    <div style="width: 100%; min-width: 836px; height:60vh; background-image: url({{articles[0].multimedia}});
+    <div class="row col-md-12" style="margin:0%; padding-right: 0%; height:60vh;">
+        <div style="width: 100%; min-width: 836px; height:60vh; background-image: url({{articles[0].multimedia}});
         background-size:100%; background-position-x: 0; background-position-y: 15%; padding-right: 0%;">
-        <div _ngcontent-ppw-c16="" class="justify-self-end d-flex" style="margin-top: 45vh; height: 15vh;
+            <div _ngcontent-ppw-c16="" class="justify-self-end d-flex" style="margin-top: 45vh; height: 15vh;
             width: 100%;
             background-color: transparent;
             background-image: linear-gradient(180deg, #00000000 0%, #020000 100%);
             opacity: 0.97;
             transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
             ">
-             <div class="row col-md-12" style="padding-left:10px;position:absolute; bottom:0px">
-                <div class="row p-0 col-md-12" style="
-            height: 39px;
-            color: white;
-            font-family: Montserrat;">
-                    <p style="
-                font-size: 26px;
-               font-family: 'Montserrat';
-                margin-bottom: 0;
-                padding-left: 24px;
-                position:absolute; bottom:-5px; cursor: pointer;
-                " (click)="setSelection(0)" data-toggle="modal" data-target="#setArticle">
-                        {{ articles[0].header }}</p>
-                </div>
-                <div class="row p-0 col-md-12" style="
-            height: 30px;
-            color: white;
-            font-family: Montserrat;">
-                    <p _ngcontent-ppw-c16="" style="
-                font-size: 20px;
-                margin-bottom: 0;
-                padding-left: 30px;
-                position:absolute; bottom:0; cursor: pointer;
-                " (click)="setSelection(0)" data-toggle="modal" data-target="#setArticle">
-                        {{ articles[0].date }}</p>
+                <div class="row col-md-12" style="padding-left:10px;position:absolute; bottom:0px">
+                    <div class="row p-0 col-md-12" style="height: 39px; color: white; font-family: Montserrat;">
+                        <p style="font-size: 26px; font-family: 'Montserrat'; margin-bottom: 0;
+                            padding-left: 24px; position:absolute; bottom:-5px; cursor: pointer;"
+                            (click)="setSelection(0)" data-toggle="modal" data-target="#setArticle">
+                            {{ articles[0].header }}
+                        </p>
+                    </div>
+                    <div class="row p-0 col-md-12" style="height: 30px; color: white; font-family: Montserrat;">
+                        <p _ngcontent-ppw-c16="" style="font-size: 20px; margin-bottom: 0; padding-left: 30px;
+                            position:absolute; bottom:0; cursor: pointer;" (click)="setSelection(0)" 
+                            data-toggle="modal" data-target="#setArticle">
+                            {{ articles[0].date }}</p>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
-  <div class="row col-md-12" style="margin:0%; padding-right:0%; padding-left: 0%; margin-right: 0%; width: 99%; margin-top:20px">
-      <nav class="navbar navbar-expand-lg navbar-light" style="background-color:white; width: 99%; height: 5vh; min-width: 836px">
-          <div class="d-flex justify-content-between" style="margin-left:4%; width: 92%;">
-              <div class="p-2" class="hover_gray">
-                  <a class="hover_gray">Our Core Values</a>
-              </div>
-              <div class="p-2" class="hover_gray">
-                  <a class="hover_gray">Event Calendar</a>
-              </div>
-              <div class="p-2" class="hover_gray">
-                  <a class="hover_gray">Experience</a>
-              </div>
-              <div class="p-2" class="hover_gray">
-                  <a class="hover_gray">Benefits</a>
-              </div>
-              <div class="p-2" class="hover_gray">
-                  <a class="hover_gray">Greate Place To Work</a>
-              </div>
-          </div>
-      </nav>
-  </div>
-  <div class="row col-md-12" style="margin:0%; padding-right:0%; padding-left: 0%; margin-right: 0%; width: 99%; margin-top:20px">
-      <div style="margin-left:45%; width:10%;border-bottom: solid 1px #F9423A;height: 1%;">
-      </div>
-  </div>
-  <div class="row col-md-12 d-flex justify-content-center"
-      style="margin:0%; padding-right:0%; padding-left: 0%; margin-right: 0%; width: 99%; margin-top:20px">
-      <div class="p-2">
-          <h5 style="color:gray; font-size:34px;font-family: 'Montserrat'er;">Our Current Reads</h5>
-      </div>
-  </div>
+    <div class="row col-md-12"
+        style="margin:0%; padding-right:0%; padding-left: 0%; margin-right: 0%; width: 99%; margin-top:20px">
+        <nav class="navbar navbar-expand-lg navbar-light"
+            style="background-color:white; width: 99%; height: 5vh; min-width: 836px">
+            <div class="d-flex justify-content-between" style="margin-left:4%; width: 92%;">
+                <div class="p-2" class="hover_gray">
+                    <a class="hover_gray">Our Core Values</a>
+                </div>
+                <div class="p-2" class="hover_gray">
+                    <a class="hover_gray">Event Calendar</a>
+                </div>
+                <div class="p-2" class="hover_gray">
+                    <a class="hover_gray">Experience</a>
+                </div>
+                <div class="p-2" class="hover_gray">
+                    <a class="hover_gray">Benefits</a>
+                </div>
+                <div class="p-2" class="hover_gray">
+                    <a class="hover_gray">Greate Place To Work</a>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div class="row col-md-12"
+        style="margin:0%; padding-right:0%; padding-left: 0%; margin-right: 0%; width: 99%; margin-top:20px">
+        <div style="margin-left:45%; width:10%;border-bottom: solid 1px #F9423A;height: 1%;">
+        </div>
+    </div>
+    <div class="row col-md-12 d-flex justify-content-center"
+        style="margin:0%; padding-right:0%; padding-left: 0%; margin-right: 0%; width: 99%; margin-top:20px">
+        <div class="p-2">
+            <h5 style="color:gray; font-size:34px;font-family: 'Montserrat'er;">Our Current Reads</h5>
+        </div>
+    </div>
 
     <div class="row col-md-12"
         style="margin:0%; padding-right:0%; padding-left: 1rem; margin-right: 0%; width: 99%; justify-content: space-between;margin-top:20px">
-        <div class="card row_card" style="background-color: #edeeee; padding:0%; margin:0%;" *ngIf="articles.length > 1">
+        <div class="card row_card" style="background-color: #edeeee; padding:0%; margin:0%;"
+            *ngIf="articles.length > 1">
             <a class="link-primary" style="color:#003b71; font-size: 12px;font-family: 'Montserrat';" href="#"
                 (click)="setSelection(1)" data-toggle="modal" data-target="#setArticle">
-                <img [src]="articles[1].multimedia" class="card-img-top" style="padding:0%; margin:0%; max-width: 559px; max-height: 321px;" alt="...">
+                <img [src]="articles[1].multimedia" class="card-img-top"
+                    style="padding:0%; margin:0%; max-width: 559px; max-height: 321px;" alt="...">
             </a>
             <div class="card-body" style="padding:0%; margin-top:25px; margin-left:20px; margin-right:20px">
                 <h5 class="card-title" style="color: #003b71;font-family: 'Montserrat'; font-size: 20px">
                     {{ articles[1].header }}{{articles[1].byline}}
                 </h5>
-                <p class="card-text" style="font-size: 14px;color: gray;">
+                <p class="card-text text-justify" style="font-size: 14px;color: gray;">
                     {{ articles[1].fragment }}
                     <br><br>
                 </p>
             </div>
-            <div class="card-footer" style="margin:0%; padding:0%; border:none; margin-left:20px; margin-right:20px;background-color: #edeeee">
+            <div class="card-footer"
+                style="margin:0%; padding:0%; border:none; margin-left:20px; margin-right:20px;background-color: #edeeee">
                 <div class="row" style="margin:0%; padding:0%">
                     <a class="link-primary" style="color:#003b71; font-size: 12px;font-family: 'Montserrat';" href="#"
                         (click)="setSelection(1)" data-toggle="modal" data-target="#setArticle">
@@ -101,21 +95,24 @@
                 </div>
             </div>
         </div>
-        <div class="card row_card" style="background-color: #edeeee; padding:0%; margin:0%;" *ngIf="articles.length > 2">
+        <div class="card row_card" style="background-color: #edeeee; padding:0%; margin:0%;"
+            *ngIf="articles.length > 2">
             <a class="link-primary" style="color:#003b71; font-size: 12px;font-family: 'Montserrat';" href="#"
                 (click)="setSelection(2)" data-toggle="modal" data-target="#setArticle">
-                <img [src]="articles[2].multimedia" class="card-img-top" style="padding:0%; margin:0%; max-width: 559px; max-height: 321px" alt="...">
+                <img [src]="articles[2].multimedia" class="card-img-top"
+                    style="padding:0%; margin:0%; max-width: 559px; max-height: 321px" alt="...">
             </a>
             <div class="card-body" style="padding:0%; margin-top:25px; margin-left:20px; margin-right:20px">
                 <h5 class="card-title" style="color: #003b71;font-family: 'Montserrat'; font-size: 20px">
                     {{ articles[2].header }}{{articles[2].byline}}
                 </h5>
-                <p class="card-text" style="font-size: 14px;color: gray;">
+                <p class="card-text text-justify" style="font-size: 14px;color: gray;">
                     {{ articles[2].fragment }}
                     <br><br>
                 </p>
             </div>
-            <div class="card-footer" style="margin:0%; padding:0%; border:none; margin-left:20px; margin-right:20px;background-color: #edeeee">
+            <div class="card-footer"
+                style="margin:0%; padding:0%; border:none; margin-left:20px; margin-right:20px;background-color: #edeeee">
                 <div class="row" style="margin:0%; padding:0%">
                     <a class="link-primary" style="color:#003b71; font-size: 12px;font-family: 'Montserrat';" href="#"
                         (click)="setSelection(2)" data-toggle="modal" data-target="#setArticle">
@@ -129,21 +126,24 @@
                 </div>
             </div>
         </div>
-        <div class="card row_card" style="background-color: #edeeee; padding:0%; margin:0%;" *ngIf="articles.length > 3">
+        <div class="card row_card" style="background-color: #edeeee; padding:0%; margin:0%;"
+            *ngIf="articles.length > 3">
             <a class="link-primary" style="color:#003b71; font-size: 12px;font-family: 'Montserrat';" href="#"
                 (click)="setSelection(3)" data-toggle="modal" data-target="#setArticle">
-                <img [src]="articles[3].multimedia" class="card-img-top" style="padding:0%; margin:0%; max-width: 559px; max-height: 321px" alt="...">
+                <img [src]="articles[3].multimedia" class="card-img-top"
+                    style="padding:0%; margin:0%; max-width: 559px; max-height: 321px" alt="...">
             </a>
             <div class="card-body" style="padding:0%; margin-top:25px; margin-left:20px; margin-right:20px">
                 <h5 class="card-title" style="color: #003b71;font-family: 'Montserrat'; font-size: 20px">
                     {{ articles[3].header }}{{articles[3].byline}}
                 </h5>
-                <p class="card-text" style="font-size: 14px;color: gray;">
+                <p class="card-text text-justify" style="font-size: 14px;color: gray;">
                     {{ articles[3].fragment }}
                     <br><br>
                 </p>
             </div>
-            <div class="card-footer" style="margin:0%; padding:0%; border:none; margin-left:20px; margin-right:20px;background-color: #edeeee">
+            <div class="card-footer"
+                style="margin:0%; padding:0%; border:none; margin-left:20px; margin-right:20px;background-color: #edeeee">
                 <div class="row" style="margin:0%; padding:0%">
                     <a class="link-primary" style="color:#003b71; font-size: 12px;font-family: 'Montserrat';" href="#"
                         (click)="setSelection(3)" data-toggle="modal" data-target="#setArticle">
@@ -160,130 +160,139 @@
     </div>
 
     <div class="row col-md-12"
-    style="margin:0%; padding-right:0%; padding-left: 1rem; margin-right: 0%; width: 99%; justify-content: space-between;margin-top:20px">
-    <div class="card row_card" style="background-color: #edeeee; padding:0%; margin:0%;" *ngIf="articles.length > 4">
-        <a class="link-primary" style="color:#003b71; font-size: 12px;font-family: 'Montserrat';" href="#"
-            (click)="setSelection(4)" data-toggle="modal" data-target="#setArticle" >
-            <img [src]="articles[4].multimedia" class="card-img-top" style="padding:0%; margin:0%; max-width: 559px; max-height: 321px" alt="...">
-        </a>
-        <div class="card-body" style="padding:0%; margin-top:25px; margin-left:20px; margin-right:20px">
-            <h5 class="card-title" style="color: #003b71;font-family: 'Montserrat'; font-size: 20px">
-                {{ articles[4].header }}{{articles[4].byline}}
-            </h5>
-            <p class="card-text" style="font-size: 14px;color: gray;">
-                {{ articles[4].fragment }}
-                <br><br>
-            </p>
-        </div>
-        <div class="card-footer" style="margin:0%; padding:0%; border:none; margin-left:20px; margin-right:20px;background-color: #edeeee">
-            <div class="row" style="margin:0%; padding:0%">
-                <a class="link-primary" style="color:#003b71; font-size: 12px;font-family: 'Montserrat';" href="#"
-                    (click)="setSelection(4)" data-toggle="modal" data-target="#setArticle">
-                    Read more
-                </a>
-            </div>
-            <div class="row" style="margin:0%; padding:0%; border-top: solid 1px #F9423A;">
-                <p style="font-size: 10px; color:gray;">
-                    {{ articles[4].author }} | {{ articles[4].date }}
+        style="margin:0%; padding-right:0%; padding-left: 1rem; margin-right: 0%; width: 99%; justify-content: space-between;margin-top:20px">
+        <div class="card row_card" style="background-color: #edeeee; padding:0%; margin:0%;"
+            *ngIf="articles.length > 4">
+            <a class="link-primary" style="color:#003b71; font-size: 12px;font-family: 'Montserrat';" href="#"
+                (click)="setSelection(4)" data-toggle="modal" data-target="#setArticle">
+                <img [src]="articles[4].multimedia" class="card-img-top"
+                    style="padding:0%; margin:0%; max-width: 559px; max-height: 321px" alt="...">
+            </a>
+            <div class="card-body" style="padding:0%; margin-top:25px; margin-left:20px; margin-right:20px">
+                <h5 class="card-title" style="color: #003b71;font-family: 'Montserrat'; font-size: 20px">
+                    {{ articles[4].header }}{{articles[4].byline}}
+                </h5>
+                <p class="card-text text-justify" style="font-size: 14px;color: gray;">
+                    {{ articles[4].fragment }}
+                    <br><br>
                 </p>
+            </div>
+            <div class="card-footer"
+                style="margin:0%; padding:0%; border:none; margin-left:20px; margin-right:20px;background-color: #edeeee">
+                <div class="row" style="margin:0%; padding:0%">
+                    <a class="link-primary" style="color:#003b71; font-size: 12px;font-family: 'Montserrat';" href="#"
+                        (click)="setSelection(4)" data-toggle="modal" data-target="#setArticle">
+                        Read more
+                    </a>
+                </div>
+                <div class="row" style="margin:0%; padding:0%; border-top: solid 1px #F9423A;">
+                    <p style="font-size: 10px; color:gray;">
+                        {{ articles[4].author }} | {{ articles[4].date }}
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="card row_card" style="background-color: #edeeee; padding:0%; margin:0%;"
+            *ngIf="articles.length > 5">
+            <a class="link-primary" style="color:#003b71; font-size: 12px;font-family: 'Montserrat';" href="#"
+                (click)="setSelection(5)" data-toggle="modal" data-target="#setArticle">
+                <img [src]="articles[5].multimedia" class="card-img-top"
+                    style="padding:0%; margin:0%; max-width: 559px; max-height: 321px" alt="...">
+            </a>
+            <div class="card-body" style="padding:0%; margin-top:25px; margin-left:20px; margin-right:20px">
+                <h5 class="card-title" style="color: #003b71;font-family: 'Montserrat'; font-size: 20px">
+                    {{ articles[5].header }}{{articles[5].byline}}
+                </h5>
+                <p class="card-text text-justify" style="font-size: 14px;color: gray;">
+                    {{ articles[5].fragment }}
+                    <br><br>
+                </p>
+            </div>
+            <div class="card-footer"
+                style="margin:0%; padding:0%; border:none; margin-left:20px; margin-right:20px;background-color: #edeeee">
+                <div class="row" style="margin:0%; padding:0%">
+                    <a class="link-primary" style="color:#003b71; font-size: 12px;font-family: 'Montserrat';" href="#"
+                        (click)="setSelection(5)" data-toggle="modal" data-target="#setArticle">
+                        Read more
+                    </a>
+                </div>
+                <div class="row" style="margin:0%; padding:0%; border-top: solid 1px #F9423A;">
+                    <p style="font-size: 10px; color:gray;">
+                        {{ articles[5].author }} | {{ articles[5].date }}
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="card row_card" style="background-color: #edeeee; padding:0%; margin:0%;"
+            *ngIf="articles.length >= 6">
+            <a class="link-primary" style="color:#003b71; font-size: 12px;font-family: 'Montserrat';">
+                <img [src]="'./assets/soon.png'" class="card-img-top"
+                    style="padding:0%; margin:0%; max-width: 559px; max-height: 321px" alt="...">
+            </a>
+            <div class="card-body" style="padding:0%; margin-top:25px; margin-left:20px; margin-right:20px">
+                <h5 class="card-title" style="color: #003b71;font-family: 'Montserrat'; font-size: 20px">
+                    More Content Soon
+                </h5>
+                <p class="card-text" style="font-size: 14px;color: gray;">
+                    <br><br>
+                </p>
+            </div>
+            <div class="card-footer"
+                style="margin:0%; padding:0%; border:none; margin-left:20px; margin-right:20px;background-color: #edeeee">
+                <div class="row" style="margin:0%; padding:0%">
+                    <a class="link-primary" style="color:#003b71; font-size: 12px;font-family: 'Montserrat';">
+                    </a>
+                </div>
+                <div class="row" style="margin:0%; padding:0%; border-top: solid 1px #F9423A;">
+                    <p style="font-size: 10px; color:gray;">
+                        Admin | June 17, 2021
+                    </p>
+                </div>
             </div>
         </div>
     </div>
-    <div class="card row_card" style="background-color: #edeeee; padding:0%; margin:0%;" *ngIf="articles.length > 5">
-        <a class="link-primary" style="color:#003b71; font-size: 12px;font-family: 'Montserrat';" href="#"
-            (click)="setSelection(5)" data-toggle="modal" data-target="#setArticle">
-            <img [src]="articles[5].multimedia" class="card-img-top" style="padding:0%; margin:0%; max-width: 559px; max-height: 321px" alt="...">
-        </a>
-        <div class="card-body" style="padding:0%; margin-top:25px; margin-left:20px; margin-right:20px">
-            <h5 class="card-title" style="color: #003b71;font-family: 'Montserrat'; font-size: 20px">
-                {{ articles[5].header }}{{articles[5].byline}}
-            </h5>
-            <p class="card-text" style="font-size: 14px;color: gray;">
-                {{ articles[5].fragment }}
-                <br><br>
-            </p>
-        </div>
-        <div class="card-footer" style="margin:0%; padding:0%; border:none; margin-left:20px; margin-right:20px;background-color: #edeeee">
-            <div class="row" style="margin:0%; padding:0%">
-                <a class="link-primary" style="color:#003b71; font-size: 12px;font-family: 'Montserrat';" href="#"
-                    (click)="setSelection(5)" data-toggle="modal" data-target="#setArticle">
-                    Read more
-                </a>
-            </div>
-            <div class="row" style="margin:0%; padding:0%; border-top: solid 1px #F9423A;">
-                <p style="font-size: 10px; color:gray;">
-                    {{ articles[5].author }} | {{ articles[5].date }}
-                </p>
-            </div>
-        </div>
-    </div>
-    <div class="card row_card" style="background-color: #edeeee; padding:0%; margin:0%;" *ngIf="articles.length >= 6">
-        <a class="link-primary" style="color:#003b71; font-size: 12px;font-family: 'Montserrat';"
-            >
-            <img [src]="'./assets/soon.png'" class="card-img-top" style="padding:0%; margin:0%; max-width: 559px; max-height: 321px" alt="...">
-        </a>
-        <div class="card-body" style="padding:0%; margin-top:25px; margin-left:20px; margin-right:20px">
-            <h5 class="card-title" style="color: #003b71;font-family: 'Montserrat'; font-size: 20px">
-                More Content Soon
-            </h5>
-            <p class="card-text" style="font-size: 14px;color: gray;">
-                <br><br>
-            </p>
-        </div>
-        <div class="card-footer" style="margin:0%; padding:0%; border:none; margin-left:20px; margin-right:20px;background-color: #edeeee">
-            <div class="row" style="margin:0%; padding:0%">
-                <a class="link-primary" style="color:#003b71; font-size: 12px;font-family: 'Montserrat';"
-                    >
-                </a>
-            </div>
-            <div class="row" style="margin:0%; padding:0%; border-top: solid 1px #F9423A;">
-                <p style="font-size: 10px; color:gray;">
-                    Admin | June 17, 2021
-                </p>
-            </div>
-        </div>
-    </div>
-</div>
-<!--------------------------------------------MODAL ARTICLES---------------------------------------------------------->
-<div class="modal fade" id="setArticle" tabindex="-1" aria-labelledby="setArticle" aria-hidden="true">
-  <div class="modal-dialog  modal-dialog-centered modal-lg">
-      <div class="modal-content">
-          <div class="modal-header">
-              <h5 class="card-title" id="st-setPatronoLabel" style="color:#003b71;font-family: 'Montserrat'er;">
-                  {{selected_article.header + ": " + selected_article.byline }}
-              </h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-              </button>
-          </div>
-          <div class="modal-body" style="margin-left:25px; padding:0px">
-            <div class="row col-md-12" style="height:80vh; margin-top:20px; max-height: 450px;">
-              <div class="form-group col-md-12" style="margin-bottom:5px; margin-top:5px;
+    <!--------------------------------------------MODAL ARTICLES---------------------------------------------------------->
+    <div class="modal fade" id="setArticle" tabindex="-1" aria-labelledby="setArticle" aria-hidden="true">
+        <div class="modal-dialog  modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="card-title" id="st-setPatronoLabel" style="color:#003b71;font-family: 'Montserrat'er;">
+                        {{selected_article.header + ": " + selected_article.byline }}
+                    </h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body" style="margin-left:25px; padding:0px">
+                    <div class="row col-md-12" style="height:80vh; margin-top:20px; max-height: 450px;">
+                        <div class="form-group col-md-12" style="margin-bottom:5px; margin-top:5px;
               margin-bottom: 5px;
               margin-top: 5px;
               background-image: url({{selected_article.multimedia}});
               background-position: center center;
               background-repeat: no-repeat;
-              background-size: cover;">
-              </div>
+              background-size: cover;
+              max-width: 559;
+              max-height: 321;">
+                        </div>
+                    </div>
+                    <div class="row col-md-12 text-justify" style="padding-top:25px">
+                        <div [innerHTML]="selected_article.article">
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer d-flex">
+                    <div class="mr-auto" *ngIf="selected_article.url!==''">
+                        Link:
+                        <a class="link-primary" style="color:#003b71; font-size: 12px;font-family: 'Montserrat'er;"
+                            [href]="selected_article.url">
+                            {{ selected_article.url }}
+                        </a>
+                    </div>
+                    <div class="ml-auto">
+                        <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
             </div>
-            <div class="row col-md-12" style="padding-top:25px">
-              <div [innerHTML]="selected_article.article">
-              </div>
-            </div>
-          </div>
-          <div class="modal-footer d-flex">
-              <div class="mr-auto" *ngIf="selected_article.url!==''">
-                  Link:
-                  <a class="link-primary" style="color:#003b71; font-size: 12px;font-family: 'Montserrat'er;"
-                      [href]="selected_article.url">
-                      {{ selected_article.url }}
-                  </a>
-              </div>
-              <div class="ml-auto">
-                  <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Close</button>
-              </div>
-          </div>
-      </div>
-  </div>
-</div>
+        </div>
+    </div>

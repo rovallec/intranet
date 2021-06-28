@@ -166,6 +166,19 @@ export class HrHomepageComponent implements OnInit {
       date:'June 28, 2021',
       url: 'https://nearsol.us/nia-manila/',
       origin: 'Manila'
+    },
+    {
+      location:"Recruitment",
+      header:"NEARSOL Intelligence Automation",
+      byline:"",
+      multimedia:"http://181.114.12.81/intranet/assets/recruitment_image_1.png",
+      fragment:"We proudly present to you NIA, NEARSOL Recruitment Chatbot Recruitment Tool. NIA helps us with lead generation, process guidance and does all that while projecting our brand identity. She is not just a chatbot, she is so much more!",
+      article:"We proudly present to you NIA, NEARSOL Recruitment Chatbot Recruitment Tool. NIA helps us with lead generation, process guidance and does all that while projecting our brand identity. She is not just a chatbot, she is so much more!",
+      author:'Admin',
+      date:'June 28, 2021',
+      url:"https://nearsol.us/nia-manila/",
+      origin:'Manila'
+
     }]
   }
   }
