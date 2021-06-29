@@ -146,6 +146,17 @@ export class HrHomepageComponent implements OnInit {
   }else if(this.routes.snapshot.url.toString().includes('re-homepage')){
     this.articles = [{
       location:"Recruitment",
+      header:"",
+      byline: "",
+      multimedia:"http://181.114.12.81/intranet/assets/recruitment_image_5.png",
+      fragment: "",
+      article:"",
+      author:'Admin',
+      date:'',
+      url: '',
+      origin: 'Manila'
+    },{
+      location:"Recruitment",
       header:"NIA",
       byline: "NEARSOL Intelligence Automation",
       multimedia:"http://181.114.12.81/intranet/assets/recruitment_image_1.png",
@@ -168,9 +179,9 @@ export class HrHomepageComponent implements OnInit {
       origin: 'Manila'
     },{
       location:"Recruitment",
-      header:"Virtual Job Fair",
+      header:"More Content Soon",
       byline: "",
-      multimedia:"http://181.114.12.81/intranet/assets/recruitment_image_3.png",
+      multimedia:"http://181.114.12.81/intranet/assets/soon.png",
       fragment: "",
       article:"",
       author:'Admin',
@@ -179,29 +190,38 @@ export class HrHomepageComponent implements OnInit {
       origin: 'Manila'
     },{
       location:"Recruitment",
-      header:"Internal Hiring",
+      header:"More Content Soon",
       byline: "",
-      multimedia:"http://181.114.12.81/intranet/assets/recruitment_image_4.png",
+      multimedia:"http://181.114.12.81/intranet/assets/soon.png",
       fragment: "",
       article:"",
       author:'Admin',
       date:'June 28, 2021',
       url: '',
       origin: 'Manila'
-    },
-    {
+    },{
       location:"Recruitment",
-      header:"NEARSOL Intelligence Automation",
-      byline:"",
-      multimedia:"http://181.114.12.81/intranet/assets/recruitment_image_1.png",
-      fragment:"We proudly present to you NIA, NEARSOL Recruitment Chatbot Recruitment Tool. NIA helps us with lead generation, process guidance and does all that while projecting our brand identity. She is not just a chatbot, she is so much more!",
-      article:"We proudly present to you NIA, NEARSOL Recruitment Chatbot Recruitment Tool. NIA helps us with lead generation, process guidance and does all that while projecting our brand identity. She is not just a chatbot, she is so much more!",
+      header:"More Content Soon",
+      byline: "",
+      multimedia:"http://181.114.12.81/intranet/assets/soon.png",
+      fragment: "",
+      article:"",
       author:'Admin',
       date:'June 28, 2021',
-      url:"https://nearsol.us/nia-manila/",
-      origin:'Manila'
-
-    }]
+      url: '',
+      origin: 'Manila'
+    },{
+      location:"Recruitment",
+      header:"More Content Soon",
+      byline: "",
+      multimedia:"http://181.114.12.81/intranet/assets/soon.png",
+      fragment: "",
+      article:"",
+      author:'Admin',
+      date:'June 28, 2021',
+      url: '',
+      origin: 'Manila'
+    },]
   }
   }
 
