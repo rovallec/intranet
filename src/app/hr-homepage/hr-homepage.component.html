@@ -224,28 +224,32 @@
             </div>
         </div>
         <div class="card row_card" style="background-color: #edeeee; padding:0%; margin:0%;"
-            *ngIf="articles.length >= 6">
-            <a class="link-primary" style="color:#003b71; font-size: 12px;font-family: 'Montserrat';">
-                <img [src]="'./assets/soon.png'" class="card-img-top"
+            *ngIf="articles.length > 6">
+            <a class="link-primary" style="color:#003b71; font-size: 12px;font-family: 'Montserrat';" href="#"
+                (click)="setSelection(6)" data-toggle="modal" data-target="#setArticle">
+                <img [src]="articles[6].multimedia" class="card-img-top"
                     style="padding:0%; margin:0%; max-width: 559px; max-height: 321px" alt="...">
             </a>
             <div class="card-body" style="padding:0%; margin-top:25px; margin-left:20px; margin-right:20px">
                 <h5 class="card-title" style="color: #003b71;font-family: 'Montserrat'; font-size: 20px">
-                    More Content Soon
+                    {{ articles[6].header }}{{articles[6].byline}}
                 </h5>
-                <p class="card-text" style="font-size: 14px;color: gray;">
+                <p class="card-text text-justify" style="font-size: 14px;color: gray;">
+                    {{ articles[6].fragment }}
                     <br><br>
                 </p>
             </div>
             <div class="card-footer"
                 style="margin:0%; padding:0%; border:none; margin-left:20px; margin-right:20px;background-color: #edeeee">
                 <div class="row" style="margin:0%; padding:0%">
-                    <a class="link-primary" style="color:#003b71; font-size: 12px;font-family: 'Montserrat';">
+                    <a class="link-primary" style="color:#003b71; font-size: 12px;font-family: 'Montserrat';" href="#"
+                        (click)="setSelection(6)" data-toggle="modal" data-target="#setArticle">
+                        Read more
                     </a>
                 </div>
                 <div class="row" style="margin:0%; padding:0%; border-top: solid 1px #F9423A;">
                     <p style="font-size: 10px; color:gray;">
-                        Admin | June 17, 2021
+                        {{ articles[6].author }} | {{ articles[6].date }}
                     </p>
                 </div>
             </div>

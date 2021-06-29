@@ -25,22 +25,62 @@ export class HrHomepageComponent implements OnInit {
         location:"Global",
         header:"",
         byline: "",
-        multimedia:"http://181.114.12.81/intranet/assets/recruitment_image_5.png",
+        multimedia:"http://181.114.12.81/intranet/assets/HR_image_6.png",
         fragment: "",
         article:"",
-        author:'HR',
+        author:'Human Resources',
         date:'',
         url: '',
         origin
       },
       {
         location:"Global",
-        header:"Pride Month 2021",
+        header:"Annual Wellness Examination",
         byline: "",
+        multimedia:"http://181.114.12.81/intranet/assets/admin_image_3.png",
+        fragment: "Employees from NEARSOL Ortigas reported to the ayala 30th site for the first time this year to participate in this year's Annual Wellness Examination.",
+        article: "Employees from NEARSOL Ortigas reported to the ayala 30th site for the first time this year to participate in this year's Annual Wellness Examination.",
+        author:'Human Resources',
+        date:'June 17, 2021',
+        url: '',
+        origin
+      },{
+        location:"Global",
+        header:"Employee Hangout: ",
+        byline:"Core Values & People Analyzer Edition",
+        multimedia:"http://181.114.12.81/intranet/assets/HR_image_7.png",
+        fragment: "The HR Engagement Team led by Mira Yza Costes, Joseph Daza, and Ibrahim Claravall, recently conducted an employee online hangout to promote June's core value of the month : Results Oriented.",
+        article: "The HR Engagement Team led by Mira Yza Costes, Joseph Daza, and Ibrahim Claravall, recently conducted an employee online hangout to promote June's core value of the month : Results Oriented." +
+        "<br>" +
+        "The Employee Hangout is an online event where employees participate in games and learning sessions. The HR Engagement Team launched the Core Value edition last week and completed the roll out of the core values and the Employee Performance Reporting using the People Analyzer tool. Prizes were given to employees who actively participated in the sessions from all sites of Nearsol PH." +
+        "<br>" +
+        "All Department heads agreed to use the People Analyzer, a tool used to evaluate employees by checking their adherence to Nearsol's core Values and determining if employees are GWC compliant (Get it, Want it, Has the Capacity to do it)." +
+        "<br>" +
+        "The Nearsol Employee Hangout is a monthly engagement activity designed to provide fun, engaging online activity while promoting continuous learning experiences for Nearsol PH employees.",
+        author:'Human Resources',
+        date:'June 17, 2021',
+        url: '',
+        origin
+      },{
+        location:"Global",
+        header:"Payroll Update ",
+        byline: "",
+        multimedia:"http://181.114.12.81/intranet/assets/fn_image_1.png",
+        fragment: "PAYROLL BANK FOR NEARSOL ORTIGAS IS SWITCHING TO ASIA UNITED BANK (AUB) EFFECTIVE JULY 5, 2021. Please fill out the bank forms and submit them immediately!  Please review attached FAQs and reach out to HR if you have questions",
+        article:"PAYROLL BANK FOR NEARSOL ORTIGAS IS SWITCHING TO ASIA UNITED BANK (AUB) EFFECTIVE JULY 5, 2021. Please fill out the bank forms and submit them immediately!  Please review attached FAQs and reach out to HR if you have questions",
+        author:'Human Resources',
+        date:'June 29, 2021',
+        url: '',
+        origin
+      },
+      {
+        location:"Global",
+        header:"#IAmIncluded: ",
+        byline: "Pride Month 2021",
         multimedia:"http://181.114.12.81/intranet/assets/hr_image_5.png",
         fragment: "June is PRIDE Month! It's time to celebrate our courageous and colorful brothers and sisters in the LGBTQIA+ community! Be proud of who you are and say #IAMINCLUDED",
         article:"June is PRIDE Month! It's time to celebrate our courageous and colorful brothers and sisters in the LGBTQIA+ community! Be proud of who you are and say #IAMINCLUDED",
-        author:'HR',
+        author:'Human Resources',
         date:'June 17, 2021',
         url: '',
         origin
@@ -52,22 +92,21 @@ export class HrHomepageComponent implements OnInit {
         multimedia:"http://181.114.12.81/intranet/assets/hr_image_1.png",
         fragment: "It's time to honor and recognize our hardworking and awesome Fathers/Dads/Papas/Tatays/Papsy at NEARSOL.",
         article:"It's time to honor and recognize our hardworking and awesome Fathers/Dads/Papas/Tatays/Papsy at NEARSOL. Show your love and appreciation to all Dads by creating a TikTok video for a chance to win awesome prizes during the Father’s Day Virtual Party on June 18, 2021! #NearsolSuperDad",
-        author:'HR',
+        author:'Human Resources',
         date:'June 17, 2021',
         url: '',
         origin
-      },
-      {
-        location:"Global",
-        header:"Annual Wellness Examination",
+      },{
+        location:"Admin",
+        header:"More Content Soon",
         byline: "",
-        multimedia:"http://181.114.12.81/intranet/assets/an_image_1.png",
+        multimedia:"http://181.114.12.81/intranet/assets/soon.png",
         fragment: "",
-        article: '',
-        author:'HR',
-        date:'June 17, 2021',
+        article:"",
+        author:'Admin',
+        date:'June 2, 2021',
         url: '',
-        origin
+        origin: 'Manila'
       },
       {
         location:"Global",
@@ -98,7 +137,7 @@ export class HrHomepageComponent implements OnInit {
         "<br>" +
         "Thank you and we look forward to your participation." +
         "</p>",
-        author:'HR',
+        author:'Human Resources',
         date:'June 17, 2021',
         url: '',
         origin
@@ -106,14 +145,80 @@ export class HrHomepageComponent implements OnInit {
     ]
   }else if(this.routes.snapshot.url.toString().includes('admin-homepage')){
     this.articles = [{
-      location:"Recriutment",
+      location:"Admin",
+      header:"",
+      byline: "Ayala 30th and iSquare Sites Ocular Visit from a Potential Client",
+      multimedia:"http://181.114.12.81/intranet/assets/admin_image_2.png",
+      fragment: "",
+      article:"",
+      author:'Admin',
+      date:'',
+      url: '',
+      origin: 'Manila'
+    },{
+      location:"Admin",
       header:"Client Site Tour",
       byline: "Ayala 30th and iSquare Sites Ocular Visit from a Potential Client",
       multimedia:"http://181.114.12.81/intranet/assets/admin_image_1.jpeg",
       fragment: "The Admin-Facilities and IT team headed by Jon Caballero, Administrative Director...",
       article:"The Admin-Facilities and IT team headed by Jon Caballero, Administrative Director, did a site tour for a potential client together with the representatives from a property broker.  Ocular inspection was done for both Ayala 30th and iSquare sites.",
       author:'Admin',
-      date:'June 28, 2021',
+      date:'June 29, 2021',
+      url: '',
+      origin: 'Manila'
+    },{
+      location:"Admin",
+      header:"More Content Soon",
+      byline: "",
+      multimedia:"http://181.114.12.81/intranet/assets/soon.png",
+      fragment: "",
+      article:"",
+      author:'Admin',
+      date:'June 2, 2021',
+      url: '',
+      origin: 'Manila'
+    },{
+      location:"Admin",
+      header:"More Content Soon",
+      byline: "",
+      multimedia:"http://181.114.12.81/intranet/assets/soon.png",
+      fragment: "",
+      article:"",
+      author:'Admin',
+      date:'June 2, 2021',
+      url: '',
+      origin: 'Manila'
+    },{
+      location:"Admin",
+      header:"More Content Soon",
+      byline: "",
+      multimedia:"http://181.114.12.81/intranet/assets/soon.png",
+      fragment: "",
+      article:"",
+      author:'Admin',
+      date:'June 2, 2021',
+      url: '',
+      origin: 'Manila'
+    },{
+      location:"Admin",
+      header:"More Content Soon",
+      byline: "",
+      multimedia:"http://181.114.12.81/intranet/assets/soon.png",
+      fragment: "",
+      article:"",
+      author:'Admin',
+      date:'June 2, 2021',
+      url: '',
+      origin: 'Manila'
+    },{
+      location:"Admin",
+      header:"More Content Soon",
+      byline: "",
+      multimedia:"http://181.114.12.81/intranet/assets/soon.png",
+      fragment: "",
+      article:"",
+      author:'Admin',
+      date:'June 2, 2021',
       url: '',
       origin: 'Manila'
     }]
@@ -127,6 +232,17 @@ export class HrHomepageComponent implements OnInit {
       article:"Our new Country Manager, Tonichi Achurra - Parekh will appear in a video podcast hosted by Great Place to Work. The podcast aim to create awareness for Great Place to Work PH and to educate and help other companies strengthen their employer branding.",
       author:'Admin',
       date:'June 28, 2021',
+      url: '',
+      origin: 'Manila'
+    },{
+      location:"Marketing",
+      header:"NEARSOL and Great Place to Work Video Podcast",
+      byline: "Employer Branding Campaign",
+      multimedia:"http://181.114.12.81/intranet/assets/marketing_image_1.jpg",
+      fragment: "Our new Country Manager, Tonichi Achurra - Parekh will appear in a video podcast hosted by Great Place to Work....",
+      article:"Our new Country Manager, Tonichi Achurra - Parekh will appear in a video podcast hosted by Great Place to Work. The podcast aim to create awareness for Great Place to Work PH and to educate and help other companies strengthen their employer branding.",
+      author:'Admin',
+      date:'June 29, 2021',
       url: '',
       origin: 'Manila'
     }]
@@ -185,7 +301,7 @@ export class HrHomepageComponent implements OnInit {
       fragment: "",
       article:"",
       author:'Admin',
-      date:'June 28, 2021',
+      date:'June 2, 2021',
       url: '',
       origin: 'Manila'
     },{

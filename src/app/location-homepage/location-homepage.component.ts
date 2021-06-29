@@ -19,38 +19,26 @@ export class LocationHomepageComponent implements OnInit {
     this.articles = [
       {
         location:"Global",
-        header:"Pride Month 2021",
+        header:"",
         byline: '',
+        multimedia:"http://181.114.12.81/intranet/assets/manila_image_1.png",
+        fragment: "June is PRIDE Month! It's time to celebrate our courageous and colorful brothers and sisters in the LGBTQIA+ community! Be proud of who you are and say #IAMINCLUDED",
+        article:"June is PRIDE Month! It's time to celebrate our courageous and colorful brothers and sisters in the LGBTQIA+ community! Be proud of who you are and say #IAMINCLUDED",
+        author:'Human Resources',
+        date:'',
+        url: '',
+        origin:'Manila'
+      },
+      {
+        location:"Global",
+        header:"",
+        byline: "Pride Month 2021",
         multimedia:"http://181.114.12.81/intranet/assets/hr_image_5.png",
         fragment: "June is PRIDE Month! It's time to celebrate our courageous and colorful brothers and sisters in the LGBTQIA+ community! Be proud of who you are and say #IAMINCLUDED",
         article:"June is PRIDE Month! It's time to celebrate our courageous and colorful brothers and sisters in the LGBTQIA+ community! Be proud of who you are and say #IAMINCLUDED",
-        author:'HR',
-        date:'June, 17 2021',
+        author:'Human Resources',
+        date:'June 17, 2021',
         url: '',
-        origin:'Manila'
-      },
-      {
-        location:"Global",
-        header:"Father's Day at NEARSOL",
-        byline: '',
-        multimedia:"http://181.114.12.81/intranet/assets/hr_image_1.png",
-        fragment: "It's time to honor and recognize our hardworking and awesome Fathers/Dads/Papas/Tatays/Papsy at NEARSOL.",
-        article:"It's time to honor and recognize our hardworking and awesome Fathers/Dads/Papas/Tatays/Papsy at NEARSOL. Show your love and appreciation to all Dads by creating a TikTok video for a chance to win awesome prizes during the Father’s Day Virtual Party on June 18, 2021! #NearsolSuperDad.",
-        author:'HR',
-        date:'June, 17 2021',
-        url: '',
-        origin:'Manila'
-      },
-      {
-        location:"Global",
-        header:"Top Performers of the Month",
-        byline: '',
-        multimedia:"http://181.114.12.81/intranet/assets/op_image_1.jpg",
-        fragment: "",
-        article:"",
-        author:'Opeartions',
-        date:'June, 17 2021',
-        url:'',
         origin:'Manila'
       },
       {
@@ -60,10 +48,22 @@ export class LocationHomepageComponent implements OnInit {
         multimedia:"./assets/recruitment_image_2.png",
         fragment: "Refer a friend and receive the payouts on the 3rd and 6th months of the applicant’s joining date.",
         article:"Refer a friend and receive the payouts on the 3rd and 6th months of the applicant’s joining date.",
-        author:'Recruitment',
+        author:'Human Resources',
         date:"June 17, 2021",
         url: '',
         origin:'Manila'
+      },
+      {
+        location:"Global",
+        header:"Client Site Tour",
+        byline: "Ayala 30th and iSquare Sites Ocular Visit from a Potential Client",
+        multimedia:"http://181.114.12.81/intranet/assets/admin_image_1.jpeg",
+        fragment: "The Admin-Facilities and IT team headed by Jon Caballero, Administrative Director...",
+        article:"The Admin-Facilities and IT team headed by Jon Caballero, Administrative Director, did a site tour for a potential client together with the representatives from a property broker.  Ocular inspection was done for both Ayala 30th and iSquare sites.",
+        author:'Admin',
+        date:'June 29, 2021',
+        url: '',
+        origin: 'Manila'
       },
       {
         location:'Global',
@@ -78,29 +78,29 @@ export class LocationHomepageComponent implements OnInit {
         origin:'Manila'
       },
       {
-        location:'Global',
-        header:"Timekeeper Reminders",
-        byline: '',
-        multimedia:"./assets/wf_image_1.png",
-        fragment: "",
-        article:"",
-        author:'Workforce',
-        date:"June 17, 2021",
+        location:"Global",
+        header:"NIA",
+        byline: "NEARSOL Intelligence Automation",
+        multimedia:"http://181.114.12.81/intranet/assets/recruitment_image_1.png",
+        fragment: "We proudly present to you NIA, NEARSOL Recruitment Chatbot Recruitment Tool. NIA helps us with lead generation....",
+        article:"We proudly present to you NIA, NEARSOL Recruitment Chatbot Recruitment Tool. NIA helps us with lead generation, process guidance and does all that while projecting our brand identity. She is not just a chatbot, she is so much more!",
+        author:'Admin',
+        date:'June 28, 2021',
+        url: 'https://nearsol.us/nia-manila/',
+        origin: 'Manila'
+      },
+      {
+        location:"Global",
+        header:"Annual Wellness Examination",
+        byline: "",
+        multimedia:"http://181.114.12.81/intranet/assets/admin_image_3.png",
+        fragment: "Employees from NEARSOL Ortigas reported to the ayala 30th site for the first time this year to participate in this year's Annual Wellness Examination.",
+        article: "Employees from NEARSOL Ortigas reported to the ayala 30th site for the first time this year to participate in this year's Annual Wellness Examination.",
+        author:'Human Resources',
+        date:'June 17, 2021',
         url: '',
         origin:'Manila'
       },
-      {
-        location:'Global',
-        header:"Annual Wellness Examination",
-        byline: '',
-        multimedia:"./assets/an_image_1.png",
-        fragment: "",
-        article:"",
-        author:'HR',
-        date:"June 17, 2021",
-        url: '',
-        origin:'Manila'
-      }
     ]
   }
 
