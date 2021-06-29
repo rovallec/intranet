@@ -23,13 +23,13 @@ export class HrHomepageComponent implements OnInit {
     this.articles = [
       {
         location:"Global",
-        header:"Payroll Update",
+        header:"",
         byline: "",
-        multimedia:"http://181.114.12.81/intranet/assets/HR_image_6.png",
+        multimedia:"http://181.114.12.81/intranet/assets/recruitment_image_5.png",
         fragment: "",
         article:"",
         author:'HR',
-        date:'June 17, 2021',
+        date:'',
         url: '',
         origin
       },
