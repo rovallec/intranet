@@ -25,7 +25,7 @@ export class HrHomepageComponent implements OnInit {
         location:"Global",
         header:"Payroll Update",
         byline: "",
-        multimedia:"http://181.114.12.81/intranet/assets/fn_image_1.png",
+        multimedia:"http://181.114.12.81/intranet/assets/HR_image_6.png",
         fragment: "",
         article:"",
         author:'HR',
@@ -165,6 +165,28 @@ export class HrHomepageComponent implements OnInit {
       author:'Admin',
       date:'June 28, 2021',
       url: 'https://nearsol.us/nia-manila/',
+      origin: 'Manila'
+    },{
+      location:"Recruitment",
+      header:"Virtual Job Fair",
+      byline: "",
+      multimedia:"http://181.114.12.81/intranet/assets/recruitment_image_3.png",
+      fragment: "",
+      article:"",
+      author:'Admin',
+      date:'June 28, 2021',
+      url: '',
+      origin: 'Manila'
+    },{
+      location:"Recruitment",
+      header:"Internal Hiring",
+      byline: "",
+      multimedia:"http://181.114.12.81/intranet/assets/recruitment_image_4.png",
+      fragment: "",
+      article:"",
+      author:'Admin',
+      date:'June 28, 2021',
+      url: '',
       origin: 'Manila'
     },
     {
