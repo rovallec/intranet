@@ -105,13 +105,7 @@ export class LocationHomepageComponent implements OnInit {
   }
 
   setSelection(sel:number){
-    let filtered_articles:Articles[] = [];
-    this.articles.forEach(article=>{
-      if(article.location == "Global"){
-        filtered_articles.push(article);
-      }
-    });
-    if(filtered_articles.length > 0){
+    if(this.articles.length > 0){
       this.selected_article = this.articles[sel];
     }else{
       window.alert("Uppps! Something went wrong, please contact your Administrator");
