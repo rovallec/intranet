@@ -227,7 +227,7 @@ export class HrHomepageComponent implements OnInit {
       location:"Marketing",
       header:"NEARSOL and Great Place to Work Video Podcast",
       byline: "Employer Branding Campaign",
-      multimedia:"http://181.114.12.81/intranet/assets/marketing_image_1.jpg",
+      multimedia:"http://181.114.12.81/intranet/assets/marketing_image_2.jpg",
       fragment: "Our new Country Manager, Tonichi Achurra - Parekh will appear in a video podcast hosted by Great Place to Work....",
       article:"Our new Country Manager, Tonichi Achurra - Parekh will appear in a video podcast hosted by Great Place to Work. The podcast aim to create awareness for Great Place to Work PH and to educate and help other companies strengthen their employer branding.",
       author:'Admin',
