@@ -75,8 +75,8 @@ export class HrHomepageComponent implements OnInit {
       },
       {
         location:"Human Resources",
-        header:"#IAmIncluded: ",
-        byline: "Pride Month 2021",
+        header:"Pride Month 2021",
+        byline: "",
         multimedia:"http://181.114.12.81/intranet/assets/hr_image_5.png",
         fragment: "June is PRIDE Month! It's time to celebrate our courageous and colorful brothers and sisters in the LGBTQIA+ community! Be proud of who you are and say #IAMINCLUDED",
         article:"June is PRIDE Month! It's time to celebrate our courageous and colorful brothers and sisters in the LGBTQIA+ community! Be proud of who you are and say #IAMINCLUDED",
@@ -237,7 +237,7 @@ export class HrHomepageComponent implements OnInit {
     },{
       location:"Marketing",
       header:"NEARSOL and Great Place to Work Video Podcast",
-      byline: "Employer Branding Campaign",
+      byline: ": Employer Branding Campaign",
       multimedia:"http://181.114.12.81/intranet/assets/marketing_image_1.jpg",
       fragment: "Our new Country Manager, Tonichi Achurra - Parekh will appear in a video podcast hosted by Great Place to Work....",
       article:"Our new Country Manager, Tonichi Achurra - Parekh will appear in a video podcast hosted by Great Place to Work. The podcast aim to create awareness for Great Place to Work PH and to educate and help other companies strengthen their employer branding.",
@@ -274,7 +274,7 @@ export class HrHomepageComponent implements OnInit {
     },{
       location:'Recruitment',
       header:"Employee Referral Program",
-      byline: ': Refer a friend and receive a P10,000 incentive',
+      byline: '',
       multimedia:"./assets/recruitment_image_2.png",
       fragment: "Refer a friend and receive the payouts on the 3rd and 6th months of the applicant’s joining date.",
       article:"Refer a friend and receive the payouts on the 3rd and 6th months of the applicant’s joining date.",
@@ -287,7 +287,7 @@ export class HrHomepageComponent implements OnInit {
       header:"NIA",
       byline: "NEARSOL Intelligence Automation",
       multimedia:"http://181.114.12.81/intranet/assets/recruitment_image_1.png",
-      fragment: "We proudly present to you NIA, NEARSOL Recruitment Chatbot Recruitment Tool. NIA helps us with lead generation....",
+      fragment: "We proudly present to you NIA, NEARSOL Recruitment Chatbot Recruitment Tool. NIA helps us with lead generation, process guidance and does all that while projecting our brand identity. She is not just a chatbot, she is so much more!",
       article:"We proudly present to you NIA, NEARSOL Recruitment Chatbot Recruitment Tool. NIA helps us with lead generation, process guidance and does all that while projecting our brand identity. She is not just a chatbot, she is so much more!",
       author:'Recruitment',
       date:'June 28, 2021',

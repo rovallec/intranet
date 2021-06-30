@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Articles } from './articles';
 import { AuthServiceService } from './auth-service.service';
 import { Users } from './users';
@@ -10,7 +10,7 @@ import { Users } from './users';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  constructor(private _router: Router, private _authService: AuthServiceService) { }
+  constructor(private _router: Router, private _authService: AuthServiceService, public route: ActivatedRoute) { }
 
   title = 'NEARSOL';
   username:string = null;

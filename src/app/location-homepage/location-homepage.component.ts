@@ -44,7 +44,7 @@ export class LocationHomepageComponent implements OnInit {
       {
         location:'Manila',
         header:"Employee Referral Program",
-        byline: ': Refer a friend and receive a P10,000 incentive',
+        byline: '',
         multimedia:"./assets/recruitment_image_2.png",
         fragment: "Refer a friend and receive the payouts on the 3rd and 6th months of the applicant’s joining date.",
         article:"Refer a friend and receive the payouts on the 3rd and 6th months of the applicant’s joining date.",
