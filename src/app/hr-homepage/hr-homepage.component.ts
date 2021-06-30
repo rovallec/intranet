@@ -225,13 +225,13 @@ export class HrHomepageComponent implements OnInit {
   }else if(this.routes.snapshot.url.toString().includes('marketing-homepage')){
     this.articles = [{
       location:"Marketing",
-      header:"NEARSOL and Great Place to Work Video Podcast",
-      byline: "Employer Branding Campaign",
+      header:"",
+      byline: "",
       multimedia:"http://181.114.12.81/intranet/assets/marketing_image_2.jpg",
       fragment: "Our new Country Manager, Tonichi Achurra - Parekh will appear in a video podcast hosted by Great Place to Work....",
       article:"Our new Country Manager, Tonichi Achurra - Parekh will appear in a video podcast hosted by Great Place to Work. The podcast aim to create awareness for Great Place to Work PH and to educate and help other companies strengthen their employer branding.",
       author:'Admin',
-      date:'June 28, 2021',
+      date:'',
       url: '',
       origin: 'Manila'
     },{
