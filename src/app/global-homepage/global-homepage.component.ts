@@ -94,7 +94,7 @@ export class GlobalHomepageComponent implements OnInit {
         header:"The Noche Buena Project 2021",
         byline: '',
         multimedia:"./assets/il_image_1.png",
-        fragment: "",
+        fragment: "Our ability to care for each other shows we are FAMILY.",
         article:"Our ability to care for each other shows we are FAMILY.",
         author:'Human Resources',
         date:"June 17, 2021",
