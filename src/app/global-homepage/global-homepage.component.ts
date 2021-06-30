@@ -58,8 +58,8 @@ export class GlobalHomepageComponent implements OnInit {
         header:"NIA",
         byline: ': NEARSOL Intelligence Automation',
         multimedia:"http://181.114.12.81/intranet/assets/recruitment_image_1.png",
-        fragment: "We proudly present to you NIA, NEARSOL Recruitment Chatbot Recruitment Tool. NIA helps us with lead generation, process guidance and does all that while projecting our brand identity.",
-        article:"We proudly present to you NIA, NEARSOL Recruitment Chatbot Recruitment Tool. NIA helps us with lead generation, process guidance and does all that while projecting our brand identity. She is not just a chatbot, she is so much more!",
+        fragment: "We proudly present to you NIA, NEARSOL Recruitment Chatbot. NIA helps us with lead generation, process guidance and does all that while projecting our brand identity.",
+        article:"We proudly present to you NIA, NEARSOL Recruitment Chatbot. NIA helps us with lead generation, process guidance and does all that while projecting our brand identity. She is not just a chatbot, she is so much more!",
         author:'Recruitment',
         date:"June 17, 2021",
         url: 'https://nearsol.us/nia-manila/',
@@ -104,14 +104,19 @@ export class GlobalHomepageComponent implements OnInit {
     ]
   }
 
+  setArticlesFragment(str:string){
+    let ss:string = str.substr(0, 200 + str.substr(199, str.length).search(' '));
+    if(str.length > 200){
+      ss = ss.substr(0,ss.length - 1) + '...';
+    }else{
+      ss = ss;
+    }
+    return ss;
+  }
+
   setSelection(sel:number){
-    let filtered_articles:Articles[] = [];
-    this.articles.forEach(article=>{
-      if(article.location == "Global"){
-        filtered_articles.push(article);
-      }
-    });
-    if(filtered_articles.length > 0){
+    console.log()
+    if(this.articles.length > 0){
       this.selected_article = this.articles[sel];
     }else{
       window.alert("Uppps! Something went wrong, please contact your Administrator");

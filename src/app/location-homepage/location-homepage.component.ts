@@ -82,8 +82,8 @@ export class LocationHomepageComponent implements OnInit {
         header:"NIA",
         byline: "NEARSOL Intelligence Automation",
         multimedia:"http://181.114.12.81/intranet/assets/recruitment_image_1.png",
-        fragment: "We proudly present to you NIA, NEARSOL Recruitment Chatbot Recruitment Tool. NIA helps us with lead generation, process guidance and does all that while projecting our brand identity.",
-        article:"We proudly present to you NIA, NEARSOL Recruitment Chatbot Recruitment Tool. NIA helps us with lead generation, process guidance and does all that while projecting our brand identity. She is not just a chatbot, she is so much more!",
+        fragment: "We proudly present to you NIA, NEARSOL Recruitment Chatbot. NIA helps us with lead generation, process guidance and does all that while projecting our brand identity.",
+        article:"We proudly present to you NIA, NEARSOL Recruitment Chatbot. NIA helps us with lead generation, process guidance and does all that while projecting our brand identity. She is not just a chatbot, she is so much more!",
         author:'Human Resources',
         date:'June 28, 2021',
         url: 'https://nearsol.us/nia-manila/',
@@ -102,6 +102,16 @@ export class LocationHomepageComponent implements OnInit {
         origin:'Manila'
       },
     ]
+  }
+
+  setArticlesFragment(str:string){
+    let ss:string = str.substr(0, 200 + str.substr(199, str.length).search(' '));
+    if(str.length > 200){
+      ss = ss.substr(0,ss.length - 1) + '...';
+    }else{
+      ss = ss;
+    }
+    return ss;
   }
 
   setSelection(sel:number){
