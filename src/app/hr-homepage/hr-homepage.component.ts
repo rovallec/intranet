@@ -37,7 +37,7 @@ export class HrHomepageComponent implements OnInit {
         location:"Human Resources",
         header:"Annual Wellness Examination",
         byline: "",
-        multimedia:"http://181.114.12.81/intranet/assets/admin_image_3.png",
+        multimedia:"http://181.114.12.81/intranet/assets/admin_image_3.jpg",
         fragment: "Employees from NEARSOL Ortigas reported to the ayala 30th site for the first time this year to participate in this year's Annual Wellness Examination.",
         article: "Employees from NEARSOL Ortigas reported to the ayala 30th site for the first time this year to participate in this year's Annual Wellness Examination.",
         author:'Human Resources',
