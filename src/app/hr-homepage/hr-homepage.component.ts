@@ -22,7 +22,7 @@ export class HrHomepageComponent implements OnInit {
     if(this.routes.snapshot.url.toString().includes('hr-homepage')){
     this.articles = [
       {
-        location:"Global",
+        location:"Human Resources",
         header:"",
         byline: "",
         multimedia:"http://181.114.12.81/intranet/assets/HR_image_6.png",
@@ -31,10 +31,10 @@ export class HrHomepageComponent implements OnInit {
         author:'Human Resources',
         date:'',
         url: '',
-        origin
+        origin: 'Manila'
       },
       {
-        location:"Global",
+        location:"Human Resources",
         header:"Annual Wellness Examination",
         byline: "",
         multimedia:"http://181.114.12.81/intranet/assets/admin_image_3.png",
@@ -43,9 +43,9 @@ export class HrHomepageComponent implements OnInit {
         author:'Human Resources',
         date:'June 17, 2021',
         url: '',
-        origin
+        origin: 'Manila'
       },{
-        location:"Global",
+        location:"Human Resources",
         header:"Employee Hangout: ",
         byline:"Core Values & People Analyzer Edition",
         multimedia:"http://181.114.12.81/intranet/assets/HR_image_7.png",
@@ -60,9 +60,9 @@ export class HrHomepageComponent implements OnInit {
         author:'Human Resources',
         date:'June 17, 2021',
         url: '',
-        origin
+        origin: 'Manila'
       },{
-        location:"Global",
+        location:"Human Resources",
         header:"Payroll Update ",
         byline: "",
         multimedia:"http://181.114.12.81/intranet/assets/fn_image_1.png",
@@ -71,10 +71,10 @@ export class HrHomepageComponent implements OnInit {
         author:'Human Resources',
         date:'June 29, 2021',
         url: '',
-        origin
+        origin: 'Manila'
       },
       {
-        location:"Global",
+        location:"Human Resources",
         header:"#IAmIncluded: ",
         byline: "Pride Month 2021",
         multimedia:"http://181.114.12.81/intranet/assets/hr_image_5.png",
@@ -83,10 +83,10 @@ export class HrHomepageComponent implements OnInit {
         author:'Human Resources',
         date:'June 17, 2021',
         url: '',
-        origin
+        origin: 'Manila'
       },
       {
-        location:"Global",
+        location:"Human Resources",
         header:"Father’s Day at NEARSOL",
         byline: "",
         multimedia:"http://181.114.12.81/intranet/assets/hr_image_1.png",
@@ -95,21 +95,21 @@ export class HrHomepageComponent implements OnInit {
         author:'Human Resources',
         date:'June 17, 2021',
         url: '',
-        origin
+        origin: 'Manila'
       },{
-        location:"Admin",
+        location:"Human Resources",
         header:"More Content Soon",
         byline: "",
         multimedia:"http://181.114.12.81/intranet/assets/soon.png",
         fragment: "",
         article:"",
-        author:'Admin',
+        author:'Human Resources',
         date:'June 2, 2021',
         url: '',
         origin: 'Manila'
       },
       {
-        location:"Global",
+        location:"Human Resources",
         header:"Employee Satisfaction Survey",
         byline: "",
         multimedia:"http://181.114.12.81/intranet/assets/hr_image_4.png",
@@ -140,7 +140,7 @@ export class HrHomepageComponent implements OnInit {
         author:'Human Resources',
         date:'June 17, 2021',
         url: '',
-        origin
+        origin: 'Manila'
       }
     ]
   }else if(this.routes.snapshot.url.toString().includes('admin-homepage')){
@@ -230,7 +230,7 @@ export class HrHomepageComponent implements OnInit {
       multimedia:"http://181.114.12.81/intranet/assets/marketing_image_2.jpg",
       fragment: "Our new Country Manager, Tonichi Achurra - Parekh will appear in a video podcast hosted by Great Place to Work....",
       article:"Our new Country Manager, Tonichi Achurra - Parekh will appear in a video podcast hosted by Great Place to Work. The podcast aim to create awareness for Great Place to Work PH and to educate and help other companies strengthen their employer branding.",
-      author:'Admin',
+      author:'Marketing',
       date:'',
       url: '',
       origin: 'Manila'
@@ -241,7 +241,7 @@ export class HrHomepageComponent implements OnInit {
       multimedia:"http://181.114.12.81/intranet/assets/marketing_image_1.jpg",
       fragment: "Our new Country Manager, Tonichi Achurra - Parekh will appear in a video podcast hosted by Great Place to Work....",
       article:"Our new Country Manager, Tonichi Achurra - Parekh will appear in a video podcast hosted by Great Place to Work. The podcast aim to create awareness for Great Place to Work PH and to educate and help other companies strengthen their employer branding.",
-      author:'Admin',
+      author:'Marketing',
       date:'June 29, 2021',
       url: '',
       origin: 'Manila'
@@ -254,7 +254,7 @@ export class HrHomepageComponent implements OnInit {
       multimedia:"http://181.114.12.81/intranet/assets/op_image_1.jpg",
       fragment: "Our new Country Manager, Tonichi Achurra - Parekh will appear in a video podcast hosted by Great Place to Work....",
       article:"Our new Country Manager, Tonichi Achurra - Parekh will appear in a video podcast hosted by Great Place to Work. The podcast aim to create awareness for Great Place to Work PH and to educate and help other companies strengthen their employer branding.",
-      author:'Admin',
+      author:'Operations',
       date:'',
       url: '',
       origin: 'Manila'
@@ -267,10 +267,21 @@ export class HrHomepageComponent implements OnInit {
       multimedia:"http://181.114.12.81/intranet/assets/recruitment_image_5.png",
       fragment: "",
       article:"",
-      author:'Admin',
+      author:'Recruitment',
       date:'',
       url: '',
       origin: 'Manila'
+    },{
+      location:'Recruitment',
+      header:"Employee Referral Program",
+      byline: ': Refer a friend and receive a P10,000 incentive',
+      multimedia:"./assets/recruitment_image_2.png",
+      fragment: "Refer a friend and receive the payouts on the 3rd and 6th months of the applicant’s joining date.",
+      article:"Refer a friend and receive the payouts on the 3rd and 6th months of the applicant’s joining date.",
+      author:'Recruitment',
+      date:"June 17, 2021",
+      url: '',
+      origin:'Manila'
     },{
       location:"Recruitment",
       header:"NIA",
@@ -278,18 +289,7 @@ export class HrHomepageComponent implements OnInit {
       multimedia:"http://181.114.12.81/intranet/assets/recruitment_image_1.png",
       fragment: "We proudly present to you NIA, NEARSOL Recruitment Chatbot Recruitment Tool. NIA helps us with lead generation....",
       article:"We proudly present to you NIA, NEARSOL Recruitment Chatbot Recruitment Tool. NIA helps us with lead generation, process guidance and does all that while projecting our brand identity. She is not just a chatbot, she is so much more!",
-      author:'Admin',
-      date:'June 28, 2021',
-      url: 'https://nearsol.us/nia-manila/',
-      origin: 'Manila'
-    },{
-      location:"Recruitment",
-      header:"Employee Referral Program",
-      byline: "Refer a friend and receive a P10,000 incentive",
-      multimedia:"http://181.114.12.81/intranet/assets/recruitment_image_2.png",
-      fragment: "Refer a friend and receive the payouts on the 3rd and 6th months of the applicant’s joining date.",
-      article:"Refer a friend and receive the payouts on the 3rd and 6th months of the applicant’s joining date.",
-      author:'Admin',
+      author:'Recruitment',
       date:'June 28, 2021',
       url: 'https://nearsol.us/nia-manila/',
       origin: 'Manila'
@@ -300,7 +300,7 @@ export class HrHomepageComponent implements OnInit {
       multimedia:"http://181.114.12.81/intranet/assets/soon.png",
       fragment: "",
       article:"",
-      author:'Admin',
+      author:'Recruitment',
       date:'June 2, 2021',
       url: '',
       origin: 'Manila'
@@ -311,7 +311,7 @@ export class HrHomepageComponent implements OnInit {
       multimedia:"http://181.114.12.81/intranet/assets/soon.png",
       fragment: "",
       article:"",
-      author:'Admin',
+      author:'Recruitment',
       date:'June 28, 2021',
       url: '',
       origin: 'Manila'
@@ -322,7 +322,7 @@ export class HrHomepageComponent implements OnInit {
       multimedia:"http://181.114.12.81/intranet/assets/soon.png",
       fragment: "",
       article:"",
-      author:'Admin',
+      author:'Recruitment',
       date:'June 28, 2021',
       url: '',
       origin: 'Manila'
@@ -333,7 +333,7 @@ export class HrHomepageComponent implements OnInit {
       multimedia:"http://181.114.12.81/intranet/assets/soon.png",
       fragment: "",
       article:"",
-      author:'Admin',
+      author:'Recruitment',
       date:'June 28, 2021',
       url: '',
       origin: 'Manila'

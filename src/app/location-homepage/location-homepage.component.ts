@@ -18,7 +18,7 @@ export class LocationHomepageComponent implements OnInit {
   ngOnInit(): void {
     this.articles = [
       {
-        location:"Global",
+        location:"Manila",
         header:"",
         byline: '',
         multimedia:"http://181.114.12.81/intranet/assets/manila_image_1.png",
@@ -30,7 +30,7 @@ export class LocationHomepageComponent implements OnInit {
         origin:'Manila'
       },
       {
-        location:"Global",
+        location:"Manila",
         header:"",
         byline: "Pride Month 2021",
         multimedia:"http://181.114.12.81/intranet/assets/hr_image_5.png",
@@ -42,22 +42,22 @@ export class LocationHomepageComponent implements OnInit {
         origin:'Manila'
       },
       {
-        location:'Global',
+        location:'Manila',
         header:"Employee Referral Program",
         byline: ': Refer a friend and receive a P10,000 incentive',
         multimedia:"./assets/recruitment_image_2.png",
         fragment: "Refer a friend and receive the payouts on the 3rd and 6th months of the applicant’s joining date.",
         article:"Refer a friend and receive the payouts on the 3rd and 6th months of the applicant’s joining date.",
-        author:'Human Resources',
+        author:'Recruitment',
         date:"June 17, 2021",
         url: '',
         origin:'Manila'
       },
       {
-        location:"Global",
+        location:"Manila",
         header:"Client Site Tour",
         byline: "Ayala 30th and iSquare Sites Ocular Visit from a Potential Client",
-        multimedia:"http://181.114.12.81/intranet/assets/admin_image_1.jpeg",
+        multimedia:"./assets/admin_image_1.jpg",
         fragment: "The Admin-Facilities and IT team headed by Jon Caballero, Administrative Director...",
         article:"The Admin-Facilities and IT team headed by Jon Caballero, Administrative Director, did a site tour for a potential client together with the representatives from a property broker.  Ocular inspection was done for both Ayala 30th and iSquare sites.",
         author:'Admin',
@@ -66,36 +66,36 @@ export class LocationHomepageComponent implements OnInit {
         origin: 'Manila'
       },
       {
-        location:'Global',
+        location:'Manila',
         header:"Payroll update",
         byline: '',
         multimedia:"./assets/fn_image_1.png",
-        fragment: "",
-        article:"",
-        author:'Finance',
+        fragment: "PAYROLL BANK FOR NEARSOL ORTIGAS IS SWITCHING TO ASIA UNITED BANK (AUB) EFFECTIVE JULY 5, 2021. Please fill out the bank forms and submit them immediately!  Please review attached FAQs and reach out to HR if you have questions",
+        article:"PAYROLL BANK FOR NEARSOL ORTIGAS IS SWITCHING TO ASIA UNITED BANK (AUB) EFFECTIVE JULY 5, 2021. Please fill out the bank forms and submit them immediately!  Please review attached FAQs and reach out to HR if you have questions",
+        author:'Human Resources',
         date:"June 17, 2021",
         url: '',
         origin:'Manila'
       },
       {
-        location:"Global",
+        location:"Manila",
         header:"NIA",
         byline: "NEARSOL Intelligence Automation",
         multimedia:"http://181.114.12.81/intranet/assets/recruitment_image_1.png",
         fragment: "We proudly present to you NIA, NEARSOL Recruitment Chatbot Recruitment Tool. NIA helps us with lead generation....",
         article:"We proudly present to you NIA, NEARSOL Recruitment Chatbot Recruitment Tool. NIA helps us with lead generation, process guidance and does all that while projecting our brand identity. She is not just a chatbot, she is so much more!",
-        author:'Admin',
+        author:'Human Resources',
         date:'June 28, 2021',
         url: 'https://nearsol.us/nia-manila/',
         origin: 'Manila'
       },
       {
-        location:"Global",
-        header:"Annual Wellness Examination",
+        location:"Manila",
+        header:"NEARSOL Manila Completes Annual Wellness Exam",
         byline: "",
         multimedia:"http://181.114.12.81/intranet/assets/admin_image_3.png",
-        fragment: "Employees from NEARSOL Ortigas reported to the ayala 30th site for the first time this year to participate in this year's Annual Wellness Examination.",
-        article: "Employees from NEARSOL Ortigas reported to the ayala 30th site for the first time this year to participate in this year's Annual Wellness Examination.",
+        fragment: "Employees from NEARSOL Ortigas reported to Ayala 30th site for the first time this year to participate in Annual Wellness Examination.",
+        article: "Employees from NEARSOL Ortigas reported to Ayala 30th site for the first time this year to participate in Annual Wellness Examination. More than 100 employees attended on June 26, 2021 following strict covid-19 protocol and a well planned schedule to ensure social distancing. The event started at 8am and ended at around 7pm. AWE was successfully completed in partnership with Maxicare and Keyman Insurances.",
         author:'Human Resources',
         date:'June 17, 2021',
         url: '',
