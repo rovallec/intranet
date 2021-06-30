@@ -123,4 +123,12 @@ export class GlobalHomepageComponent implements OnInit {
     }
   }
 
+  getHeight(object:string){
+    let height = document.getElementById(object).offsetHeight
+    if((height/parseInt(document.getElementById(object).style.lineHeight)) > 1){
+      return true;
+    }else{
+      return false;
+    }
+  }
 }

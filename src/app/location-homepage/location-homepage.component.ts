@@ -121,4 +121,14 @@ export class LocationHomepageComponent implements OnInit {
       window.alert("Uppps! Something went wrong, please contact your Administrator");
     }
   }
+
+  getHeight(object:string){
+    let height = document.getElementById(object).offsetHeight
+    console.log(height);
+    if((height/24) <= 1){
+      return true;
+    }else{
+      return false;
+    }
+  }
 }
