@@ -58,7 +58,7 @@ export class GlobalHomepageComponent implements OnInit {
         header:"NIA",
         byline: ': NEARSOL Intelligence Automation',
         multimedia:"http://181.114.12.81/intranet/assets/recruitment_image_1.png",
-        fragment: "We proudly present to you NIA, NEARSOL Recruitment Chatbot Recruitment Tool. NIA helps us with lead generation, process guidance and does all that while projecting our brand identity. She is not just a chatbot, she is so much more!",
+        fragment: "We proudly present to you NIA, NEARSOL Recruitment Chatbot Recruitment Tool. NIA helps us with lead generation, process guidance and does all that while projecting our brand identity.",
         article:"We proudly present to you NIA, NEARSOL Recruitment Chatbot Recruitment Tool. NIA helps us with lead generation, process guidance and does all that while projecting our brand identity. She is not just a chatbot, she is so much more!",
         author:'Recruitment',
         date:"June 17, 2021",
