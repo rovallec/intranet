@@ -17,7 +17,7 @@ export class GuardGuard implements CanActivate {
     next: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
       if (!this._authService.isAuthenticated()) {
-        this._router.navigate(['../intranet']);
+        this._router.navigate(['../intranet/login']);
         return false;
     }else{
       return true;
