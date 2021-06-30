@@ -80,7 +80,7 @@ export class LocationHomepageComponent implements OnInit {
       {
         location:"Manila",
         header:"NIA",
-        byline: "NEARSOL Intelligence Automation",
+        byline: "",
         multimedia:"http://181.114.12.81/intranet/assets/recruitment_image_1.png",
         fragment: "We proudly present to you NIA, NEARSOL Recruitment Chatbot. NIA helps us with lead generation, process guidance and does all that while projecting our brand identity.",
         article:"We proudly present to you NIA, NEARSOL Recruitment Chatbot. NIA helps us with lead generation, process guidance and does all that while projecting our brand identity. She is not just a chatbot, she is so much more!",
