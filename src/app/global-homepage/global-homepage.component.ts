@@ -69,7 +69,7 @@ export class GlobalHomepageComponent implements OnInit {
         location:'Global',
         header:"Guatemala",
         byline: '',
-        multimedia:"./assets/gt_image_1.jpg",
+        multimedia:"./assets/gt_image_1.png",
         fragment: "",
         article:"",
         author:'HR',
