@@ -56,7 +56,7 @@ export class LocationHomepageComponent implements OnInit {
       {
         location:"Manila",
         header:"Client Site Tour",
-        byline: "Ayala 30th and iSquare Sites Ocular Visit from a Potential Client",
+        byline: "",
         multimedia:"./assets/admin_image_1.jpg",
         fragment: "The Admin-Facilities and IT team headed by Jon Caballero, Administrative Director, did a site tour for a potential client together with the representatives from a property broker.  Ocular inspection was done for both Ayala 30th and iSquare sites.",
         article:"The Admin-Facilities and IT team headed by Jon Caballero, Administrative Director, did a site tour for a potential client together with the representatives from a property broker.  Ocular inspection was done for both Ayala 30th and iSquare sites.",
