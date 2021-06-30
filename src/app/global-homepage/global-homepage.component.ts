@@ -105,8 +105,8 @@ export class GlobalHomepageComponent implements OnInit {
   }
 
   setArticlesFragment(str:string){
-    let ss:string = str.substr(0, 200 + str.substr(199, str.length).search(' '));
-    if(str.length > 200){
+    let ss:string = str.substr(0, 180 + str.substr(179, str.length).search(' '));
+    if(str.length > 180){
       ss = ss.substr(0,ss.length - 1) + '...';
     }else{
       ss = ss;
