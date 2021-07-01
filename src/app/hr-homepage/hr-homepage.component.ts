@@ -38,10 +38,10 @@ export class HrHomepageComponent implements OnInit {
         header:"Annual Wellness Examination",
         byline: "",
         multimedia:"http://181.114.12.81/intranet/assets/admin_image_3.png",
-        fragment: "Employees from NEARSOL Ortigas reported to the ayala 30th site for the first time this year to participate in this year's Annual Wellness Examination.",
-        article: "Employees from NEARSOL Ortigas reported to the ayala 30th site for the first time this year to participate in this year's Annual Wellness Examination.",
+        fragment: "Employees from NEARSOL Manila reported to the The 30th Corporate Center site to participate in this year's Annual Wellness Examination (AWE). More than 100 employees attended on June 26, 2021 following strict covid-19 protocol and a well planned schedule to ensure social distancing. The event started at 8am and ended at around 7pm. AWE was successfully completed in partnership with Maxicare and Keyman Insurances.",
+        article: "Employees from NEARSOL Manila reported to the The 30th Corporate Center site to participate in this year's Annual Wellness Examination (AWE). More than 100 employees attended on June 26, 2021 following strict covid-19 protocol and a well planned schedule to ensure social distancing. The event started at 8am and ended at around 7pm. AWE was successfully completed in partnership with Maxicare and Keyman Insurances.",
         author:'Human Resources',
-        date:'June 17, 2021',
+        date:'June 26, 2021',
         url: '',
         origin: 'Manila'
       },{
@@ -66,8 +66,8 @@ export class HrHomepageComponent implements OnInit {
         header:"Payroll Update ",
         byline: "",
         multimedia:"http://181.114.12.81/intranet/assets/fn_image_1.png",
-        fragment: "PAYROLL BANK FOR NEARSOL ORTIGAS IS SWITCHING TO ASIA UNITED BANK (AUB) EFFECTIVE JULY 5, 2021. Please fill out the bank forms and submit them immediately!  Please review attached FAQs and reach out to HR if you have questions",
-        article:"PAYROLL BANK FOR NEARSOL ORTIGAS IS SWITCHING TO ASIA UNITED BANK (AUB) EFFECTIVE JULY 5, 2021. Please fill out the bank forms and submit them immediately!  Please review attached FAQs and reach out to HR if you have questions",
+        fragment: "Payroll bank account for NEARSOL Manila is switching to Asia United Bank (AUB). ",
+        article:"Payroll bank account for NEARSOL Manila is switching to Asia United Bank (AUB). ",
         author:'Human Resources',
         date:'June 29, 2021',
         url: '',
@@ -160,8 +160,8 @@ export class HrHomepageComponent implements OnInit {
       header:"Client Site Tour",
       byline: "Ayala 30th and iSquare Sites Ocular Visit from a Potential Client",
       multimedia:"http://181.114.12.81/intranet/assets/admin_image_1.jpg",
-      fragment: "The Admin-Facilities and IT team headed by Jon Caballero, Administrative Director...",
-      article:"The Admin-Facilities and IT team headed by Jon Caballero, Administrative Director, did a site tour for a potential client together with the representatives from a property broker.  Ocular inspection was done for both Ayala 30th and iSquare sites.",
+      fragment: "The Admin team headed by Jon Caballero, Administrative Director, organized a site tour for a potential client from a property broker company.  Ocular inspection was done for both The 30th Corporate Center and iSquare sites.",
+      article:"The Admin team headed by Jon Caballero, Administrative Director, organized a site tour for a potential client from a property broker company.  Ocular inspection was done for both The 30th Corporate Center and iSquare sites.",
       author:'Admin',
       date:'June 29, 2021',
       url: '',
@@ -218,7 +218,7 @@ export class HrHomepageComponent implements OnInit {
       fragment: "",
       article:"",
       author:'Admin',
-      date:'June 2, 2021',
+      date:'June 29, 2021',
       url: '',
       origin: 'Manila'
     }]
@@ -228,10 +228,10 @@ export class HrHomepageComponent implements OnInit {
       header:"",
       byline: "",
       multimedia:"http://181.114.12.81/intranet/assets/marketing_image_2.jpg",
-      fragment: "Our new Country Manager, Tonichi Achurra - Parekh will appear in a video podcast hosted by Great Place to Work....",
-      article:"Our new Country Manager, Tonichi Achurra - Parekh will appear in a video podcast hosted by Great Place to Work. The podcast aim to create awareness for Great Place to Work PH and to educate and help other companies strengthen their employer branding.",
+      fragment: "Our new Country Manager, Tonichi Achurra - Parekh will appear in a video podcast hosted by Great Place to Work. The podcast aims to create awareness for Great Place to Work PH and, educate and help other companies strengthen their employer branding.",
+      article:"Our new Country Manager, Tonichi Achurra - Parekh will appear in a video podcast hosted by Great Place to Work. The podcast aims to create awareness for Great Place to Work PH and, educate and help other companies strengthen their employer branding.",
       author:'Marketing',
-      date:'',
+      date:'June 29, 2021',
       url: '',
       origin: 'Manila'
     },{
@@ -276,8 +276,8 @@ export class HrHomepageComponent implements OnInit {
       header:"Employee Referral Program",
       byline: '',
       multimedia:"./assets/recruitment_image_2.png",
-      fragment: "Refer a friend and receive the payouts on the 3rd and 6th months of the applicant’s joining date.",
-      article:"Refer a friend and receive the payouts on the 3rd and 6th months of the applicant’s joining date.",
+      fragment: "Refer a friend and receive a P10,000 incentive! The payouts will be released on the 3rd and 6th months of the applicant’s joining date.",
+      article:"Refer a friend and receive a P10,000 incentive! The payouts will be released on the 3rd and 6th months of the applicant’s joining date.",
       author:'Recruitment',
       date:"June 17, 2021",
       url: '',
@@ -287,8 +287,8 @@ export class HrHomepageComponent implements OnInit {
       header:"NIA",
       byline: "",
       multimedia:"http://181.114.12.81/intranet/assets/recruitment_image_1.png",
-      fragment: "We proudly present to you NIA, NEARSOL Recruitment. NIA helps us with lead generation, process guidance and does all that while projecting our brand identity.",
-      article:"We proudly present to you NIA, NEARSOL Recruitment. NIA helps us with lead generation, process guidance and does all that while projecting our brand identity. She is not just a chatbot, she is so much more!",
+      fragment: "We proudly present to you NIA, NEARSOL's recruitment chatbot. NIA helps with lead generation, process guidance and does all that while projecting our brand identity. She is not just a chatbot, she is so much more!",
+      article:"We proudly present to you NIA, NEARSOL's recruitment chatbot. NIA helps with lead generation, process guidance and does all that while projecting our brand identity. She is not just a chatbot, she is so much more!",
       author:'Recruitment',
       date:'June 28, 2021',
       url: 'https://nearsol.us/nia-manila/',
@@ -337,7 +337,7 @@ export class HrHomepageComponent implements OnInit {
       date:'June 28, 2021',
       url: '',
       origin: 'Manila'
-    },]
+    }]
   }
   }
 
