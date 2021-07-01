@@ -25,7 +25,7 @@ export class GlobalHomepageComponent implements OnInit {
         fragment: "Caring is one of the strongest values that we see in YOU! Your ability to care for each other shows that we are a FAMILY. At NEARSOL, the core value of caring is so strong that it just comes naturally to all employees.",
         article:"Caring is one of the strongest values that we see in YOU! Your ability to care for each other shows that we are a FAMILY. At NEARSOL, the core value of caring is so strong that it just comes naturally to all employees.",
         author:'Human Resources',
-        date:'June 17, 2021',
+        date:'July 1, 2021',
         url: 'https://nearsol.us/',
         origin:"Manila"
       },
