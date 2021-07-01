@@ -231,7 +231,7 @@ export class HrHomepageComponent implements OnInit {
       fragment: "Our new Country Manager, Tonichi Achurra - Parekh will appear in a video podcast hosted by Great Place to Work. The podcast aims to create awareness for Great Place to Work PH and, educate and help other companies strengthen their employer branding.",
       article:"Our new Country Manager, Tonichi Achurra - Parekh will appear in a video podcast hosted by Great Place to Work. The podcast aims to create awareness for Great Place to Work PH and, educate and help other companies strengthen their employer branding.",
       author:'Marketing',
-      date:'June 29, 2021',
+      date:'',
       url: '',
       origin: 'Manila'
     },{
