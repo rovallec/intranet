@@ -21,7 +21,7 @@
                             padding-left: 80px;
                             position:absolute; bottom:20px; cursor: pointer;"
                             (click)="setSelection(0)" data-toggle="modal" data-target="#setArticle">
-                            {{ img_foot }}</p>
+                            {{ articles[0].header }}:{{ articles[0].byline }}</p>
                     </div>
                     <div class="row p-0 col-md-12" style="
                         height: 30px;
@@ -33,7 +33,7 @@
                             padding-left: 82px;
                             position:absolute; bottom: 30px; cursor: pointer;
                             " (click)="setSelection(0)" data-toggle="modal" data-target="#setArticle">
-                            {{ img_date }}</p>
+                            {{ articles[0].date }}</p>
                     </div>
                 </div>
             </div>

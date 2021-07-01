@@ -31,23 +31,11 @@ export class GlobalHomepageComponent implements OnInit {
       },
       {
         location:"Global",
-        header:"Pride Month 2021",
+        header:"Employee Hangout",
         byline: "",
-        multimedia:"http://181.114.12.81/intranet/assets/hr_image_5.png",
-        fragment: "June is PRIDE Month! It's time to celebrate our courageous and colorful brothers and sisters in the LGBTQIA+ community! Be proud of who you are and say #IAMINCLUDED",
-        article:"June is PRIDE Month! It's time to celebrate our courageous and colorful brothers and sisters in the LGBTQIA+ community! Be proud of who you are and say #IAMINCLUDED",
-        author:'Human Resources',
-        date:'June 17, 2021',
-        url: '',
-        origin:"Manila"
-      },
-      {
-        location:"Global",
-        header:"Father's Day at NEARSOL",
-        byline: '',
-        multimedia:"http://181.114.12.81/intranet/assets/hr_image_1.png",
-        fragment: "It's time to honor and recognize our hardworking and awesome Fathers/Dads/Papas/Tatays/Papsy at NEARSOL.",
-        article:"It's time to honor and recognize our hardworking and awesome Fathers/Dads/Papas/Tatays/Papsy at NEARSOL. Show your love and appreciation to all Dads by creating a TikTok video for a chance to win awesome prizes during the Father’s Day Virtual Party on June 18, 2021! #NearsolSuperDad.",
+        multimedia:"http://181.114.12.81/intranet/assets/hr_image_8.png",
+        fragment: "The HR Engagement Team led by Mira Yza Costes, Joseph Daza, and Ibrahim Claravall, recently conducted an employee online hangout to promote June's core value of the month : Results Oriented. The Employee Hangout is an online event where employees participate in games and learning sessions. The HR Engagement Team launched the Core Value edition last week and completed the roll out of the core values and the Employee Performance Reporting using the People Analyzer tool. Prizes were given to employees who actively participated in the sessions from all sites of NEARSOL PH. All Department heads agreed to use the People Analyzer, a tool used to evaluate employees by checking their adherence to Nearsol's core Values and determining if employees are GWC compliant (Get it, Want it, Has the Capacity to do it). The NEARSOL Employee Hangout is a monthly engagement activity designed to provide fun, engaging online activity while promoting continuous learning experiences for NEARSOL PH employees.",
+        article:"The HR Engagement Team led by Mira Yza Costes, Joseph Daza, and Ibrahim Claravall, recently conducted an employee online hangout to promote June's core value of the month : Results Oriented. The Employee Hangout is an online event where employees participate in games and learning sessions. The HR Engagement Team launched the Core Value edition last week and completed the roll out of the core values and the Employee Performance Reporting using the People Analyzer tool. Prizes were given to employees who actively participated in the sessions from all sites of NEARSOL PH. All Department heads agreed to use the People Analyzer, a tool used to evaluate employees by checking their adherence to Nearsol's core Values and determining if employees are GWC compliant (Get it, Want it, Has the Capacity to do it). The NEARSOL Employee Hangout is a monthly engagement activity designed to provide fun, engaging online activity while promoting continuous learning experiences for NEARSOL PH employees.",
         author:'Human Resources',
         date:'June 17, 2021',
         url: '',
@@ -63,6 +51,18 @@ export class GlobalHomepageComponent implements OnInit {
         author:'Recruitment',
         date:"June 17, 2021",
         url: 'https://nearsol.us/nia-manila/',
+        origin:"Manila"
+      },
+      {
+        location:"Global",
+        header:"Client Site Tour",
+        byline: '',
+        multimedia:"http://181.114.12.81/intranet/assets/admin_image_1.jpg",
+        fragment: "The Admin team headed by Jon Caballero, Administrative Director, organized a site tour for a potential client from a property broker company.  Ocular inspection was done for both The 30th Corporate Center and iSquare sites.",
+        article:"The Admin team headed by Jon Caballero, Administrative Director, organized a site tour for a potential client from a property broker company.  Ocular inspection was done for both The 30th Corporate Center and iSquare sites.",
+        author:'Human Resources',
+        date:'June 17, 2021',
+        url: '',
         origin:"Manila"
       },
       {
