@@ -20,7 +20,7 @@ export class GlobalHomepageComponent implements OnInit {
       {
         location:"Global",
         header:"Core Value of the Month",
-        byline: ": Caring",
+        byline: " Caring",
         multimedia:"http://181.114.12.81/intranet/assets/homepage_image.png",
         fragment: "Caring is one of the strongest values that we see in YOU! Your ability to care for each other shows that we are a FAMILY. At NEARSOL, the core value of caring is so strong that it just comes naturally to all employees.",
         article:"Caring is one of the strongest values that we see in YOU! Your ability to care for each other shows that we are a FAMILY. At NEARSOL, the core value of caring is so strong that it just comes naturally to all employees.",
@@ -31,8 +31,8 @@ export class GlobalHomepageComponent implements OnInit {
       },
       {
         location:"Global",
-        header:"Employee Hangout",
-        byline: "",
+        header:"NEARSOL",
+        byline: ": Employee Hangout",
         multimedia:"http://181.114.12.81/intranet/assets/hr_image_8.png",
         fragment: "The HR Engagement Team led by Mira Yza Costes, Joseph Daza, and Ibrahim Claravall, recently conducted an employee online hangout to promote June's core value of the month : Results Oriented. The Employee Hangout is an online event where employees participate in games and learning sessions. The HR Engagement Team launched the Core Value edition last week and completed the roll out of the core values and the Employee Performance Reporting using the People Analyzer tool. Prizes were given to employees who actively participated in the sessions from all sites of NEARSOL PH. All Department heads agreed to use the People Analyzer, a tool used to evaluate employees by checking their adherence to Nearsol's core Values and determining if employees are GWC compliant (Get it, Want it, Has the Capacity to do it). The NEARSOL Employee Hangout is a monthly engagement activity designed to provide fun, engaging online activity while promoting continuous learning experiences for NEARSOL PH employees.",
         article:"The HR Engagement Team led by Mira Yza Costes, Joseph Daza, and Ibrahim Claravall, recently conducted an employee online hangout to promote June's core value of the month : Results Oriented. The Employee Hangout is an online event where employees participate in games and learning sessions. The HR Engagement Team launched the Core Value edition last week and completed the roll out of the core values and the Employee Performance Reporting using the People Analyzer tool. Prizes were given to employees who actively participated in the sessions from all sites of NEARSOL PH. All Department heads agreed to use the People Analyzer, a tool used to evaluate employees by checking their adherence to Nearsol's core Values and determining if employees are GWC compliant (Get it, Want it, Has the Capacity to do it). The NEARSOL Employee Hangout is a monthly engagement activity designed to provide fun, engaging online activity while promoting continuous learning experiences for NEARSOL PH employees.",
