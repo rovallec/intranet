@@ -141,7 +141,7 @@ export class HrHomepageComponent implements OnInit {
     this.articles = [{
       location:"Admin",
       header:"",
-      byline: "Ayala 30th and iSquare Sites Ocular Visit from a Potential Client",
+      byline: "",
       multimedia:"http://181.114.12.81/intranet/assets/admin_image_2.png",
       fragment: "",
       article:"",
@@ -152,7 +152,7 @@ export class HrHomepageComponent implements OnInit {
     },{
       location:"Admin",
       header:"Client Site Tour",
-      byline: "Ayala 30th and iSquare Sites Ocular Visit from a Potential Client",
+      byline: "",
       multimedia:"http://181.114.12.81/intranet/assets/admin_image_1.jpg",
       fragment: "The Admin team headed by Jon Caballero, Administrative Director, organized a site tour for a potential client from a property broker company.  Ocular inspection was done for both The 30th Corporate Center and iSquare sites.",
       article:"The Admin team headed by Jon Caballero, Administrative Director, organized a site tour for a potential client from a property broker company.  Ocular inspection was done for both The 30th Corporate Center and iSquare sites.",
