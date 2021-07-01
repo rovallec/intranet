@@ -91,7 +91,7 @@ export class LocationHomepageComponent implements OnInit {
       },
       {
         location:"Manila",
-        header:"NEARSOL Manila Completes Annual Wellness Exam",
+        header:"Annual Wellness Exam",
         byline: "",
         multimedia:"http://181.114.12.81/intranet/assets/admin_image_3.png",
         fragment: "Employees from NEARSOL Manila reported to the The 30th Corporate Center site to participate in this year's Annual Wellness Examination (AWE). More than 100 employees attended on June 26, 2021 following strict covid-19 protocol and a well planned schedule to ensure social distancing. The event started at 8am and ended at around 7pm. AWE was successfully completed in partnership with Maxicare and Keyman Insurances.",
