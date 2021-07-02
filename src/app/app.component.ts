@@ -42,7 +42,91 @@ export class AppComponent {
       username: 'violet.pereda',
       user_name: 'Violet Pereda',
       password: 'Marketing2021'
-    }]
+    },
+    {username:'aaron.advincula', user_name:'Aaron Advincula',password:'Nearsol.2021'},
+{username:'aaron.bautista', user_name:'Aaron Bautista',password:'Nearsol.2021'},
+{username:'abraham.velasco', user_name:'Abraham Velasco',password:'Nearsol.2021'},
+{username:'alaiza.dela ', user_name:'Alaiza Dela Cruz',password:'Nearsol.2021'},
+{username:'alexander.singo', user_name:'Alexander Singo',password:'Nearsol.2021'},
+{username:'ann.marie ', user_name:'Ann Marie Javier',password:'Nearsol.2021'},
+{username:'arbie.ignacio', user_name:'Arbie Ignacio',password:'Nearsol.2021'},
+{username:'arnie.romero', user_name:'Arnie Romero',password:'Nearsol.2021'},
+{username:'art.aquino', user_name:'Art Aquino',password:'Nearsol.2021'},
+{username:'aurelio.ted ', user_name:'Aurelio Ted Thadeus Isidro',password:'Nearsol.2021'},
+{username:'carl.albert ', user_name:'Carl Albert Villaluz',password:'Nearsol.2021'},
+{username:'ched.nikki ', user_name:'Ched Nikki Jimenez',password:'Nearsol.2021'},
+{username:'christ.john ', user_name:'Christ John Puras',password:'Nearsol.2021'},
+{username:'christian.meonada', user_name:'Christian Meonada',password:'Nearsol.2021'},
+{username:'christine.ann ', user_name:'Christine Ann Tuvilla',password:'Nearsol.2021'},
+{username:'christopher.sangal', user_name:'Christopher Sangal',password:'Nearsol.2021'},
+{username:'claire.ruflo', user_name:'Claire Ruflo',password:'Nearsol.2021'},
+{username:'ma..cristina ', user_name:'Ma. Cristina Pasion',password:'Nearsol.2021'},
+{username:'dorothy.sue ', user_name:'Dorothy Sue Pili',password:'Nearsol.2021'},
+{username:'earl.inlayo', user_name:'Earl Inlayo',password:'Nearsol.2021'},
+{username:'elaine.marion ', user_name:'Elaine Marion Edano',password:'Nearsol.2021'},
+{username:'ella.divinagracia', user_name:'Ella Divinagracia',password:'Nearsol.2021'},
+{username:'enrique.manus', user_name:'Enrique Manus',password:'Nearsol.2021'},
+{username:'felmer.san ', user_name:'Felmer San Juan',password:'Nearsol.2021'},
+{username:'ferdinand.datuin', user_name:'Ferdinand Datuin',password:'Nearsol.2021'},
+{username:'galaxy.salas', user_name:'Galaxy Salas',password:'Nearsol.2021'},
+{username:'gerard.palado', user_name:'Gerard Palado',password:'Nearsol.2021'},
+{username:'gil.concepcion', user_name:'Gil Concepcion',password:'Nearsol.2021'},
+{username:'gillyn.marie ', user_name:'Gillyn Marie Catindig',password:'Nearsol.2021'},
+{username:'inna.camilla ', user_name:'Inna Camilla Condinato',password:'Nearsol.2021'},
+{username:'jaypee.largosa', user_name:'Jaypee Largosa',password:'Nearsol.2021'},
+{username:'jefrey.fernando', user_name:'Jefrey Fernando',password:'Nearsol.2021'},
+{username:'jennifer.magsino', user_name:'Jennifer Magsino',password:'Nearsol.2021'},
+{username:'jennifer.roco', user_name:'Jennifer Roco',password:'Nearsol.2021'},
+{username:'jirus.cedric ', user_name:'Jirus Cedric Bustamante',password:'Nearsol.2021'},
+{username:'jo-anne.gepolio', user_name:'Jo-Anne Gepolio',password:'Nearsol.2021'},
+{username:'joaida.mejico', user_name:'Joaida Mejico',password:'Nearsol.2021'},
+{username:'joemar.anacion', user_name:'Joemar Anacion',password:'Nearsol.2021'},
+{username:'johanna.salazar', user_name:'Johanna Salazar',password:'Nearsol.2021'},
+{username:'john.amores', user_name:'John Amores',password:'Nearsol.2021'},
+{username:'john.emerson ', user_name:'John Emerson Licudine',password:'Nearsol.2021'},
+{username:'jon.caballero', user_name:'Jon Caballero',password:'Nearsol.2021'},
+{username:'josephine.baylon', user_name:'Josephine Baylon',password:'Nearsol.2021'},
+{username:'joycee.felicilda ', user_name:'Joycee Felicilda Herminio',password:'Nearsol.2021'},
+{username:'judy.ann ', user_name:'Judy Ann Bangco',password:'Nearsol.2021'},
+{username:'katherine.quesada', user_name:'Katherine Quesada',password:'Nearsol.2021'},
+{username:'kendrick.ocampo', user_name:'Kendrick Ocampo',password:'Nearsol.2021'},
+{username:'kristine.carrera', user_name:'Kristine Carrera',password:'Nearsol.2021'},
+{username:'leonico.blancia', user_name:'Leonico Blancia',password:'Nearsol.2021'},
+{username:'lester.cui', user_name:'Lester Cui',password:'Nearsol.2021'},
+{username:'lorence.cruzat', user_name:'Lorence Cruzat',password:'Nearsol.2021'},
+{username:'luis.ortiz', user_name:'Luis Ortiz',password:'Nearsol.2021'},
+{username:'mark.joseph ', user_name:'Mark Joseph Bongar',password:'Nearsol.2021'},
+{username:'mark.casumpang', user_name:'Mark Casumpang',password:'Nearsol.2021'},
+{username:'mark.anthony ', user_name:'Mark Anthony Roxas',password:'Nearsol.2021'},
+{username:'melanie.bino', user_name:'Melanie Bino',password:'Nearsol.2021'},
+{username:'menina.elysse ', user_name:'Menina Elysse Condado',password:'Nearsol.2021'},
+{username:'michael.bellido', user_name:'Michael Bellido',password:'Nearsol.2021'},
+{username:'michael.william ', user_name:'Michael William Modesto',password:'Nearsol.2021'},
+{username:'michael.tanael', user_name:'Michael Tanael',password:'Nearsol.2021'},
+{username:'michael.villamiel', user_name:'Michael Villamiel',password:'Nearsol.2021'},
+{username:'michelle.gonzales', user_name:'Michelle Gonzales',password:'Nearsol.2021'},
+{username:'miguel.sacluti', user_name:'Miguel Sacluti',password:'Nearsol.2021'},
+{username:'nilo.cruz', user_name:'Nilo Cruz',password:'Nearsol.2021'},
+{username:'oscar.manuel', user_name:'Oscar Manuel',password:'Nearsol.2021'},
+{username:'patrick.gariando', user_name:'Patrick Gariando',password:'Nearsol.2021'},
+{username:'ralph.camago', user_name:'Ralph Camago',password:'Nearsol.2021'},
+{username:'ramon.guevarra ', user_name:'Ramon Guevarra III',password:'Nearsol.2021'},
+{username:'renante.datuin', user_name:'Renante Datuin',password:'Nearsol.2021'},
+{username:'rex.luangco', user_name:'Rex Luangco',password:'Nearsol.2021'},
+{username:'reynand.lopez', user_name:'Reynand Lopez',password:'Nearsol.2021'},
+{username:'rhodora.nisperos', user_name:'Rhodora Nisperos',password:'Nearsol.2021'},
+{username:'rummel.amponin', user_name:'Rummel Amponin',password:'Nearsol.2021'},
+{username:'security.manila', user_name:'Security Manila',password:'Nearsol.2021'},
+{username:'sharon.dela ', user_name:'Sharon Dela Peña',password:'Nearsol.2021'},
+{username:'shiela.mendoza', user_name:'Shiela Mendoza',password:'Nearsol.2021'},
+{username:'spencer.barrameda', user_name:'Spencer Barrameda',password:'Nearsol.2021'},
+{username:'stephen.abriol', user_name:'Stephen Abriol',password:'Nearsol.2021'},
+{username:'theresa.ferrer', user_name:'Theresa Ferrer',password:'Nearsol.2021'},
+{username:'tonichi.parekh', user_name:'Tonichi Parekh',password:'Nearsol.2021'},
+{username:'vhia.patrice ', user_name:'Vhia Patrice Marcelo',password:'Nearsol.2021'},
+{username:'wilmart.abellera', user_name:'Wilmart Abellera',password:'Nearsol.2021'},
+{username:'zyra.mae ', user_name:'Zyra Mae Blanco',password:'Nearsol.2021'},
+  ]
 
     this.sites = ['Global', 'Guatemala', 'Manila', 'Iloilo', 'Colombia'];
 
@@ -324,15 +408,26 @@ export class AppComponent {
   }
 
   login() {
+    let pss:boolean = false;
+    let us:boolean = false;
     this._authService.changeAuth(false);
     this.users.forEach((user: Users) => {
       if (user.username == this.username) {
         if (user.password == this.password) {
-          this._authService.changeAuth(true);
-          this._router.navigate(["./home"])
+          this._authService.changeAuth(true);          
+          this._router.navigate(["./home"]);
+        }else{
+          pss = true;
         }
+      }else{
+        us = true
       }
     })
+    if(us = true && !this._authService.isAuthenticated()){
+      if(pss = true){
+        window.alert("Worng user or bad password please try again");
+      }
+    }
   }
 
   setCurrentSite(str: string) {
