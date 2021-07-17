@@ -10,7 +10,9 @@ import { LoginComponent } from './login/login.component';
 import { HrHomepageComponent } from './hr-homepage/hr-homepage.component';
 import { LocationHomepageComponent } from './location-homepage/location-homepage.component';
 
-import { HashLocationStrategy, LocationStrategy } from '@angular/common'
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,8 @@ import { HashLocationStrategy, LocationStrategy } from '@angular/common'
   imports: [
     BrowserModule,
     FormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [{provide:LocationStrategy, 
     useClass:HashLocationStrategy}],
