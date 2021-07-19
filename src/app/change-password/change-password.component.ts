@@ -28,6 +28,7 @@ export class ChangePasswordComponent implements OnInit {
       this.username.password = this.newPassword;
       this.apiService.change_password(this.username).subscribe((str: string) => {
         if (str=='changed') {
+          this._authService.changeAuth(false);
           this._router.navigate(["./login"]);
         }
       });
