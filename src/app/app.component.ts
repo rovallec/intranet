@@ -317,7 +317,10 @@ export class AppComponent {
         if(usr.active == '1'){
           this._authService.changeAuth(true);
           this._router.navigate(["./home"]);
-        }else{
+        } else if(usr.active == '2') {
+          this._authService.changeAuth(true);
+          this._router.navigate(['./change_password']);
+        } else {
           window.alert("User is not longer active");
         }
       }else{

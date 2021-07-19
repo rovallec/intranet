@@ -13,6 +13,7 @@ import { LocationHomepageComponent } from './location-homepage/location-homepage
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 import { HttpClientModule } from '@angular/common/http';
+import { ChangePasswordComponent } from './change-password/change-password.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { HttpClientModule } from '@angular/common/http';
     LoginComponent,
     HrHomepageComponent,
     LocationHomepageComponent,
+    ChangePasswordComponent,
   ],
   imports: [
     BrowserModule,

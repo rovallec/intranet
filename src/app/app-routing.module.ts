@@ -5,6 +5,7 @@ import { LoginComponent } from './login/login.component'
 import { GuardGuard } from './guard.guard';
 import { HrHomepageComponent } from './hr-homepage/hr-homepage.component';
 import { LocationHomepageComponent } from './location-homepage/location-homepage.component';
+import { ChangePasswordComponent } from './change-password/change-password.component';
 
 const routes: Routes = [
   {
@@ -44,6 +45,11 @@ const routes: Routes = [
   {
     path:'location/:id',
     component:LocationHomepageComponent,
+    canActivate:[GuardGuard]
+  },
+  {
+    path:'change_password',
+    component:ChangePasswordComponent,
     canActivate:[GuardGuard]
   },
   {
