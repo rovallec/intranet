@@ -4,6 +4,8 @@ import { Articles } from './articles';
 import { AuthServiceService } from './auth-service.service';
 import { Users } from './users';
 import { ApiServiceService } from './api-service.service';
+import { delay, map,  tap } from "rxjs/operators";
+import { of } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -310,7 +312,6 @@ export class AppComponent {
 
   login() {
     this._authService.changeAuth(false);
-    let users = new Users;
     this.apiService.login({username:this.username, password:this.password}).subscribe((usr:Users)=>{
       if(usr.idusers != 'NULL'){
         if(usr.active == '1'){
