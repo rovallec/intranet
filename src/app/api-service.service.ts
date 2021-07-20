@@ -9,7 +9,7 @@ export class ApiServiceService {
 
 
   //PHP_API_SERVER = "http://172.18.2.45";
-  PHP_API_SERVER = "http://172.18.2.45";
+  PHP_API_SERVER = "http://181.114.12.81";
 
   constructor(private httpClient:HttpClient) { }
 
