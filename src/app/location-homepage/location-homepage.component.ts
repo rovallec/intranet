@@ -18,6 +18,7 @@ export class LocationHomepageComponent implements OnInit {
   ngOnInit(): void {
     this.articles = [
       {
+        id: '0',
         location:"Manila",
         header:"",
         byline: '',
@@ -30,6 +31,7 @@ export class LocationHomepageComponent implements OnInit {
         origin:'Manila'
       },
       {
+        id: '0',
         location:"Global",
         header:"NEARSOL",
         byline:" Employee Hangout",
@@ -42,6 +44,7 @@ export class LocationHomepageComponent implements OnInit {
         origin: 'Manila'
       },
       {
+        id: '0',
         location:'Manila',
         header:"Employee Referral Program",
         byline: '',
@@ -54,6 +57,7 @@ export class LocationHomepageComponent implements OnInit {
         origin:'Manila'
       },
       {
+        id: '0',
         location:"Manila",
         header:"Client Site Tour",
         byline: "",
@@ -66,6 +70,7 @@ export class LocationHomepageComponent implements OnInit {
         origin: 'Manila'
       },
       {
+        id: '0',
         location:'Manila',
         header:"Payroll update",
         byline: '',
@@ -78,6 +83,7 @@ export class LocationHomepageComponent implements OnInit {
         origin:'Manila'
       },
       {
+        id: '0',
         location:"Manila",
         header:"NIA",
         byline: "",
@@ -90,6 +96,7 @@ export class LocationHomepageComponent implements OnInit {
         origin: 'Manila'
       },
       {
+        id: '0',
         location:"Manila",
         header:"Annual Wellness Exam",
         byline: "",

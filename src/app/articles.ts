@@ -1,4 +1,5 @@
 export class Articles {
+    id: string;
     location:string;
     header:string;
     byline:string;
@@ -11,6 +12,7 @@ export class Articles {
     origin:string;
 
     constructor(){
+        this.id = null;
         this.location = null;
         this.header = null;
         this.byline = null;

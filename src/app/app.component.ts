@@ -35,6 +35,7 @@ export class AppComponent {
 
     this.allArticles = [
       {
+        id: '0',
         location:"Human Resources",
         header:"Pride Month 2021",
         byline: "",
@@ -47,6 +48,7 @@ export class AppComponent {
         origin: 'Manila-HR'
       },
       {
+        id: '0',
         location:"Human Resources",
         header:"Father’s Day at NEARSOL",
         byline: "",
@@ -59,6 +61,7 @@ export class AppComponent {
         origin: 'Manila-HR'
       },
       {
+        id: '0',
         location:"Human Resources",
         header:"Payroll Update",
         byline: "",
@@ -71,6 +74,7 @@ export class AppComponent {
         origin: 'Manila-HR'
       },
       {
+        id: '0',
         location:"Human Resources",
         header:"Annual Wellness Examination",
         byline: "",
@@ -83,6 +87,7 @@ export class AppComponent {
         origin: 'Manila-HR'
       },
       {
+        id: '0',
         location:"Human Resources",
         header:"Forms",
         byline: "",
@@ -95,6 +100,7 @@ export class AppComponent {
         origin: 'Manila-HR'
       },
       {
+        id: '0',
         location:"Human Resources",
         header:"Employee Satisfaction Survey",
         byline: "",
@@ -129,6 +135,7 @@ export class AppComponent {
         origin: 'Manila-HR'
       },
       {
+        id: '0',
         location:"Global",
         header:"Core Value of the Month",
         byline: ": Results-Driven",
@@ -141,6 +148,7 @@ export class AppComponent {
         origin:"Global Manila"
       },
       {
+        id: '0',
         location:"Global",
         header:"Pride Month 2021",
         byline: "",
@@ -153,6 +161,7 @@ export class AppComponent {
         origin:"Global Manila"
       },
       {
+        id: '0',
         location:"Global",
         header:"Father's Day at NEARSOL",
         byline: '',
@@ -165,6 +174,7 @@ export class AppComponent {
         origin:"Global Manila"
       },
       {
+        id: '0',
         location:'Global',
         header:"NIA",
         byline: ': NEARSOL Intelligence Automation',
@@ -177,6 +187,7 @@ export class AppComponent {
         origin:"Global Manila"
       },
       {
+        id: '0',
         location:'Global',
         header:"Guatemala",
         byline: '',
@@ -189,6 +200,7 @@ export class AppComponent {
         origin:"Global Guatemala"
       },
       {
+        id: '0',
         location:'Global',
         header:"Colombia",
         byline: '',
@@ -201,6 +213,7 @@ export class AppComponent {
         origin:"Global Colombia"
       },
       {
+        id: '0',
         location:'Global',
         header:"Iloilo",
         byline: '',
@@ -213,6 +226,7 @@ export class AppComponent {
         origin:"Global Iloilo"
       },
       {
+        id: '0',
         location:"Manila",
         header:"Pride Month 2021",
         byline: '',
@@ -225,6 +239,7 @@ export class AppComponent {
         origin:'Manila'
       },
       {
+        id: '0',
         location:"Manila",
         header:"Father's Day at NEARSOL",
         byline: '',
@@ -237,6 +252,7 @@ export class AppComponent {
         origin:'Manila'
       },
       {
+        id: '0',
         location:"Manila",
         header:"Top Performers of the Month",
         byline: '',
@@ -249,6 +265,7 @@ export class AppComponent {
         origin:'Manila'
       },
       {
+        id: '0',
         location:'Manila',
         header:"Employee Referral Program",
         byline: 'Refer a friend and receive a P10,000 incentive',
@@ -261,6 +278,7 @@ export class AppComponent {
         origin:'Manila'
       },
       {
+        id: '0',
         location:'Manila',
         header:"Payroll update",
         byline: '',
@@ -273,6 +291,7 @@ export class AppComponent {
         origin:'Manila'
       },
       {
+        id: '0',
         location:'Manila',
         header:"Timekeeper Reminders",
         byline: '',
@@ -285,6 +304,7 @@ export class AppComponent {
         origin:'Manila'
       },
       {
+        id: '0',
         location:'Manila',
         header:"Annual Wellness Examination",
         byline: '',
