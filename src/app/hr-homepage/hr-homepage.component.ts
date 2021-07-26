@@ -18,21 +18,15 @@ export class HrHomepageComponent implements OnInit {
   articles: Articles[] = [];
   img_foot: string = 'Intranet Forms';
   img_date:string = 'June 16, 2021';
+  origin: string = 'Manila';
   
   ngOnInit(): void {
-    let artDefault: Articles = {
-      id: '0',
-      location:"",
-      header:"More Content Soon",
-      byline: "",
-      multimedia:"./assets/soon.png",
-      fragment: "",
-      article:"",
-      author:'',
-      date:'June 2, 2021',
-      url: '',
-      origin: 'Manila'
-    };
+    let artDefault: Articles = this.apiService.artDefault;
+    artDefault.origin = this.origin;
+
+    for (let index = 0; index < 7; index++) {
+      this.articles[index] = artDefault;
+    }
 
     if(this.routes.snapshot.url.toString().includes('hr-homepage')){
       artDefault.location = 'Human Resources';
@@ -54,29 +48,9 @@ export class HrHomepageComponent implements OnInit {
   }
 
   getPost(art: Articles) {
-    let artDefault: Articles = {
-      id: '0',
-      location:"",
-      header:"More Content Soon",
-      byline: "",
-      multimedia:"./assets/soon.png",
-      fragment: "",
-      article:"",
-      author:'',
-      date:'June 2, 2021',
-      url: '',
-      origin: 'Manila'
-    };
-     
     this.apiService.getPost(art).subscribe((posts: Articles[]) => {
       this.articles = posts;
-    })    
-
-    if (this.articles.length == 0) {
-      for (let index = 0; index < 7; index++) {
-        this.articles[index] = artDefault;
-      }
-    }
+    }) 
   }
 
   setArticlesFragment(str:string){

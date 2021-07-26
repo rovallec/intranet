@@ -14,6 +14,21 @@ export class ApiServiceService {
 
   constructor(private httpClient:HttpClient) { }
 
+  artDefault: Articles = {
+    id: '0',
+    location:"",
+    header:"More Content Soon",
+    byline: "",
+    multimedia:"./assets/soon.png",
+    fragment: "",
+    article:"",
+    author:'',
+    date:'June 2, 2021',
+    url: '',
+    origin: '',
+    label: ''
+  };
+
   login(usr:any){
     return this.httpClient.post<Users>(`${this.PHP_API_SERVER}/phpscripts/login_intranet.php`, usr);
   }
@@ -23,6 +38,6 @@ export class ApiServiceService {
   }
 
   getPost(art:Articles){
-    return this.httpClient.post<Articles[]>(`${this.PHP_API_SERVER}/phpscripts/getPost.php`, art);
+    return this.httpClient.post<Articles[]>(`${this.PHP_API_SERVER}/phpscripts/postgres/getPost.php`, art);
   }
 }
