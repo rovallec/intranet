@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  PHP_URL: 'http://localhost'
+  PHP_root: 'http://localhost'
 };
 
 /*

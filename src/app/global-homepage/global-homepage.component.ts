@@ -18,6 +18,7 @@ export class GlobalHomepageComponent implements OnInit {
   ngOnInit(): void {
     this.articles = [
       {
+        id: '0',
         location:"Global",
         header:"Core Value of the Month",
         byline: " Caring",
@@ -30,6 +31,7 @@ export class GlobalHomepageComponent implements OnInit {
         origin:"Manila"
       },
       {
+        id: '0',
         location:"Global",
         header:"NEARSOL",
         byline: " Employee Hangout",
@@ -42,6 +44,7 @@ export class GlobalHomepageComponent implements OnInit {
         origin:"Manila"
       },
       {
+        id: '0',
         location:'Global',
         header:"NIA",
         byline: '',
@@ -54,6 +57,7 @@ export class GlobalHomepageComponent implements OnInit {
         origin:"Manila"
       },
       {
+        id: '0',
         location:"Global",
         header:"Client Site Tour",
         byline: '',
@@ -66,6 +70,7 @@ export class GlobalHomepageComponent implements OnInit {
         origin:"Manila"
       },
       {
+        id: '0',
         location:'Global',
         header:"Bicycle Day",
         byline: '',
@@ -78,6 +83,7 @@ export class GlobalHomepageComponent implements OnInit {
         origin:"Guatemala"
       },
       {
+        id: '0',
         location:'Global',
         header:"Customer Service Week",
         byline: '',
@@ -90,6 +96,7 @@ export class GlobalHomepageComponent implements OnInit {
         origin:"Colombia"
       },
       {
+        id: '0',
         location:'Global',
         header:"The Noche Buena Project 2021",
         byline: '',
