@@ -30,6 +30,8 @@ export class ChangePasswordComponent implements OnInit {
         if (str=='changed') {
           this._authService.changeAuth(false);
           this._router.navigate(["./login"]);
+        }else{
+          window.alert(str);
         }
       });
     } else {
