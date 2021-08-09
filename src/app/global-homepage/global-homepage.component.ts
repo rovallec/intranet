@@ -20,12 +20,12 @@ export class GlobalHomepageComponent implements OnInit {
       {
         location:"Global",
         header:"Core Value of the Month",
-        byline: " Caring",
+        byline: " Committed",
         multimedia:"./assets/homepage_image.png",
-        fragment: "Caring is one of the strongest values that we see in YOU! Your ability to care for each other shows that we are a FAMILY. At NEARSOL, the core value of caring is so strong that it just comes naturally to all employees.",
-        article:"Caring is one of the strongest values that we see in YOU! Your ability to care for each other shows that we are a FAMILY. At NEARSOL, the core value of caring is so strong that it just comes naturally to all employees.",
+        fragment: "Being Committed means that rain or shine you will continue to center your attention on your target and your goal. All hell might be breaking loose but you will stay on your course, focused and nothing can stop you.",
+        article:"Being Committed means that rain or shine you will continue to center your attention on your target and your goal. All hell might be breaking loose but you will stay on your course, focused and nothing can stop you.",
         author:'Human Resources',
-        date:'July 1, 2021',
+        date:'August 1, 2021',
         url: 'https://nearsol.us/',
         origin:"Manila"
       },
