@@ -43,6 +43,11 @@ const routes: Routes = [
     canActivate: [GuardGuard]
   },
   {
+    path:'wf-homepage',
+    component:HrHomepageComponent,
+    canActivate: [GuardGuard]
+  },
+  {
     path:'location/:id',
     component:LocationHomepageComponent,
     canActivate:[GuardGuard]

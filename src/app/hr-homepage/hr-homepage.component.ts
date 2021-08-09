@@ -332,6 +332,85 @@ export class HrHomepageComponent implements OnInit {
       url: '',
       origin: 'Manila'
     }]
+  }else if(this.routes.snapshot.url.toString().includes('wf-homepage')){
+    this.articles = [{
+      location:"Workforce",
+      header:"Max Billable Hours Dashboard",
+      byline: "NiRi (Nearsol Insights and Reporting Instrument)",
+      multimedia:"./assets/workforce_image1.png",
+      fragment: "",
+      article:"It is a unified dashboard that would enable end-users to have the desired data or information that they need in one click of a finger. Applicable only for Upper Management",
+      author:'Workforce',
+      date:'08/09/2021',
+      url: 'https://datastudio.google.com/s/jpFN0qAyfdg',
+      origin: 'Manila'
+    },{
+      location:"Workforce",
+      header:"Max Billable Hours Dashboard",
+      byline: "NiRi (Nearsol Insights and Reporting Instrument)",
+      multimedia:"./assets/workforce_image1.png",
+      fragment: "",
+      article:"It is a unified dashboard that would enable end-users to have the desired data or information that they need in one click of a finger. Applicable only for Upper Management",
+      author:'Workforce',
+      date:'08/09/2021',
+      url: 'https://datastudio.google.com/s/jpFN0qAyfdg',
+      origin: 'Manila'
+    },{
+      location:"Recruitment",
+      header:"NIA",
+      byline: "",
+      multimedia:"./assets/recruitment_image_1.png",
+      fragment: "We proudly present to you NIA, NEARSOL's recruitment chatbot. NIA helps with lead generation, process guidance and does all that while projecting our brand identity. She is not just a chatbot, she is so much more!",
+      article:"We proudly present to you NIA, NEARSOL's recruitment chatbot. NIA helps with lead generation, process guidance and does all that while projecting our brand identity. She is not just a chatbot, she is so much more!",
+      author:'Recruitment',
+      date:'June 28, 2021',
+      url: 'https://nearsol.us/nia-manila/',
+      origin: 'Manila'
+    },{
+      location:"Recruitment",
+      header:"More Content Soon",
+      byline: "",
+      multimedia:"./assets/soon.png",
+      fragment: "",
+      article:"",
+      author:'Recruitment',
+      date:'June 2, 2021',
+      url: '',
+      origin: 'Manila'
+    },{
+      location:"Recruitment",
+      header:"More Content Soon",
+      byline: "",
+      multimedia:"./assets/soon.png",
+      fragment: "",
+      article:"",
+      author:'Recruitment',
+      date:'June 28, 2021',
+      url: '',
+      origin: 'Manila'
+    },{
+      location:"Recruitment",
+      header:"More Content Soon",
+      byline: "",
+      multimedia:"./assets/soon.png",
+      fragment: "",
+      article:"",
+      author:'Recruitment',
+      date:'June 28, 2021',
+      url: '',
+      origin: 'Manila'
+    },{
+      location:"Recruitment",
+      header:"More Content Soon",
+      byline: "",
+      multimedia:"./assets/soon.png",
+      fragment: "",
+      article:"",
+      author:'Recruitment',
+      date:'June 28, 2021',
+      url: '',
+      origin: 'Manila'
+    }]
   }
   }
 
