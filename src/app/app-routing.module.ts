@@ -6,6 +6,7 @@ import { GuardGuard } from './guard.guard';
 import { HrHomepageComponent } from './hr-homepage/hr-homepage.component';
 import { LocationHomepageComponent } from './location-homepage/location-homepage.component';
 import { ChangePasswordComponent } from './change-password/change-password.component';
+import { ApprovalRequestComponent } from './approval-request/approval-request.component';
 
 const routes: Routes = [
   {
@@ -50,6 +51,11 @@ const routes: Routes = [
   {
     path:'change_password',
     component:ChangePasswordComponent,
+    canActivate:[GuardGuard]
+  },
+  {
+    path:'approval',
+    component:ApprovalRequestComponent,
     canActivate:[GuardGuard]
   },
   {

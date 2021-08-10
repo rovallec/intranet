@@ -60,21 +60,25 @@ export class AppComponent {
     console.log(this._authService.isAuthenticated());
   }
 
+  approval_request(){
+    this._router.navigate(['./approval']);
+  }
+
   login() {
     this._authService.changeAuth(false);
     this.apiService.login({username:this.username, password:this.password}).subscribe((usr:Users)=>{
-      if(usr.idusers != 'NULL'){
-        if(usr.active == '1'){
+      if (usr.idusers != 'NULL') {
+        if (usr.active == '1') {
           this._authService.changeAuth(true);
           this._router.navigate(["./home"]);
-        } else if(usr.active == '2') {
+        } else if (usr.active == '2') {
           this._authService.changeAuth(true);
           this._authService.autUser = usr;
           this._router.navigate(['./change_password']);
         } else {
           window.alert("User is not longer active");
         }
-      }else{
+      } else {
         window.alert("Worng user or ad password please try again");
       }
     })

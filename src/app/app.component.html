@@ -22,6 +22,10 @@
           </div>
         </div>
       </div>
+      <button class="btn hover_blue" style=" font-size: 14px;" *ngIf="getAuth()" routerLink="./approval"
+        (click)="approval_request()">
+        Approval-Request
+      </button>
       <div class="dropdown" *ngIf="getAuth()" style="margin-right:15px">
         <button class="menu_button_1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{current_site}}</button>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton"
