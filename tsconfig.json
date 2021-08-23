@@ -13,5 +13,10 @@
     {
       "path": "./tsconfig.spec.json"
     }
-]
+  ],
+  "compilerOptions": {
+    "plugins": [
+      { "name": "typescript-tslint-plugin" }
+    ]
+  }
 }

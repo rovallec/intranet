@@ -10,7 +10,7 @@ import { attendences, attendences_adjustment, disciplinary_processes, employees,
 })
 export class ApiServiceService {
 
-  PHP_API_SERVER = environment.PHP_root; 
+  PHP_API_SERVER = environment.PHP_root;
   user: Users = new Users;
 
   constructor(private httpClient:HttpClient) { }
@@ -57,7 +57,7 @@ export class ApiServiceService {
   getAttendences(flt:any){
     return this.httpClient.post<attendences[]>(`${this.PHP_API_SERVER}/phpscripts/getAttendences.php`, flt);
   }
-  
+
   getVacations(str:any){
     return this.httpClient.post<vacations[]>(`${this.PHP_API_SERVER}/phpscripts/getVacations.php`,str);
   }
@@ -77,5 +77,28 @@ export class ApiServiceService {
   getAttAdjustments(str:any){
     return this.httpClient.post<attendences_adjustment[]>(`${this.PHP_API_SERVER}/phpscripts/getAttAdjustments.php`, str);
   }
-  
+
+  insertVacations(vacation:vacations){
+    return this.httpClient.post<vacations>(`${this.PHP_API_SERVER}/phpscripts/insertVacations.php`, vacation);
+  }
+
+  getApprovers(){
+    return this.httpClient.get<Users[]>(`${this.PHP_API_SERVER}/phpscripts/getApprovers.php`);
+  }
+
+  updateLeaves(leave:leaves){
+    return this.httpClient.post<string>(`${this.PHP_API_SERVER}/phpscripts/updateLeaves.php`, leave);
+  }
+
+  insertLeaves(leaves:leaves){
+    return this.httpClient.post<string>(`${this.PHP_API_SERVER}/phpscripts/insertLeave.php`, leaves);
+  }
+
+  insertAttJustification(adj:attendences_adjustment){
+    return this.httpClient.post<string>(`${this.PHP_API_SERVER}/phpscripts/insertAttJustification.php`, adj);
+  }
+
+  getAttAdjustment(str:any){
+    return this.httpClient.post<attendences_adjustment>(`${this.PHP_API_SERVER}/phpscripts/getAttAdjustment.php`, str);
+  }  
 }

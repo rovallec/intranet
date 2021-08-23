@@ -48,7 +48,7 @@ export class AppComponent {
   getPost(art: Articles) {
     this.apiService.getPost(art).subscribe((posts: Articles[]) => {
       this.allArticles = posts;
-    }) 
+    })
   }
 
   getAuth(): boolean {
@@ -70,10 +70,12 @@ export class AppComponent {
       if (usr.idusers != 'NULL') {
         if (usr.active == '1') {
           this._authService.changeAuth(true);
+          this._authService.saveUsr(usr);
           this._router.navigate(["./home"]);
         } else if (usr.active == '2') {
           this._authService.changeAuth(true);
           this._authService.autUser = usr;
+          this._authService.saveUsr(usr);
           this._router.navigate(['./change_password']);
         } else {
           window.alert("User is not longer active");

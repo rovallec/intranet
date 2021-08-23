@@ -2,7 +2,6 @@ export class Users {
     username: string;
     user_name: string;
     password: string;
-
     idusers: string;
     department: string;
     id_role: string;
