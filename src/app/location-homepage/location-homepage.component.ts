@@ -31,6 +31,62 @@ export class LocationHomepageComponent implements OnInit {
       },
       {
         location:"Global",
+        header:"Max Billable Hours Dashboard",
+        byline: "NiRi (Nearsol Insights and Reporting Instrument)",
+        multimedia:"./assets/workforce_image1.jpg",
+        fragment: "",
+        article:"It is a unified dashboard that would enable end-users to have the desired data or information that they need in one click of a finger. Applicable only for Upper Management",
+        author:'Workforce',
+        date:'August 09, 2021',
+        url: 'https://datastudio.google.com/s/jpFN0qAyfdg',
+        origin: 'Manila'
+      },{
+        location:"Global",
+        header:"Nearsol Global Attrition Report",
+        byline: "NiRi (Nearsol Insights and Reporting Instrument)",
+        multimedia:"./assets/workforce_image2.jpg",
+        fragment: "",
+        article:"It is a unified dashboard that would enable end-users to have the desired data or information that they need in one click of a finger. Applicable only for Upper Management",
+        author:'Workforce',
+        date:'August 09, 2021',
+        url: '',
+        origin: 'Manila'
+      },{
+        location:"Global",
+        header:"Payroll Inquiry Form",
+        byline: "",
+        multimedia:"./assets/workforce_image3.jpg",
+        fragment: "",
+        article:"This is a portal were employees can send their questions or inquiry for better understanding of the breakdown of their salary or Request for an adjustment if necessary. For Supervisors and Up only.",
+        author:'Workforce',
+        date:'August 09, 2021',
+        url: 'https://docs.google.com/forms/d/e/1FAIpQLSe4OC7cWXGRxbd4Ga3bvrwIZMPdqgRlTlvhJt2-Rc8_xqTbKw/viewform',
+        origin: 'Manila'
+      },{
+        location:"Global",
+        header:"Timekeeping Process Flow and Reminders",
+        byline: "",
+        multimedia:"./assets/workforce_image4.jpg",
+        fragment: "",
+        article:"This is a short and comprehensive presentation on how the timekeeping works as a function in overall payroll. Quick reminders are included to promote accuracy in employees monthly salary.",
+        author:'Workforce',
+        date:'August 09, 2021',
+        url: 'https://drive.google.com/file/d/1qT41Ui45e-3fOZ1T9F7yEfEyUyePG534/view?usp=sharing',
+        origin: 'Manila'
+      },{
+        location:"Global",
+        header:"Project Sparta",
+        byline: "",
+        multimedia:"./assets/workforce_image5.png",
+        fragment: "",
+        article:"Project Sparta is a scholarship program on data analytics, a partnership project of CCAP-DOST. Our Country Manager, Tonichi Parekh and Workforce Director, Gerard Palado led this initiative.",
+        author:'Recruitment',
+        date:'August 48, 2021',
+        url: 'https://bit.ly/3shdAlw',
+        origin: 'Manila'
+      },
+      {
+        location:"Global",
         header:"NEARSOL",
         byline:" Employee Hangout",
         multimedia:"./assets/hr_image_8.png",
@@ -40,67 +96,7 @@ export class LocationHomepageComponent implements OnInit {
         date:'June 17, 2021',
         url: '',
         origin: 'Manila'
-      },
-      {
-        location:'Manila',
-        header:"Employee Referral Program",
-        byline: '',
-        multimedia:"./assets/recruitment_image_2.png",
-        fragment: "Refer a friend and receive a P10,000 incentive! The payouts will be released on the 3rd and 6th months of the applicant’s joining date.",
-        article:"Refer a friend and receive a P10,000 incentive! The payouts will be released on the 3rd and 6th months of the applicant’s joining date.",
-        author:'Recruitment',
-        date:"June 17, 2021",
-        url: '',
-        origin:'Manila'
-      },
-      {
-        location:"Manila",
-        header:"Client Site Tour",
-        byline: "",
-        multimedia:"./assets/admin_image_1.jpg",
-        fragment: "The Admin team headed by Jon Caballero, Administrative Director, organized a site tour for a potential client from a property broker company.  Ocular inspection was done for both The 30th Corporate Center and iSquare sites.",
-        article:"The Admin team headed by Jon Caballero, Administrative Director, organized a site tour for a potential client from a property broker company.  Ocular inspection was done for both The 30th Corporate Center and iSquare sites.",
-        author:'Admin',
-        date:'June 29, 2021',
-        url: '',
-        origin: 'Manila'
-      },
-      {
-        location:'Manila',
-        header:"Payroll update",
-        byline: '',
-        multimedia:"./assets/fn_image_1.png",
-        fragment: "Payroll bank account for NEARSOL Manila is switching to Asia United Bank (AUB).",
-        article:"Payroll bank account for NEARSOL Manila is switching to Asia United Bank (AUB). ",
-        author:'Human Resources',
-        date:"June 17, 2021",
-        url: '',
-        origin:'Manila'
-      },
-      {
-        location:"Manila",
-        header:"NIA",
-        byline: "",
-        multimedia:"./assets/recruitment_image_1.png",
-        fragment: "We proudly present to you NIA, NEARSOL's recruitment chatbot. NIA helps with lead generation, process guidance and does all that while projecting our brand identity. She is not just a chatbot, she is so much more!",
-        article:"We proudly present to you NIA, NEARSOL's recruitment chatbot. NIA helps with lead generation, process guidance and does all that while projecting our brand identity. She is not just a chatbot, she is so much more!",
-        author:'Human Resources',
-        date:'June 28, 2021',
-        url: 'https://nearsol.us/nia-manila/',
-        origin: 'Manila'
-      },
-      {
-        location:"Manila",
-        header:"Annual Wellness Exam",
-        byline: "",
-        multimedia:"./assets/admin_image_3.png",
-        fragment: "Employees from NEARSOL Manila reported to the The 30th Corporate Center site to participate in this year's Annual Wellness Examination (AWE). More than 100 employees attended on June 26, 2021 following strict covid-19 protocol and a well planned schedule to ensure social distancing. The event started at 8am and ended at around 7pm. AWE was successfully completed in partnership with Maxicare and Keyman Insurances.",
-        article: "Employees from NEARSOL Manila reported to the The 30th Corporate Center site to participate in this year's Annual Wellness Examination (AWE). More than 100 employees attended on June 26, 2021 following strict covid-19 protocol and a well planned schedule to ensure social distancing. The event started at 8am and ended at around 7pm. AWE was successfully completed in partnership with Maxicare and Keyman Insurances.",
-        author:'Human Resources',
-        date:'June 17, 2021',
-        url: '',
-        origin:'Manila'
-      },
+      }
     ]
   }
 

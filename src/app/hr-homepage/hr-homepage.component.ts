@@ -35,6 +35,18 @@ export class HrHomepageComponent implements OnInit {
       },
       {
         location:"Human Resources",
+        header:"National Heroes Day",
+        byline: "",
+        multimedia:"./assets/hr_image_9.png",
+        fragment: "",
+        article: "Let’s honor our modern day heroes at NEARSOL by creating a photo or video entry answering “ How have you shown your commitment to serve as a front liner, the unsung HERO of our time in this pandemic?”. #NearsolHeroes",
+        author:'Human Resources',
+        date:'August 24, 2021',
+        url: '',
+        origin: 'Manila'
+      },
+      {
+        location:"Human Resources",
         header:"Annual Wellness Exam",
         byline: "",
         multimedia:"./assets/admin_image_3.png",
@@ -88,17 +100,6 @@ export class HrHomepageComponent implements OnInit {
         article:"It's time to honor and recognize our hardworking and awesome Fathers/Dads/Papas/Tatays/Papsy at NEARSOL. Show your love and appreciation to all Dads by creating a TikTok video for a chance to win awesome prizes during the Father’s Day Virtual Party on June 18, 2021! #NearsolSuperDad",
         author:'Human Resources',
         date:'June 17, 2021',
-        url: '',
-        origin: 'Manila'
-      },{
-        location:"Human Resources",
-        header:"More Content Soon",
-        byline: "",
-        multimedia:"./assets/Soon.png",
-        fragment: "",
-        article:"",
-        author:'Human Resources',
-        date:'June 2, 2021',
         url: '',
         origin: 'Manila'
       },
@@ -237,6 +238,29 @@ export class HrHomepageComponent implements OnInit {
       article:"Our new Country Manager, Tonichi Achurra - Parekh will appear in a video podcast hosted by Great Place to Work. The podcast aims to create awareness for Great Place to Work PH and, educate and help other companies strengthen their employer branding.",
       author:'Marketing',
       date:'June 29, 2021',
+      url: '',
+      origin: 'Manila'
+    },{
+      location:"Marketing",
+      header:"CSR Projects  ",
+      byline: "",
+      multimedia:"./assets/marketing_image_3.jpg",
+      fragment: "",
+      article:"As it continues its pledge to take part in philanthropic causes, NEARSOL once again partners with different Non-Government Organizations to give back to the community and provide positive social value. The company will continue to champion education by providing educational assistance to Tahanan ng Pagmamahal and by sponsoring the tuition fee of a deserving student from Meralco Foundation Institute.",
+      author:'Marketing',
+      date:'August 24, 2021',
+      url: '',
+      origin: 'Manila'
+    },
+    {
+      location:"Recruitment",
+      header:"More Content Soon",
+      byline: "",
+      multimedia:"./assets/Soon.png",
+      fragment: "",
+      article:"",
+      author:'Recruitment',
+      date:'June 28, 2021',
       url: '',
       origin: 'Manila'
     }]
@@ -392,11 +416,11 @@ export class HrHomepageComponent implements OnInit {
       location:"Workforce",
       header:"Project Sparta",
       byline: "",
-      multimedia:"./assets/workforce_image5.jpg",
+      multimedia:"./assets/workforce_image5.png",
       fragment: "",
       article:"Project Sparta is a scholarship program on data analytics, a partnership project of CCAP-DOST. Our Country Manager, Tonichi Parekh and Workforce Director, Gerard Palado led this initiative.",
       author:'Recruitment',
-      date:'June 28, 2021',
+      date:'August 48, 2021',
       url: 'https://bit.ly/3shdAlw',
       origin: 'Manila'
     },{
