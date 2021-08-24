@@ -389,15 +389,15 @@ export class HrHomepageComponent implements OnInit {
       url: 'https://drive.google.com/file/d/1qT41Ui45e-3fOZ1T9F7yEfEyUyePG534/view?usp=sharing',
       origin: 'Manila'
     },{
-      location:"Recruitment",
-      header:"More Content Soon",
+      location:"Workforce",
+      header:"Project Sparta",
       byline: "",
-      multimedia:"./assets/Soon.png",
+      multimedia:"./assets/workforce_image5.jpg",
       fragment: "",
-      article:"",
+      article:"Project Sparta is a scholarship program on data analytics, a partnership project of CCAP-DOST. Our Country Manager, Tonichi Parekh and Workforce Director, Gerard Palado led this initiative.",
       author:'Recruitment',
       date:'June 28, 2021',
-      url: '',
+      url: 'https://bit.ly/3shdAlw',
       origin: 'Manila'
     },{
       location:"Recruitment",
