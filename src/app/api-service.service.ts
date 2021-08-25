@@ -98,7 +98,11 @@ export class ApiServiceService {
     return this.httpClient.post<string>(`${this.PHP_API_SERVER}/phpscripts/insertAttJustification.php`, adj);
   }
 
+  revertJustification(any:any){
+    return this.httpClient.post<string>(`${this.PHP_API_SERVER}/phpscripts/insertCancelAdjustment.php`, any);
+  }
+
   getAttAdjustment(str:any){
     return this.httpClient.post<attendences_adjustment>(`${this.PHP_API_SERVER}/phpscripts/getAttAdjustment.php`, str);
-  }  
+  }
 }

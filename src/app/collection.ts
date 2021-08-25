@@ -1,6 +1,43 @@
 export class Collection {
 }
 
+export class Fecha{
+  today: string;
+  year: string;
+  month: string;
+
+  getToday(): string {
+      let fecha: Date = new Date();
+      let dd: string = String(fecha.getDate()).padStart(2,'0');
+      let MM: string = String(fecha.getMonth() + 1).padStart(2, '0');
+      let yyyy: string = fecha.getFullYear().toString();
+      this.year = yyyy;
+      this.month = MM;
+      return (yyyy + '-' + MM + '-' + dd);
+  }
+
+  transform(Adate: Date): string {
+      let dd: string = String(Adate.getDate()).padStart(2,'0');
+      let MM: string = String(Adate.getMonth() + 1).padStart(2, '0');
+      let yyyy: string = Adate.getFullYear().toString();
+      let sdate: string = (yyyy + '-' + MM + '-' + dd);
+      if (sdate == 'NaN-NaN-NaN') {
+          sdate = '1970-01-01';
+      }
+      return sdate;
+  }
+
+  dateExcel(d): Date {
+    let date = new Date(Math.round((d - 25569) * 864e5));
+    date.setMinutes(date.getMinutes() + date.getTimezoneOffset());
+    return date;
+  }
+
+  constructor() {
+      this.today = this.getToday();
+  }
+}
+
 export class employees{
   id_profile:string;
   idemployees:string;

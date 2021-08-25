@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { isNullOrUndefined } from 'util';
 import { ApiServiceService } from '../api-service.service';
-import { attendences, attendences_adjustment, disciplinary_processes, employees, leaves, periods, terminations, vacations, vacyear, leavesAction } from '../collection';
+import { attendences, attendences_adjustment, disciplinary_processes, employees, leaves, periods, terminations, vacations, vacyear, leavesAction, Fecha } from '../collection';
 import { Users } from '../users';
 import { ActivatedRoute } from '@angular/router';
 
@@ -25,6 +25,7 @@ export class ApprovalRequestComponent implements OnInit {
   attAdjudjment: attendences_adjustment = new attendences_adjustment;
   activeLeave: leaves = new leaves;
   activeVacation: vacations = new vacations;
+  actualAtt: attendences
   activeEmp: string = null;
   complete_adjustment: boolean = false;
   addJ: boolean = false;
@@ -65,14 +66,13 @@ export class ApprovalRequestComponent implements OnInit {
   }
 
   getEmployee() {
-    let fecha: string = '2021-08-23';
     this.apiService.getEmployees({id: this.user.id_profile}).subscribe((emp: employees) => {
       this.workingEmployee = emp;
       this.activeEmp = emp.id_profile;
       this.vacationsEarned = (new Date(this.todayDate).getMonth() - new Date(this.workingEmployee.hiring_date).getMonth() + ((new Date(this.todayDate).getFullYear() - new Date(this.workingEmployee.hiring_date).getFullYear()) * 12));
       this.getVacations();
       this.getLeaves();
-      this.getAttendences(fecha);
+      this.getAttendences(this.todayDate);
     });
   }
 
@@ -470,19 +470,45 @@ export class ApprovalRequestComponent implements OnInit {
     return leave;
   }
 
-  addJustification(att: attendences) {
+  addJustificationatt(att: attendences) {
     this.attAdjudjment = new attendences_adjustment;
+    let fecha: Fecha = new Fecha;
+    this.actualAtt = att;
+
     this.attAdjudjment.start = "12:00";
     this.attAdjudjment.end = "12:00";
     this.editAdj = false;
     this.attAdjudjment.date = this.todayDate;
-    this.attAdjudjment.state = "PENDING";
-    this.attAdjudjment.status
+    this.attAdjudjment.attendance_date = fecha.getToday();
+    this.attAdjudjment.state = "REQUESTED";
+    this.attAdjudjment.status = 'REQUESTED';
     this.attAdjudjment.amount = "0";
     this.attAdjudjment.time_before = att.worked_time;
     this.attAdjudjment.id_attendence = att.idattendences;
     this.attAdjudjment.id_type = '2';
-    this.attAdjudjment.id_employee = att.id_employee;
+    this.attAdjudjment.id_employee = this.workingEmployee.idemployees;
+    this.attAdjudjment.time_after = this.attAdjudjment.time_before;
+    this.attAdjudjment.id_department = this.user.department;
+    this.attAdjudjment.id_user = this.user.idusers;
+    this.addJ = true;
+  }
+
+  addJustification() {
+    this.attAdjudjment = new attendences_adjustment;
+    let fecha: Fecha = new Fecha;
+
+    this.attAdjudjment.start = "12:00";
+    this.attAdjudjment.end = "12:00";
+    this.editAdj = false;
+    this.attAdjudjment.date = this.todayDate;
+    this.attAdjudjment.attendance_date = this.actualAtt.date;
+    this.attAdjudjment.state = "REQUESTED";
+    this.attAdjudjment.status = 'REQUESTED';
+    this.attAdjudjment.amount = "0";
+    this.attAdjudjment.time_before = this.actualAtt.worked_time;
+    this.attAdjudjment.id_attendence = this.actualAtt.idattendences;
+    this.attAdjudjment.id_type = '2';
+    this.attAdjudjment.id_employee = this.workingEmployee.idemployees;
     this.attAdjudjment.time_after = this.attAdjudjment.time_before;
     this.attAdjudjment.id_department = this.user.department;
     this.attAdjudjment.id_user = this.user.idusers;
@@ -491,6 +517,9 @@ export class ApprovalRequestComponent implements OnInit {
 
   insertAdjustment() {
     this.apiService.insertAttJustification(this.attAdjudjment).subscribe((str: string) => {
+      if(str.indexOf("|")==0) {
+        console.log(str);
+      }
       this.complete_adjustment = true;
       this.getAttendences(this.todayDate);
     });
@@ -506,6 +535,29 @@ export class ApprovalRequestComponent implements OnInit {
 
   cancelAdjustment() {
     this.addJ = false;
+  }
+
+  revertAdjustment(){
+    this.attAdjudjment.notes = this.user.user_name;
+    this.attAdjudjment.id_user = this.user.idusers;
+    this.attAdjudjment.start = '12:00';
+    this.attAdjudjment.end = '12:00';
+    this.attAdjudjment.amount = (Number(this.attAdjudjment.amount) * - 1).toFixed(2);
+    this.attAdjudjment.time_before = this.attAdjudjment.time_after;
+    this.attAdjudjment.time_after = (Number(this.attAdjudjment.time_after) + Number(this.attAdjudjment.amount)).toFixed(2);
+    this.apiService.revertJustification(this.attAdjudjment).subscribe((str:string)=>{
+      this.attAdjudjment.notes = 'Reverted from ' + this.attAdjudjment.id_process + ' created at ' + this.attAdjudjment.date;
+      this.insertAdjustment();
+    })
+  }
+
+  change_time(any: any) {
+    let str_split: Date = new Date(2020, 1, 1, parseFloat(this.attAdjudjment.start.split(":")[0]), parseFloat(this.attAdjudjment.start.split(":")[1].split(" ")[0]));
+    let end_split: Date = new Date(2020, 1, 1, parseFloat(this.attAdjudjment.end.split(":")[0]), parseFloat(this.attAdjudjment.end.split(":")[1].split(" ")[0]));
+
+    this.attAdjudjment.amount = ((end_split.getTime() - str_split.getTime()) / 3600000).toFixed(2);
+
+    this.attAdjudjment.time_after = (parseFloat(this.attAdjudjment.time_before) + parseFloat(this.attAdjudjment.amount)).toFixed(2);
   }
 }
 
