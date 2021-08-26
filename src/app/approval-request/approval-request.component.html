@@ -444,27 +444,27 @@
             </button>
           </div>
         </div>
-        <div class="form-row col-md-12">
           <div class="form-row col-md-12">
-            <table style="width:98%; padding: 1%;" class="table table-striped table-hover">
-              <thead>
-                <th>DATE</th>
-                <th>USER</th>
-                <th>Status</th>
-                <th>AMOUNT</th>
-              </thead>
-              <tbody>
-                <tr style="cursor:pointer" *ngFor="let adj of showAttAdjustments"
-                  (click)="getRecordAdjustment(adj.id_justification)" class="selectable">
-                  <td>{{adj.date}}</td>
-                  <td>{{adj.id_user}}</td>
-                  <td>{{adj.state}}</td>
-                  <td>{{adj.amount}}</td>
-                </tr>
-              </tbody>
-            </table>
+            <div class="form-row col-md-12" style="overflow: auto; max-height: 480px; min-height: 20px;">
+              <table style="width:98%; padding: 1%;" class="table table-striped table-hover">
+                <thead>
+                  <th>DATE</th>
+                  <th>USER</th>
+                  <th>Status</th>
+                  <th>AMOUNT</th>
+                </thead>
+                <tbody>
+                  <tr style="cursor:pointer" *ngFor="let adj of showAttAdjustments"
+                    (click)="getRecordAdjustment(adj.id_justification)" class="selectable">
+                    <td>{{adj.date}}</td>
+                    <td>{{adj.id_user}}</td>
+                    <td>{{adj.state}}</td>
+                    <td>{{adj.amount}}</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </div>
-        </div>
         <div class="form-row col-md-11 d-flex justify-content-between mt-2">
           <div class="form-col col-md-9 justify-self-center">
 
@@ -551,6 +551,13 @@
               <label>Notes:</label>
               <textarea class="form-control" width="100%" [(ngModel)]="attAdjudjment.notes" #message='ngModel'
                 [disabled]="editAdj"></textarea>
+            </div>
+          </div>
+          <div class="form-row col-md-12">
+            <div class="form-group col-md-12">
+              <button class="form-control">
+                UPLOAD
+              </button>
             </div>
           </div>
           <div class="form-row col-md-12">

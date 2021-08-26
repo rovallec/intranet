@@ -33,6 +33,8 @@ thead th{
   border-width: 1px;
   border-right-color: rgb(233, 232, 232);
   text-align: center;
+  line-height: 1.15;
+  max-height: 25px;
 }
 tbody td{
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
