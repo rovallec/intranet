@@ -243,6 +243,37 @@ export class ApprovalRequestComponent implements OnInit {
     })
   }
 
+  getAttAllAdjustemt() {
+    this.editAdj = false;
+    this.apiService.getAttAllAdjustments({ id: this.workingEmployee.idemployees }).subscribe((adj: attendences_adjustment[]) => {
+
+      this.showAttAdjustments = [];
+        adj.forEach(ev => {
+          if (ev.id_department == '27' || ev.id_department == '5') {
+            this.showAttAdjustments.push(ev);
+          }
+        })
+
+      this.showAttendences.forEach(chng=>{
+        if((chng.igss)){
+          chng.igss = '0';
+        }
+        if((chng.tk_exp)){
+          chng.tk_exp = '0';
+        }
+      })
+      adj.forEach(at_adj=>{
+        this.showAttendences.forEach(att_show=>{
+          if(att_show.date == at_adj.attendance_date && (at_adj.id_department == '5' || at_adj.id_department == '27')){
+            att_show.igss = (Number(att_show.igss) + Number(at_adj.amount)).toFixed(2);
+          }else if(att_show.date == at_adj.attendance_date && at_adj.id_department == '28'){
+            att_show.tk_exp = (Number(att_show.tk_exp) + Number(at_adj.amount)).toFixed(2);
+          }
+        })
+      })
+    })
+  }
+
   getVacations() {
     let found: boolean = false;
     let vacYears: vacyear[] = [];

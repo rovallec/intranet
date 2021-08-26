@@ -78,6 +78,10 @@ export class ApiServiceService {
     return this.httpClient.post<attendences_adjustment[]>(`${this.PHP_API_SERVER}/phpscripts/getAttAdjustments.php`, str);
   }
 
+  getAttAllAdjustments(str:any){
+    return this.httpClient.post<attendences_adjustment[]>(`${this.PHP_API_SERVER}/phpscripts/getAttAllAdjustment.php`, str);
+  }
+
   insertVacations(vacation:vacations){
     return this.httpClient.post<vacations>(`${this.PHP_API_SERVER}/phpscripts/insertVacations.php`, vacation);
   }

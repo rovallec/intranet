@@ -465,6 +465,19 @@
             </table>
           </div>
         </div>
+        <div class="form-row col-md-11 d-flex justify-content-between mt-2">
+          <div class="form-col col-md-9 justify-self-center">
+
+          </div>
+          <div class="form-row col-md-2 gap-2 d-md-flex justify-content-md-end">
+            <button class="btn btn-link"  (click)="getAttAllAdjustemt()" *ngIf="showAttAdjustments.length<=16">
+              Show More
+            </button>
+            <button class="btn btn-link"  (click)="getAttAdjustemt()" *ngIf="showAttAdjustments.length>16">
+              Show Less
+            </button>
+          </div>
+        </div>
       </div>
     </div>
   </div>
