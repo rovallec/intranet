@@ -50,8 +50,7 @@ export class LocationHomepageComponent implements OnInit {
   }
 
   getHeight(object:string){
-    let height = document.getElementById(object).offsetHeight
-    console.log(height);
+    let height = document.getElementById(object).offsetHeight;
     if((height/24) <= 1){
       return true;
     }else{

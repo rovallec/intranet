@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { isNullOrUndefined } from 'util';
 import { ApiServiceService } from '../api-service.service';
-import { attendences, attendences_adjustment, disciplinary_processes, employees, leaves, periods, terminations, vacations, vacyear, leavesAction, Fecha } from '../collection';
+import {  attendences, attendences_adjustment, disciplinary_processes, employees, leaves, periods, terminations,
+          vacations, vacyear, leavesAction, Fecha, services, process_templates, process, advances } from '../collection';
 import { Users } from '../users';
 import { ActivatedRoute } from '@angular/router';
-
 @Component({
   selector: 'app-approval-request',
   templateUrl: './approval-request.component.html',
@@ -22,10 +22,20 @@ export class ApprovalRequestComponent implements OnInit {
   vac: vacyear[] = [];
   leaveDates: leavesAction[] = [];
   approvals: Users[] = [new Users];
+  services: services[] = [];
+  processes_template: process_templates[] = [];
+  activeProc: process_templates = new process_templates;
+  processRecord: process[] = [];
   attAdjudjment: attendences_adjustment = new attendences_adjustment;
   activeLeave: leaves = new leaves;
   activeVacation: vacations = new vacations;
   actualAtt: attendences
+  activeStoredbus: services = new services;
+  activeStoredparking: services = new services;
+  activeStoredTransport: services = new services;
+  activeService: services = new services;
+  actuallProc: process = new process;
+  actualAdvance: advances = new advances;
   activeEmp: string = null;
   complete_adjustment: boolean = false;
   addJ: boolean = false;
@@ -37,13 +47,22 @@ export class ApprovalRequestComponent implements OnInit {
   addProc: boolean = false;
   editVac: boolean = true;
   currentPayVacations: boolean = false;
+  storedBus: boolean = false;
+  storedParking: boolean = false;
+  storedTransport: boolean = false;
+  newProcess: boolean = false;
+  parking: boolean;
+  bus: boolean;
+  transport: boolean;
   earnVacations: number = 0;
   tookVacations: number = 0;
   availableVacations: number = 0;
   returnedVacations: number = 0;
   dismissedVacations: number = 0;
   vacationsEarned: number = 0;
+  status: string = 'Browse';
   todayDate: string = new Date().getFullYear().toString() + "-" + (new Date().getMonth() + 1).toString().padStart(2, "0") + "-" + (new Date().getDate()).toString().padStart(2, "0");
+  dateVac: string = null;
   motives: string[] = ['Leave of Absence Unpaid', 'Maternity', 'Others Paid', 'Others Unpaid', 'IGSS Unpaid', 'VTO Unpaid', 'COVID Unpaid', 'COVID Paid', 'IGSS Paid'];
 
   constructor(public apiService: ApiServiceService, private route: ActivatedRoute,) { }
@@ -54,8 +73,13 @@ export class ApprovalRequestComponent implements OnInit {
   }
 
   start() {
+    let fecha: Fecha = new Fecha;
     this.apiService.getApprovers().subscribe((usrs: Users[]) => {
       this.approvals = usrs;
+      this.dateVac = fecha.today;
+      this.bus = false;
+      this.parking = false;
+      this.transport = false;
       this.getEmployee();
     });
   }
@@ -68,11 +92,16 @@ export class ApprovalRequestComponent implements OnInit {
   getEmployee() {
     this.apiService.getEmployees({id: this.user.id_profile}).subscribe((emp: employees) => {
       this.workingEmployee = emp;
+      this.workingEmployee.id_user = this.user.idusers;
+      this.workingEmployee.user_name = this.user.user_name;
       this.activeEmp = emp.id_profile;
       this.vacationsEarned = (new Date(this.todayDate).getMonth() - new Date(this.workingEmployee.hiring_date).getMonth() + ((new Date(this.todayDate).getFullYear() - new Date(this.workingEmployee.hiring_date).getFullYear()) * 12));
       this.getVacations();
       this.getLeaves();
       this.getAttendences(this.todayDate);
+      this.getAttAdjustemt();
+      this.getServices();
+      this.getProcessesrecorded();
     });
   }
 
@@ -213,7 +242,9 @@ export class ApprovalRequestComponent implements OnInit {
       if (adj.length >= 16) {
         for (let i = (adj.length - 1); i > (adj.length - 16); i = i - 1) {
           if (adj[i].id_department == '5' || adj[i].id_department == '27') {
-            this.showAttAdjustments.push(adj[i]);
+            if (this.validateDates(this.dateVac, adj[i].date)) {
+              this.showAttAdjustments.push(adj[i]);
+            }
           }
         }
       } else {
@@ -416,6 +447,28 @@ export class ApprovalRequestComponent implements OnInit {
     this.showLeave = false;
   }
 
+  selectLeave(leave: leaves) {
+    let start: number = 0;
+    let end: number = 0;
+    let f: Date = new Date(leave.start);
+    let days: number = new Date(leave.end).getTime() - new Date(leave.start).getTime();
+    days = days / (1000*3600*24);
+    start = new Date(leave.start).getDate();
+    end = new Date(leave.end).getDate();
+    this.activeLeave = leave;
+    this.editLeave = true;
+    this.showLeave = true;
+    this.leaveDates = [];
+
+    for (let i = 0; i <= days; i++) {
+      let ld: leavesAction = new leavesAction;
+      f = this.addDays(f, 1);
+      ld.dates = (f.getFullYear().toString() + '-' + String(f.getMonth() + 1).padStart(2, '0') + '-' + String(f.getDate()).padStart(2,'0'));
+      ld.action = 'PENDING';
+      this.leaveDates.push(ld);
+    }
+  }
+
   saveActionLeaves() {
     let note: string = '';
     let leave: leaves = this.activeLeave;
@@ -445,9 +498,6 @@ export class ApprovalRequestComponent implements OnInit {
 
           leave.status = 'PENDING';
 
-          console.log('Estado pendiente: ');
-          console.log(leave);
-          console.log("<br>");
         } else {
           f = this.addDays(f, -1);
           end = (f.getFullYear().toString() + '-' + String(f.getMonth() + 1).padStart(2, '0') + '-' + String(f.getDate()).padStart(2,'0'));
@@ -455,7 +505,6 @@ export class ApprovalRequestComponent implements OnInit {
             leave.end = end;
             leavesNew.push(leave);
           }
-          console.log(leave);
           leave = this.fillLeave();
           f = this.addDays(f, 1);
         }
@@ -464,8 +513,6 @@ export class ApprovalRequestComponent implements OnInit {
         if ((i==this.leaveDates.length-1) && (ld.action=='PENDING')) {
           leave.end = end;
           leavesNew.push(leave);
-          console.log('Todos los Leaves: ');
-          console.log(leavesNew);
         }
       }
 
@@ -510,7 +557,7 @@ export class ApprovalRequestComponent implements OnInit {
     this.attAdjudjment.end = "12:00";
     this.editAdj = false;
     this.attAdjudjment.date = this.todayDate;
-    this.attAdjudjment.attendance_date = fecha.getToday();
+    this.attAdjudjment.attendance_date = this.actualAtt.date;
     this.attAdjudjment.state = "REQUESTED";
     this.attAdjudjment.status = 'REQUESTED';
     this.attAdjudjment.amount = "0";
@@ -525,7 +572,7 @@ export class ApprovalRequestComponent implements OnInit {
   }
 
   addJustification() {
-    this.attAdjudjment = new attendences_adjustment;
+    //this.attAdjudjment = new attendences_adjustment;
     let fecha: Fecha = new Fecha;
 
     this.attAdjudjment.start = "12:00";
@@ -557,8 +604,15 @@ export class ApprovalRequestComponent implements OnInit {
   }
 
   getRecordAdjustment(id_justification: string) {
+    let att: attendences = new attendences;
     this.apiService.getAttAdjustment({ justify: id_justification }).subscribe((requested: attendences_adjustment) => {
       this.attAdjudjment = requested;
+      this.actualAtt.date = this.attAdjudjment.date;
+      this.actualAtt.idattendences = this.attAdjudjment.id_attendence;
+      this.actualAtt.id_employee = this.attAdjudjment.id_employee;
+      this.actualAtt.nearsol_id = this.attAdjudjment.nearsol_id;
+
+      this.addJustification();
     })
     this.addJ = true;
     this.editAdj = true;
@@ -582,6 +636,94 @@ export class ApprovalRequestComponent implements OnInit {
     })
   }
 
+  getServices() {
+    this.apiService.getServices({ id: this.workingEmployee.idemployees }).subscribe((srv:services[])=>{
+      this.services = srv;
+      this.services.forEach(service=>{
+        if((service.name == "Monthly Bus" || service.name == "Daily Bus " + (new Date().getFullYear().toString()) + "-" + ((new Date().getMonth()+1).toString()) + "-" + (new Date().getDate().toString())) && service.status == '1'){
+          this.activeStoredbus = service;
+          this.bus = true;
+          this.storedBus = true;
+        }
+        this.apiService.getFacilitesTemplate().subscribe((temp:process_templates[])=>{
+          this.processes_template = temp;
+        })
+        if((service.name == "Car Parking" || service.name == "Motorcycle Parking") && service.status == "1"){
+          this.activeStoredparking = service;
+          this.parking = true;
+          this.storedParking = true;
+        }
+        if((service.name == "Uber" || service.name == "Taxy" || service.name == "Bus" || service.name == "Other") && service.status == "1"){
+          this.activeStoredTransport = service;
+          this.transport = true;
+          this.storedTransport = true;
+        }
+      })
+    })
+  }
+
+  activeBus(){
+    this.bus = true;
+    this.activeService = new services;
+    this.activeService.id_user = this.workingEmployee.user_name;
+    this.activeService.date = (new Date().getFullYear().toString()) + "-" + ((new Date().getMonth()+1).toString()) + "-" + (new Date().getDate().toString());
+    this.activeService.proc_status = "REQUESTED";
+    this.activeService.status = '1';
+    this.activeService.current = '0';
+    this.activeService.id_employee = this.workingEmployee.idemployees;
+  }
+
+  setBus(){
+    if(this.activeService.name != 'Monthly Bus'){
+      this.activeService.frecuency = "UNIQUE";
+    }
+  }
+
+  activeParking(){
+    this.parking = true;
+    this.activeService = new services;
+    this.activeService.id_user = this.workingEmployee.id_user;
+    this.activeService.date = (new Date().getFullYear().toString()) + "-" + ((new Date().getMonth()+1).toString()) + "-" + (new Date().getDate().toString());
+    this.activeService.proc_status = "REQUESTED";
+    this.activeService.status = "1";
+    this.activeService.current = '0';
+    this.activeService.id_employee = this.workingEmployee.idemployees;
+    this.status = 'Insert';
+  }
+
+  insertService(str:string){
+    this.activeService.proc_status = "COMPLETED";
+    this.activeService.id_user = this.workingEmployee.id_user;
+    if(str == 'bus'){
+      this.activeService.proc_name = "Active Bus";
+      if(this.activeService.name != "Monthly Bus"){
+        this.activeService.max = this.activeService.amount;
+      }else{
+        this.activeService.max = "0";
+      }
+    }else{
+      if(str == 'parking'){
+        this.activeService.proc_name = "Active Parking";
+        this.activeService.max = "0";
+      }
+    }
+    this.activeService.id_user = this.workingEmployee.id_user;
+    this.apiService.insertService(this.activeService).subscribe((_str:string)=>{
+      this.start();
+    })
+    this.status = 'Browse';
+  }
+
+  setService(str:string){
+    if(str === 'bus'){
+      this.activeService = this.activeStoredbus;
+    } else if(str === 'parking') {
+      this.activeService = this.activeStoredparking;
+    } else {
+      this.activeService = this.activeStoredTransport;
+    }
+  }
+
   change_time(any: any) {
     let str_split: Date = new Date(2020, 1, 1, parseFloat(this.attAdjudjment.start.split(":")[0]), parseFloat(this.attAdjudjment.start.split(":")[1].split(" ")[0]));
     let end_split: Date = new Date(2020, 1, 1, parseFloat(this.attAdjudjment.end.split(":")[0]), parseFloat(this.attAdjudjment.end.split(":")[1].split(" ")[0]));
@@ -590,5 +732,119 @@ export class ApprovalRequestComponent implements OnInit {
 
     this.attAdjudjment.time_after = (parseFloat(this.attAdjudjment.time_before) + parseFloat(this.attAdjudjment.amount)).toFixed(2);
   }
+
+  uploadFile() {
+
+  }
+
+  cancelView() {
+    this.editLeave = false;
+    this.editVac = false;
+    this.vacationAdd = false;
+    this.actuallProc = new process;
+    this.addJ = false;
+    this.showLeave = false;
+    this.newProcess = false;
+    this.addProc = false;
+    this.actualAdvance = new advances;
+    this.start();
+  }
+
+  validateDates(Adate1: string, Adate2: string): boolean {
+    let date1: Date = new Date(Adate1);
+    let date2: Date = new Date(Adate2);
+
+    if (date1 >= date2) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  saveService() {
+    if(this.status=='Insert') {
+      this.insertService('parking');
+    } else if(this.status=='Edit') {
+      this.updateService();
+    }
+  }
+
+  updateService() {
+    let fecha = new Fecha;
+    this.activeService.id_user = this.workingEmployee.id_user;
+    this.activeService.notes = this.activeService.notes + "|| Updated by: " + this.workingEmployee.user_name + " Date: " + fecha.today;
+    this.activeService.date = fecha.today;
+    this.apiService.updateService(this.activeService).subscribe((_str:string)=>{
+      this.start();
+    })
+    this.status = 'Browse';
+  }
+
+  editService() {
+    this.status = 'Edit';
+  }
+
+  editBus() {
+    this.storedBus = false;
+    this.status = 'Edit';
+  }
+
+  cancelService() {
+    this.status = 'Browse';
+    this.storedParking = false;
+    this.parking = (this.status=='Insert');
+    this.start();
+  }
+
+  setProcess(act: process) {
+    this.viewRecProd = false;
+    this.addProc = true;
+    this.actuallProc = act;
+    this.actuallProc.name = 'Advance';
+    this.actuallProc.descritpion = null;
+    this.actuallProc.prc_date = this.todayDate;
+    this.actuallProc.status = "CLOSED";
+    this.actuallProc.user_name = this.workingEmployee.user_name;
+    this.actuallProc.id_user = this.workingEmployee.id_user;
+    this.actuallProc.id_profile = this.workingEmployee.idemployees;
+    this.actuallProc.idprocesses = "10";
+    this.actualAdvance = new advances;
+    this.actuallProc.status = 'REQUESTED';
+  }
+
+  insertProc() {
+    this.apiService.insertProc(this.actuallProc).subscribe((str: string) => {
+      this.actualAdvance.id_process = str;
+      this.apiService.insertAdvances(this.actualAdvance).subscribe((str: string) => {
+        if (str.split("|")[0] == "1") {
+          window.alert("Action successfuly recorded.");
+          this.cancelView();
+        } else {
+          window.alert("An error has occured:\n" + str.split("|")[1]);
+        }
+      })
+    })
+  }
+
+  getProcessesrecorded() {
+    this.processRecord = [];
+    this.apiService.getProcRecorded({ id: this.workingEmployee.idemployees }).subscribe((prc: process[]) => {
+      prc.forEach(pr => {
+        if (pr.name == 'Advance') {
+          this.processRecord.push(pr);
+        }
+      })
+    })
+  }
+
+  viewProcess(pr: process) {
+    this.viewRecProd = true;
+    this.actuallProc = pr;
+
+    this.apiService.getAdvances(this.actuallProc).subscribe((adv: advances) => {
+      this.actualAdvance = adv;
+    })
+  }
+
 }
 

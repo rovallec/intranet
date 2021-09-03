@@ -32,7 +32,7 @@ export class GlobalHomepageComponent implements OnInit {
   getPost(art: Articles) {
       this.apiService.getPost(art).subscribe((posts: Articles[]) => {
       this.articles = posts;
-    }) 
+    })
   }
 
   setArticlesFragment(str:string){
@@ -46,7 +46,6 @@ export class GlobalHomepageComponent implements OnInit {
   }
 
   setSelection(sel:number){
-    console.log()
     if(this.articles.length > 0){
       this.selected_article = this.articles[sel];
     }else{

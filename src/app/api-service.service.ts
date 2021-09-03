@@ -3,7 +3,8 @@ import { HttpClient, HttpParams, HttpHeaders } from '@angular/common/http';
 import { Users } from './users';
 import { Articles } from './articles';
 import { environment } from './../environments/environment';
-import { attendences, attendences_adjustment, disciplinary_processes, employees, leaves, periods, terminations, vacations } from './collection';
+import {  attendences, attendences_adjustment, disciplinary_processes, employees, leaves, periods,
+          process_templates, services, terminations, vacations, process, advances } from './collection';
 
 @Injectable({
   providedIn: 'root'
@@ -109,4 +110,41 @@ export class ApiServiceService {
   getAttAdjustment(str:any){
     return this.httpClient.post<attendences_adjustment>(`${this.PHP_API_SERVER}/phpscripts/getAttAdjustment.php`, str);
   }
+
+  getServices(any:any){
+    return this.httpClient.post<services[]>(`${this.PHP_API_SERVER}/phpscripts/getServices.php`,any);
+  }
+
+  updateService(service: services) {
+    return this.httpClient.post<string>(`${this.PHP_API_SERVER}/phpscripts/updateService.php`, service);
+  }
+
+  insertService(service:services){
+    return this.httpClient.post<string>(`${this.PHP_API_SERVER}/phpscripts/insertService.php`, service);
+  }
+
+  getFacilitesTemplate(){
+    return this.httpClient.get<process_templates[]>(`${this.PHP_API_SERVER}/phpscripts/getFacilitiesTemplates.php`);
+  }
+
+  deleteService(service: services) {
+    return this.httpClient.post<string>(`${this.PHP_API_SERVER}/phpscripts/deleteService.php`, service);
+  }
+
+  insertProc(proc:process){
+    return this.httpClient.post<string>(`${this.PHP_API_SERVER}/phpscripts/insertHr_Process.php`, proc);
+  }
+
+  insertAdvances(adv:advances){
+    return this.httpClient.post<string>(`${this.PHP_API_SERVER}/phpscripts/insertAdvances.php`, adv);
+  }
+
+  getProcRecorded(id:any){
+    return this.httpClient.post<process[]>(`${this.PHP_API_SERVER}/phpscripts/getProcRecroded.php`, id);
+  }
+
+  getAdvances(proc:process){
+    return this.httpClient.post<advances>(`${this.PHP_API_SERVER}/phpscripts/getAdvances.php`, proc);
+  }
+
 }

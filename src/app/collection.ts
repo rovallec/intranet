@@ -5,6 +5,7 @@ export class Fecha{
   today: string;
   year: string;
   month: string;
+  date
 
   getToday(): string {
       let fecha: Date = new Date();
@@ -84,6 +85,7 @@ export class employees{
       this.dpi = null;
       this.children = null;
       this.gender = null;
+      this.id_user = null;
   }
 }
 
@@ -285,6 +287,65 @@ export class attendences {
   }
 }
 
+export class attendences_adjustment {
+  //adjustments
+  idattendence_adjustemnt: string;
+  id_attendence: string;
+  id_justification: string;
+  attendance_date: string;
+  time_before: string;
+  time_after: string;
+  amount: string;
+  state: string;
+  start:string;
+  end:string;
+  dateTime:string;
+  //justifications
+  id_process: string;
+  reason: string;
+  //processes
+  id_user: string;
+  id_employee: string;
+  id_type: string;
+  id_department: string;
+  date: string;
+  notes: string;
+  status: string;
+  id_period:string;
+  error:string;
+  nearsol_id:string;
+  adj_type:string;
+  account:string;
+  constructor() {
+      //adjustments
+      this.idattendence_adjustemnt = null;
+      this.id_attendence = null;
+      this.id_justification = null;
+      this.attendance_date = null;
+      this.time_before = null;;
+      this.time_after = null;
+      this.amount = null;
+      this.state = null;
+      this.start = null;
+      this.end = null;
+      //justifications
+      this.id_process = null;
+      this.reason = null;
+      //processes
+      this.id_user = null;
+      this.id_employee = null;
+      this.id_type = null;
+      this.id_department = null;
+      this.date = null;
+      this.notes = null;
+      this.status = null;
+      this.id_period = null;
+      this.error = null;
+      this.nearsol_id = null;
+      this.adj_type = null;
+  }
+}
+
 export class vacations {
   //process
   id_process;
@@ -472,65 +533,73 @@ export class terminations {
   }
 }
 
-export class attendences_adjustment {
-  //adjustments
-  idattendence_adjustemnt: string;
-  id_attendence: string;
-  id_justification: string;
-  attendance_date: string;
-  time_before: string;
-  time_after: string;
-  amount: string;
-  state: string;
-  start:string;
-  end:string;
-  dateTime:string;
-  //justifications
+export class services {
+  idservices: string;
   id_process: string;
-  reason: string;
-  //processes
-  id_user: string;
   id_employee: string;
-  id_type: string;
-  id_department: string;
-  date: string;
-  notes: string;
+  name: string;
+  amount: string;
+  max: string;
+  frecuency: string;
   status: string;
-  id_period:string;
-  error:string;
-  nearsol_id:string;
-  adj_type:string;
-  account:string;
+  current: string;
+  //Process
+  idinternal_process: string;
+  id_user: string;
+  proc_name: string;
+  date: string;
+  proc_status: string;
+  notes: string;
   constructor() {
-      //adjustments
-      this.idattendence_adjustemnt = null;
-      this.id_attendence = null;
-      this.id_justification = null;
-      this.attendance_date = null;
-      this.time_before = null;;
-      this.time_after = null;
-      this.amount = null;
-      this.state = null;
-      this.start = null;
-      this.end = null;
-      //justifications
+      this.idservices = null;
       this.id_process = null;
-      this.reason = null;
-      //processes
-      this.id_user = null;
       this.id_employee = null;
-      this.id_type = null;
-      this.id_department = null;
-      this.date = null;
-      this.notes = null;
+      this.name = null;
+      this.amount = null;
+      this.max = null;
+      this.frecuency = null;
       this.status = null;
-      this.id_period = null;
-      this.error = null;
-      this.nearsol_id = null;
-      this.adj_type = null;
+      this.idinternal_process = null;
+      this.id_user = null;
+      this.proc_name = null;
+      this.date = null;
+      this.proc_status = null;
+      this.notes = null
   }
 }
-
+export class process_templates {
+  idprocess_templates: string;
+  name: string;
+  department: string;
+  id_role: string;
+}
+export class process{
+  idprocesses:string;
+  id_role:string;
+  id_profile:string;
+  name:string;
+  descritpion:string;
+  prc_date:string;
+  status:string;
+  id_user:string;
+  user_name:string;
+}
+export class advances {
+  idadvances: string;
+  id_process: string;
+  type: string;
+  description: string;
+  classification: string;
+  amount: string;
+  constructor() {
+      this.idadvances = null;
+      this.id_process = null;
+      this.type = null;
+      this.description = null;
+      this.classification = null;
+      this.amount = null;
+  }
+}
 export class vacyear {
   year: number;
   selected: boolean

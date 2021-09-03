@@ -165,3 +165,40 @@ border: 1px solid #e9e8e8;
 .tr-nohover{
 border: 1px solid #e9e8e8;
 }
+
+html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+section {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+}
+
+#profileL {
+  float: left;
+  border: 0px solid;
+  min-height: 300px;
+  max-height: 900px;
+}
+
+#profileR {
+  float: left;
+  border: 0px solid;
+  min-height: 300px;
+  max-height: 800px;
+}
+
+.divscroll {
+  overflow: auto;
+  max-height: 600px;
+}
+
+
+.ponter {
+  cursor: pointer;
+}
