@@ -14,14 +14,14 @@
                         height: 39px;
                         color: white;
                         font-family: Montserrat;">
-                        <p style="
-                            font-size: 26px;
-                            font-family: 'Montserrat';
-                            margin-bottom: 0;
-                            padding-left: 80px;
-                            position:absolute; bottom:20px; cursor: pointer;"
-                            (click)="setSelection(0)" data-toggle="modal" data-target="#setArticle">
-                            {{ articles[0].header }}:{{ articles[0].byline }}</p>
+                        <p style="font-size: 26px; font-family: 'Montserrat'; margin-bottom: 0; padding-left: 80px;
+                          position:absolute; bottom:20px; cursor: pointer;"
+                          (click)="setSelection(0)" data-toggle="modal" data-target="#setArticle">
+                          {{ articles[0].header }}
+                          <span *ngIf="selected_article.byline!==null||selected_article.byline!==''">
+                            :{{ articles[0].byline }}
+                          </span>
+                        </p>
                     </div>
                     <div class="row p-0 col-md-12" style="
                         height: 30px;
@@ -33,7 +33,7 @@
                             padding-left: 82px;
                             position:absolute; bottom: 30px; cursor: pointer;
                             " (click)="setSelection(0)" data-toggle="modal" data-target="#setArticle">
-                            {{ articles[0].date }}</p>
+                            {{ articles[0].date | date: 'mediumDate' }}</p>
                     </div>
                 </div>
             </div>
@@ -101,7 +101,7 @@
                 </div>
                 <div class="row" style="margin:0%; padding:0%; border-top: solid 1px #F9423A;">
                     <p style="font-size: 10px; color:gray;">
-                        {{ articles[1].author }} | {{ articles[1].date }}
+                        {{ articles[1].author }} | {{ articles[1].date | date: 'mediumDate' }}
                     </p>
                 </div>
             </div>
@@ -135,7 +135,7 @@
                 </div>
                 <div class="row" style="margin:0%; padding:0%; border-top: solid 1px #F9423A;">
                     <p style="font-size: 10px; color:gray;">
-                        {{ articles[2].author }} | {{ articles[2].date }}
+                        {{ articles[2].author }} | {{ articles[2].date | date: 'mediumDate' }}
                     </p>
                 </div>
             </div>
@@ -169,7 +169,7 @@
                 </div>
                 <div class="row" style="margin:0%; padding:0%; border-top: solid 1px #F9423A;">
                     <p style="font-size: 10px; color:gray;">
-                        {{ articles[3].author }} | {{ articles[3].date }}
+                        {{ articles[3].author }} | {{ articles[3].date | date: 'mediumDate' }}
                     </p>
                 </div>
             </div>
@@ -206,7 +206,7 @@
                 </div>
                 <div class="row" style="margin:0%; padding:0%; border-top: solid 1px #F9423A;">
                     <p style="font-size: 10px; color:gray;">
-                        {{ articles[4].author }} | {{ articles[4].date }}
+                        {{ articles[4].author }} | {{ articles[4].date | date: 'mediumDate' }}
                     </p>
                 </div>
             </div>
@@ -240,7 +240,7 @@
                 </div>
                 <div class="row" style="margin:0%; padding:0%; border-top: solid 1px #F9423A;">
                     <p style="font-size: 10px; color:gray;">
-                        {{ articles[5].author }} | {{ articles[5].date }}
+                        {{ articles[5].author }} | {{ articles[5].date | date: 'mediumDate' }}
                     </p>
                 </div>
             </div>
@@ -274,7 +274,7 @@
                 </div>
                 <div class="row" style="margin:0%; padding:0%; border-top: solid 1px #F9423A;">
                     <p style="font-size: 10px; color:gray;">
-                        {{ articles[6].author }} | {{ articles[6].date }}
+                        {{ articles[6].author }} | {{ articles[6].date | date: 'mediumDate' }}
                     </p>
                 </div>
             </div>
@@ -283,44 +283,41 @@
 </div>
 <!--------------------------------------------MODAL ARTICLES---------------------------------------------------------->
 <div class="modal fade" id="setArticle" tabindex="-1" aria-labelledby="setArticle" aria-hidden="true">
-    <div class="modal-dialog  modal-dialog-centered modal-lg">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="card-title" id="st-setPatronoLabel" style="color:#003b71;font-family: 'Montserrat';">
-                    {{selected_article.header}}{{selected_article.byline }}
-                </h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
+  <div class="modal-dialog  modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="card-title" id="st-setPatronoLabel" style="color:#003b71;font-family: 'Montserrat'er;">
+          {{selected_article.header }} <span *ngIf="selected_article.byline!==null||selected_article.byline.trim()!==''">: </span> {{ selected_article.byline }}
+        </h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body" style="margin-left:25px; padding:0px">
+          <div class="row col-md-12" style="height:80vh; margin-top:20px; max-height: 450px;">
+            <div class="form-group col-md-12" style="margin-bottom:5px; margin-top:5px;
+              margin-bottom: 5px; margin-top: 5px; background-image: url({{selected_article.multimedia}});
+              background-position: center center; background-repeat: no-repeat; background-size: cover;
+              max-width: 559; max-height: 321;">
             </div>
-            <div class="modal-body" style="margin-left:25px; padding:0px">
-                <div class="row col-md-12" style="height:80vh; margin-top:20px; max-height: 450px;">
-                  <div class="form-group col-md-12" style="margin-bottom:5px; margin-top:5px;
-                  margin-bottom: 5px;
-                  margin-top: 5px;
-                  background-image: url({{selected_article.multimedia}});
-                  background-position: center center;
-                  background-repeat: no-repeat;
-                  background-size: cover;">
-                  </div>
-                </div>
-                <div class="row col-md-12" style="padding-top:25px">
-                  <div [innerHTML]="selected_article.article">
-                  </div>
-                </div>
-              </div>
-            <div class="modal-footer d-flex">
-                <div class="mr-auto" *ngIf="selected_article.url!==''">
-                    Link:
-                    <a class="link-primary" style="color:#003b71; font-size: 12px;font-family: 'Montserrat';"
-                        [href]="selected_article.url">
-                        {{ selected_article.url }}
-                    </a>
-                </div>
-                <div class="ml-auto">
-                    <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Close</button>
-                </div>
+          </div>
+          <div class="row col-md-12 text-justify" style="padding-top:25px">
+            <div [innerHTML]="selected_article.article">
             </div>
+          </div>
+      </div>
+      <div class="modal-footer d-flex">
+        <div class="mr-auto" *ngIf="selected_article.url.trim()!==''||selected_article.url!==null">
+          Link:
+          <a class="link-primary" style="color:#003b71; font-size: 12px;font-family: 'Montserrat'er;"
+            [href]="selected_article.url">
+            {{ selected_article.url }}
+          </a>
         </div>
+        <div class="ml-auto">
+          <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
     </div>
+  </div>
 </div>

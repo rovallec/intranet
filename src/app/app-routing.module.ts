@@ -7,6 +7,7 @@ import { HrHomepageComponent } from './hr-homepage/hr-homepage.component';
 import { LocationHomepageComponent } from './location-homepage/location-homepage.component';
 import { ChangePasswordComponent } from './change-password/change-password.component';
 import { ApprovalRequestComponent } from './approval-request/approval-request.component';
+import { ConfirmAprovalComponent } from './confirm-aproval/confirm-aproval.component';
 
 const routes: Routes = [
   {
@@ -44,6 +45,11 @@ const routes: Routes = [
     canActivate: [GuardGuard]
   },
   {
+    path:'wf-homepage',
+    component:HrHomepageComponent,
+    canActivate: [GuardGuard]
+  },
+  {
     path:'location/:id',
     component:LocationHomepageComponent,
     canActivate:[GuardGuard]
@@ -56,6 +62,12 @@ const routes: Routes = [
   {
     path:'approval',
     component:ApprovalRequestComponent,
+    canActivate:[GuardGuard]
+  },
+
+  {
+    path: 'confirm_approval',
+    component:ConfirmAprovalComponent,
     canActivate:[GuardGuard]
   },
   {

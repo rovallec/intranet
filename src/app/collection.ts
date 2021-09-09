@@ -5,27 +5,28 @@ export class Fecha{
   today: string;
   year: string;
   month: string;
-  date
+  firstDay: string;
+  lastDay: string;
 
   getToday(): string {
-      let fecha: Date = new Date();
-      let dd: string = String(fecha.getDate()).padStart(2,'0');
-      let MM: string = String(fecha.getMonth() + 1).padStart(2, '0');
-      let yyyy: string = fecha.getFullYear().toString();
-      this.year = yyyy;
-      this.month = MM;
-      return (yyyy + '-' + MM + '-' + dd);
+    let fecha: Date = new Date();
+    let dd: string = String(fecha.getDate()).padStart(2,'0');
+    let MM: string = String(fecha.getMonth() + 1).padStart(2, '0');
+    let yyyy: string = fecha.getFullYear().toString();
+    this.year = yyyy;
+    this.month = MM;
+    return (yyyy + '-' + MM + '-' + dd);
   }
 
   transform(Adate: Date): string {
-      let dd: string = String(Adate.getDate()).padStart(2,'0');
-      let MM: string = String(Adate.getMonth() + 1).padStart(2, '0');
-      let yyyy: string = Adate.getFullYear().toString();
-      let sdate: string = (yyyy + '-' + MM + '-' + dd);
-      if (sdate == 'NaN-NaN-NaN') {
-          sdate = '1970-01-01';
-      }
-      return sdate;
+    let dd: string = String(Adate.getDate()).padStart(2,'0');
+    let MM: string = String(Adate.getMonth() + 1).padStart(2, '0');
+    let yyyy: string = Adate.getFullYear().toString();
+    let sdate: string = (yyyy + '-' + MM + '-' + dd);
+    if (sdate == 'NaN-NaN-NaN') {
+        sdate = '1970-01-01';
+    }
+    return sdate;
   }
 
   dateExcel(d): Date {
@@ -34,11 +35,39 @@ export class Fecha{
     return date;
   }
 
+  getFirstDay(first: Date): string {
+    let day: string = this.transform(new Date(first.getFullYear(), first.getMonth(), 1));
+    return day;
+  }
+
+  getLastDay(last: Date): string {
+    let day: string = this.transform(new Date(last.getFullYear(), last.getMonth() + 1, 0));
+    return day;
+  }
+
   constructor() {
-      this.today = this.getToday();
+    this.today = this.getToday();
+    this.firstDay = this.getFirstDay(new Date(this.today));
+    this.lastDay = this.getLastDay(new Date(this.today));
   }
 }
 
+export class filters{
+  name: string;
+  start: string;
+  end: string;
+  idsup: string;
+  constructor(){
+    this.clear();
+  }
+
+  clear() {
+    this.name = null;
+    this.start = null;
+    this.end = null;
+    this.idsup = null;
+  }
+}
 export class employees{
   id_profile:string;
   idemployees:string;
@@ -64,6 +93,8 @@ export class employees{
   dpi:string;
   children: string;
   gender: string;
+  idsup: string;
+  supusername: string;
   constructor(){
       this.id_profile = null;
       this.idemployees = null;
@@ -86,6 +117,8 @@ export class employees{
       this.children = null;
       this.gender = null;
       this.id_user = null;
+      this.idsup = null;
+      this.supusername = null;
   }
 }
 

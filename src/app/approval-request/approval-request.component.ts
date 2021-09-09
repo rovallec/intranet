@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { isNullOrUndefined } from 'util';
 import { ApiServiceService } from '../api-service.service';
 import {  attendences, attendences_adjustment, disciplinary_processes, employees, leaves, periods, terminations,
           vacations, vacyear, leavesAction, Fecha, services, process_templates, process, advances } from '../collection';
 import { Users } from '../users';
 import { ActivatedRoute } from '@angular/router';
+import { isNullOrUndefined } from 'is-what';
 @Component({
   selector: 'app-approval-request',
   templateUrl: './approval-request.component.html',
@@ -357,9 +357,9 @@ export class ApprovalRequestComponent implements OnInit {
         })
       })
 
-      if (this.complete_adjustment && !found) {
+/*      if (this.complete_adjustment && !found) {
         window.alert("Vacation not applyed correctly please try again or contact your administrator");
-      }
+      }*/
       this.availableVacations = this.earnVacations - this.tookVacations;
     })
   }
@@ -414,9 +414,10 @@ export class ApprovalRequestComponent implements OnInit {
 
   getLeaves() {
     let found: boolean = false;
+    this.complete_adjustment = true;
     this.apiService.getLeaves({ id: this.workingEmployee.id_profile }).subscribe((leaves: leaves[]) => {
       if (this.complete_adjustment) {
-        if (leaves.length>0) {
+        if ((!isNullOrUndefined(leaves)) && (leaves.length>0)) {
           leaves.forEach(lv => {
             if (lv.start == this.activeLeave.start && lv.end == this.activeLeave.end) {
               this.complete_adjustment = false;
@@ -426,9 +427,9 @@ export class ApprovalRequestComponent implements OnInit {
           })
         }
       }
-      if (this.complete_adjustment && !found) {
+/*      if (this.complete_adjustment && !found) {
         window.alert("Leave not correctly applayed please try again latter or contact your administrator");
-      }
+      } */
       this.leaves = leaves;
     })
   }

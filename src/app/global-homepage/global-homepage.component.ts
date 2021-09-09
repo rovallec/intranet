@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiServiceService } from '../api-service.service';
 import { Articles } from '../articles';
+import { isNullOrUndefined } from 'is-what';
 
 @Component({
   selector: 'app-global-homepage',
@@ -21,27 +22,28 @@ export class GlobalHomepageComponent implements OnInit {
     let artDefault: Articles = this.apiService.artDefault;
     artDefault.origin = this.origin;
     artDefault.location = 'Global';
+    this.selected_article = artDefault;
 
     for (let index = 0; index < 7; index++) {
       this.articles[index] = artDefault;
     }
 
-    this.getPost(artDefault);
+    this.getPost(this.selected_article);
   }
 
   getPost(art: Articles) {
-      this.apiService.getPost(art).subscribe((posts: Articles[]) => {
-      this.articles = posts;
+    this.apiService.getPost(art).subscribe((posts: Articles[]) => {
+      if ((posts==null) || (posts==[]) || (posts.length==0)) {
+        this.articles = [];
+        this.articles.push(this.selected_article);
+      } else {
+        this.articles = posts;
+      }
     })
   }
 
   setArticlesFragment(str:string){
-    let ss:string = str.substr(0, 180 + str.substr(179, str.length).search(' '));
-    if(str.length > 180){
-      ss = ss.substr(0,ss.length - 1) + '...';
-    }else{
-      ss = ss;
-    }
+    let ss:string = this.apiService.setArticlesFragment(str);
     return ss;
   }
 

@@ -64,6 +64,10 @@ export class AppComponent {
     this._router.navigate(['./approval']);
   }
 
+  confirm_approval() {
+    this._router.navigate(['./confirm_approval']);
+  }
+
   login() {
     this._authService.changeAuth(false);
     this.apiService.login({username:this.username, password:this.password}).subscribe((usr:Users)=>{

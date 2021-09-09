@@ -23,12 +23,12 @@ export class ApiServiceService {
     byline: "",
     multimedia:"./assets/soon.png",
     fragment: "",
-    article:"",
-    author:'',
-    date:'June 2, 2021',
-    url: '',
-    origin: '',
-    label: ''
+    article:" ",
+    author:"",
+    date:"2021-06-02",
+    url: "",
+    origin: "",
+    label: ""
   };
 
   login(usr:any){
@@ -45,6 +45,10 @@ export class ApiServiceService {
 
   getEmployees(id: any) {
     return this.httpClient.post<employees>(`${this.PHP_API_SERVER}/phpscripts/getEmployeebyUser.php`, id);
+  }
+
+  getEmployeesbyReporter(id: any) {
+    return this.httpClient.post<employees>(`${this.PHP_API_SERVER}/phpscripts/getEmployeesbyReporter.php`, id);
   }
 
   setUser(user:Users) {
@@ -65,6 +69,10 @@ export class ApiServiceService {
 
   getLeaves(str:any){
     return this.httpClient.post<leaves[]>(`${this.PHP_API_SERVER}/phpscripts/getLeaves.php`, str);
+  }
+
+  getFilteredLeaves(str: any){
+    return this.httpClient.post<leaves[]>(`${this.PHP_API_SERVER}/phpscripts/getFilteredLeaves.php`, str);
   }
 
   getDPAtt(any:any){
@@ -146,5 +154,19 @@ export class ApiServiceService {
   getAdvances(proc:process){
     return this.httpClient.post<advances>(`${this.PHP_API_SERVER}/phpscripts/getAdvances.php`, proc);
   }
+
+  setArticlesFragment(str:string){
+    let ss:string = '';
+    if (str!==null) {
+      ss = str.substr(0, 180 + str.substr(179, str.length).search(' '));
+      if(str.length > 180){
+        ss = ss.substr(0,ss.length - 1) + '...';
+      } else {
+        ss = str;
+      }
+    }
+    return ss;
+  }
+
 
 }
