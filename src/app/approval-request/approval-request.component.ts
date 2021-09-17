@@ -242,7 +242,7 @@ export class ApprovalRequestComponent implements OnInit {
       if (adj.length >= 16) {
         for (let i = (adj.length - 1); i > (adj.length - 16); i = i - 1) {
           if (adj[i].id_department == '5' || adj[i].id_department == '27') {
-            if (this.validateDates(this.dateVac, adj[i].date)) {
+            if (this.apiService.validateDates(this.dateVac, adj[i].date)) {
               this.showAttAdjustments.push(adj[i]);
             }
           }
@@ -274,15 +274,13 @@ export class ApprovalRequestComponent implements OnInit {
     })
   }
 
-  getAttAllAdjustemt() {
+  getAttAllAdjustment() {
     this.editAdj = false;
     this.apiService.getAttAllAdjustments({ id: this.workingEmployee.idemployees }).subscribe((adj: attendences_adjustment[]) => {
 
       this.showAttAdjustments = [];
         adj.forEach(ev => {
-          if (ev.id_department == '27' || ev.id_department == '5') {
-            this.showAttAdjustments.push(ev);
-          }
+          this.showAttAdjustments.push(ev);
         })
 
       this.showAttendences.forEach(chng=>{
@@ -344,6 +342,7 @@ export class ApprovalRequestComponent implements OnInit {
           vacYear.year = new Date(vac.took_date).getFullYear();
           vacYear.selected = false;
           VacFiltered = this.showVacations.filter(svf => String(svf.year) == new Date(vac.took_date).getFullYear().toString());
+          VacFiltered = this.filterVacations(VacFiltered);
           vacYear.vacations.push.apply(vacYear.vacations, VacFiltered);
           this.vac.push(vacYear);
         }
@@ -405,11 +404,17 @@ export class ApprovalRequestComponent implements OnInit {
     this.vacationAdd = false;
   }
 
-  getVacation(vac: vacations) {
+  setVacation(vac: vacations) {
     this.activeVacation = vac;
     this.vacationAdd = true;
     this.editVac = false;
     this.editLeave = false;
+  }
+
+  filterVacations(vac: vacations[]): vacations[] {
+    let filvac: vacations[] = vac;
+    vac = filvac.filter(vac => vac.status == 'REQUESTED');
+    return vac;
   }
 
   getLeaves() {
@@ -749,17 +754,6 @@ export class ApprovalRequestComponent implements OnInit {
     this.addProc = false;
     this.actualAdvance = new advances;
     this.start();
-  }
-
-  validateDates(Adate1: string, Adate2: string): boolean {
-    let date1: Date = new Date(Adate1);
-    let date2: Date = new Date(Adate2);
-
-    if (date1 >= date2) {
-      return true;
-    } else {
-      return false;
-    }
   }
 
   saveService() {

@@ -58,7 +58,7 @@ export class HrHomepageComponent implements OnInit {
     })
   }
 
-  setArticlesFragment(str:string){
+  setArticlesFragment(str:string): string{
     let ss:string = this.apiService.setArticlesFragment(str);
     return ss;
   }

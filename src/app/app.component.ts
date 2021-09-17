@@ -30,6 +30,7 @@ export class AppComponent {
   searchRes:Articles[] = [new Articles];
   origin: string = '';
   artDefault: Articles = this.apiService.artDefault;
+  canApprove: boolean = false;
 
   ngOnInit() {
     let artDefault: Articles = this.apiService.artDefault;
@@ -75,6 +76,7 @@ export class AppComponent {
         if (usr.active == '1') {
           this._authService.changeAuth(true);
           this._authService.saveUsr(usr);
+          this.setCanApprove();
           this._router.navigate(["./home"]);
         } else if (usr.active == '2') {
           this._authService.changeAuth(true);
@@ -124,4 +126,9 @@ export class AppComponent {
   setSelection(selected:Articles){
     this.selected_article = selected;
   }
+
+  setCanApprove() {
+    this.canApprove = this.apiService.user.id_role == '2';
+  }
+
 }

@@ -84,7 +84,7 @@ export class ApiServiceService {
   }
 
   getAttAdjustments(str:any){
-    return this.httpClient.post<attendences_adjustment[]>(`${this.PHP_API_SERVER}/phpscripts/getAttAdjustments.php`, str);
+    return this.httpClient.post<attendences_adjustment[]>(`${this.PHP_API_SERVER}/phpscripts/getJustifications.php`, str);
   }
 
   getAttAllAdjustments(str:any){
@@ -95,12 +95,16 @@ export class ApiServiceService {
     return this.httpClient.post<vacations>(`${this.PHP_API_SERVER}/phpscripts/insertVacations.php`, vacation);
   }
 
+  updateVacation(vacation:vacations){
+    return this.httpClient.post<string>(`${this.PHP_API_SERVER}/phpscripts/updateVacation.php`, vacation);
+  }
+
   getApprovers(){
     return this.httpClient.get<Users[]>(`${this.PHP_API_SERVER}/phpscripts/getApprovers.php`);
   }
 
   updateLeaves(leave:leaves){
-    return this.httpClient.post<string>(`${this.PHP_API_SERVER}/phpscripts/updateLeaves.php`, leave);
+    return this.httpClient.post<string>(`${this.PHP_API_SERVER}/phpscripts/updateLeave.php`, leave);
   }
 
   insertLeaves(leaves:leaves){
@@ -109,6 +113,10 @@ export class ApiServiceService {
 
   insertAttJustification(adj:attendences_adjustment){
     return this.httpClient.post<string>(`${this.PHP_API_SERVER}/phpscripts/insertAttJustification.php`, adj);
+  }
+
+  updateJustifications(adj:attendences_adjustment) {
+    return this.httpClient.post<string>(`${this.PHP_API_SERVER}/phpscripts/updateJustifications.php`, adj);
   }
 
   revertJustification(any:any){
@@ -166,6 +174,17 @@ export class ApiServiceService {
       }
     }
     return ss;
+  }
+
+  validateDates(Adate1: string, Adate2: string): boolean {
+    let date1: Date = new Date(Adate1);
+    let date2: Date = new Date(Adate2);
+
+    if (date1 >= date2) {
+      return true;
+    } else {
+      return false;
+    }
   }
 
 
