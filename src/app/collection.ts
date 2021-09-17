@@ -430,18 +430,20 @@ export class leaves {
   approved_by: string;
   start: string;
   end: string;
+  name: string;
   constructor() {
-      this.id_user = null;
-      this.id_employee = null;
-      this.id_type = null;
-      this.id_department = null;
-      this.date = null;
-      this.notes = null;
-      this.status = null;
-      this.motive = null;
-      this.approved_by = null;
-      this.start = null;
-      this.end = null;
+    this.id_user = null;
+    this.id_employee = null;
+    this.id_type = null;
+    this.id_department = null;
+    this.date = null;
+    this.notes = null;
+    this.status = null;
+    this.motive = null;
+    this.approved_by = null;
+    this.start = null;
+    this.end = null;
+    this.name = null;
   }
 }
 

@@ -149,6 +149,7 @@
                     <div class="form-row col-md-12">
                       <table style="width:98%; padding: 1%;" class="table table-striped table-hover">
                         <thead>
+                          <th>NAME</th>
                           <th>PROCESS</th>
                           <th>MOTIVE</th>
                           <th>START DATE</th>
@@ -157,6 +158,7 @@
                         </thead>
                         <tbody>
                           <tr *ngFor="let leave of leaves" class="selectable" (click)="selectLeave(leave)">
+                            <td>{{leave.name}}</td>
                             <td>{{leave.id_type}}</td>
                             <td>{{leave.motive}}</td>
                             <td>{{leave.start}}</td>
