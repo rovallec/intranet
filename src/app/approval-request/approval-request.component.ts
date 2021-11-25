@@ -427,7 +427,6 @@ export class ApprovalRequestComponent implements OnInit {
             if (lv.start == this.activeLeave.start && lv.end == this.activeLeave.end) {
               this.complete_adjustment = false;
               found = true;
-              window.alert("Leave successfuly recorded");
             }
           })
         }
@@ -533,9 +532,10 @@ export class ApprovalRequestComponent implements OnInit {
   }
 
   insertLeave() {
-    this.apiService.insertLeaves(this.activeLeave).subscribe((str: string) => {
+    this.apiService.insertLeaves(this.activeLeave).subscribe((_str: string) => {
       this.complete_adjustment = true;
       this.getLeaves();
+      window.alert("Leave successfuly recorded.");
     })
   }
 

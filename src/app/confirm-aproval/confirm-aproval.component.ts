@@ -376,7 +376,6 @@ export class ConfirmAprovalComponent implements OnInit {
             if (lv.start == this.activeLeave.start && lv.end == this.activeLeave.end) {
               this.complete_adjustment = false;
               found = true;
-              window.alert("Leave successfuly recorded");
             }
           })
         }
@@ -430,6 +429,7 @@ export class ConfirmAprovalComponent implements OnInit {
 
         this.apiService.updateLeaves(leave).subscribe((str: string) => {
           this.cancelView();
+          window.alert("Leave successfuly recorded.");
         })
       }
     })

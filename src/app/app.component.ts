@@ -128,7 +128,7 @@ export class AppComponent {
   }
 
   setCanApprove() {
-    this.canApprove = this.apiService.user.id_role == '2';
+    this.canApprove = this.apiService.user.id_role >= '2';
   }
 
 }
