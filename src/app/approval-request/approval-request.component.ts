@@ -265,6 +265,8 @@ export class ApprovalRequestComponent implements OnInit {
 
       this.showAttAdjustments.forEach(at_show_n=>{
         if(at_show_n.id_user == 'intranet'){
+          console.log(at_show_n);
+          console.log(this.user);
           at_show_n.id_user = this.user.user_name;
         }
       })
