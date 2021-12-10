@@ -99,7 +99,7 @@ export class ConfirmAprovalComponent implements OnInit {
 
   getEmployee() {
     this.apiService.getEmployeesbyReporter({id: this.user.id_profile}).subscribe((emp: employees) => {
-      this.supEmployee = emp;
+      this.supEmployee = emp[0];
       this.supEmployee.id_user = this.user.idusers;
       this.supEmployee.user_name = this.user.user_name;
       this.supEmployee.supusername = emp.supusername;
