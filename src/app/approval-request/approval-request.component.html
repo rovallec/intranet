@@ -86,15 +86,15 @@
                       role="tab" aria-controls="nav-justifications" aria-selected="false">
                       Justifications
                     </a>
-                    <a class="nav-item nav-link" id="nav-parking-tab" data-toggle="tab" href="#nav-parking" role="tab"
+                    <a class="nav-item nav-link disabled" id="nav-parking-tab" data-toggle="tab" href="#nav-parking" role="tab"
                       aria-controls="nav-parking" aria-selected="false" (click)="setService('parking')">
                       Parking
                     </a>
-                    <a class="nav-item nav-link" id="nav-advances-tab" data-toggle="tab" href="#nav-advances" role="tab"
+                    <a class="nav-item nav-link disabled" id="nav-advances-tab" data-toggle="tab" href="#nav-advances" role="tab"
                       aria-controls="nav-advances" aria-selected="false">
                       Advances
                     </a>
-                    <a class="nav-item nav-link" id="nav-transport-tab" data-toggle="tab" href="#nav-transport" role="tab"
+                    <a class="nav-item nav-link disabled" id="nav-transport-tab" data-toggle="tab" href="#nav-transport" role="tab"
                       aria-controls="nav-transport" aria-selected="false" (click)="setService('bus')">
                       Transport
                     </a>
@@ -131,8 +131,6 @@
                           <th>ROSTER</th>
                           <th>ATTENDED</th>
                           <th>BALANCE</th>
-                          <th>IGSS</th>
-                          <th>EXCEPTIONS</th>
                         </thead>
                         <tbody>
                           <tr *ngFor="let att of showAttendences" style="cursor:pointer" (click)="addJustificationatt(att)"
@@ -145,8 +143,6 @@
                             <td>{{att.scheduled}}</td>
                             <td>{{att.worked_time}}</td>
                             <td>{{att.balance}}</td>
-                            <td>{{att.igss}}</td>
-                            <td>{{att.tk_exp}}</td>
                           </tr>
                         </tbody>
                       </table>
@@ -755,6 +751,15 @@
                 <option>Marriage Certificate</option>
                 <option>Death Certificate</option>
                 <option>Birth Certificate</option>
+                <option>Time in Aux 0</option>
+                <option>Time in System Issues</option>
+                <option>Time in lunch</option>
+                <option>Break Abuse</option>
+                <option>Exceptions Meeting & feedback</option>
+                <option>Exceptions offline Training</option>
+                <option>System Issues by Sup</option>
+                <option>Floor Support</option>
+                <option>TIME TRAINING</option>
                 <option *ngIf="attAdjudjment.reason === 'WFM Correction'">
                   WFM Correction
                 </option>
