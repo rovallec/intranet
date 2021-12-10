@@ -269,6 +269,9 @@ export class ApprovalRequestComponent implements OnInit {
           }else if(att_show.date == at_adj.attendance_date && at_adj.id_department == '28'){
             att_show.tk_exp = (Number(att_show.tk_exp) + Number(at_adj.amount)).toFixed(2);
           }
+          if(att_show.id_user == 'intranet'){
+            att_show.id_user = this.user.user_name;
+          }
         })
       })
     })
