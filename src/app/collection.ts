@@ -349,6 +349,7 @@ export class attendences_adjustment {
   nearsol_id:string;
   adj_type:string;
   account:string;
+  id_import: string;
   constructor() {
       //adjustments
       this.idattendence_adjustemnt = null;
@@ -376,6 +377,7 @@ export class attendences_adjustment {
       this.error = null;
       this.nearsol_id = null;
       this.adj_type = null;
+      this.id_import = null;
   }
 }
 
