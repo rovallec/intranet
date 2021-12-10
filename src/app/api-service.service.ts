@@ -67,6 +67,10 @@ export class ApiServiceService {
     return this.httpClient.post<vacations[]>(`${this.PHP_API_SERVER}/phpscripts/getVacations.php`,str);
   }
 
+  getVacationsByReporter(str:any){
+    return this.httpClient.post<vacations[]>(`${this.PHP_API_SERVER}/phpscripts/getVacationsByReporter.php`,str);
+  }
+
   getLeaves(str:any){
     return this.httpClient.post<leaves[]>(`${this.PHP_API_SERVER}/phpscripts/getLeaves.php`, str);
   }

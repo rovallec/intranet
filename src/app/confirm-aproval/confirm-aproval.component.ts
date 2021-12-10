@@ -444,7 +444,7 @@ export class ConfirmAprovalComponent implements OnInit {
     this.availableVacations = 0;
     this.returnedVacations = 0;
     this.dismissedVacations = 0;
-    this.apiService.getVacations({ id: this.supEmployee.id_profile }).subscribe((res: vacations[]) => {
+    this.apiService.getVacationsByReporter({ id: this.supEmployee.id_profile }).subscribe((res: vacations[]) => {
       this.showVacations = res;
       this.showVacations.forEach(sv => {
         sv.year = new Date(sv.took_date).getFullYear();
