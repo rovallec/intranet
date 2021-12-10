@@ -262,6 +262,15 @@ export class ApprovalRequestComponent implements OnInit {
           chng.tk_exp = '0';
         }
       })
+
+      this.showAttAdjustments.forEach(at_show_n=>{
+        if(at_show_n.id_user == 'intranet'){
+          console.log(at_show_n);
+          console.log(this.user);
+          at_show_n.id_user = this.user.user_name;
+        }
+      })
+
       adj.forEach(at_adj=>{
         this.showAttendences.forEach(att_show=>{
           if(att_show.date == at_adj.attendance_date && (at_adj.id_department == '5' || at_adj.id_department == '27')){

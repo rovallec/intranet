@@ -99,6 +99,7 @@ export class ConfirmAprovalComponent implements OnInit {
 
   getEmployee() {
     this.apiService.getEmployeesbyReporter({id: this.user.id_profile}).subscribe((emp: employees) => {
+      console.log(emp);
       this.supEmployee = emp;
       this.supEmployee.id_user = this.user.idusers;
       this.supEmployee.user_name = this.user.user_name;
@@ -255,36 +256,8 @@ export class ConfirmAprovalComponent implements OnInit {
   getAttAdjustemt(all: boolean) {
     this.editAdj = false;
     this.apiService.getAttAdjustments({ id: '0' }).subscribe((adj: attendences_adjustment[]) => {
-
-      this.showAttAdjustments = [];
-      if (all || adj.length <= 16) {
-        adj.forEach(ev => {
-          this.showAttAdjustments.push(ev);
-        })
-      } else {
-        for (let i = (adj.length - 1); i > (adj.length - 16); i = i - 1) {
-          if (this.apiService.validateDates(this.dateVac, adj[i].date)) {
-            this.showAttAdjustments.push(adj[i]);
-          }
-        }
-      }
-      this.showAttendences.forEach(chng=>{
-        if((chng.igss)){
-          chng.igss = '0';
-        }
-        if((chng.tk_exp)){
-          chng.tk_exp = '0';
-        }
-      })
-      adj.forEach(at_adj=>{
-        this.showAttendences.forEach(att_show=>{
-          if(att_show.date == at_adj.attendance_date && (at_adj.id_department == '5' || at_adj.id_department == '27')){
-            att_show.igss = (Number(att_show.igss) + Number(at_adj.amount)).toFixed(2);
-          }else if(att_show.date == at_adj.attendance_date && at_adj.id_department == '28'){
-            att_show.tk_exp = (Number(att_show.tk_exp) + Number(at_adj.amount)).toFixed(2);
-          }
-        })
-      })
+      this.showAttAdjustments = adj;
+      console.log(this.showAttAdjustments);
     })
   }
 

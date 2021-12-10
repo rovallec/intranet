@@ -297,6 +297,7 @@ export class attendences {
   state: string;
   igss:string;
   tk_exp:string;
+  id_user:string;
   constructor() {
       this.igss = '0';
       this.tk_exp = '0';
@@ -317,6 +318,7 @@ export class attendences {
       this.id_wave = null;
       this.balance = null;
       this.state = null;
+      this.id_user = null;
   }
 }
 
