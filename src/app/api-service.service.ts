@@ -108,7 +108,7 @@ export class ApiServiceService {
   }
 
   updateLeaves(leave:leaves){
-    return this.httpClient.post<string>(`${this.PHP_API_SERVER}/phpscripts/updateLeave.php`, leave);
+    return this.httpClient.post<string>(`${this.PHP_API_SERVER}/phpscripts/updateLeaves.php`, leave);
   }
 
   insertLeaves(leaves:leaves){
