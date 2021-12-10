@@ -574,6 +574,7 @@ export class ApprovalRequestComponent implements OnInit {
     this.attAdjudjment.time_after = this.attAdjudjment.time_before;
     this.attAdjudjment.id_department = this.user.department;
     this.attAdjudjment.id_user = this.user.idusers;
+    this.attAdjudjment.id_import = '0';
     this.addJ = true;
   }
 
