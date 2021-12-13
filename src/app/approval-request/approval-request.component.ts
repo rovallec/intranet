@@ -408,9 +408,9 @@ export class ApprovalRequestComponent implements OnInit {
   insertVacation() {
     this.apiService.insertVacations(this.activeVacation).subscribe((str: any) => {
       this.apiService.sendNotification({id:this.workingEmployee.idemployees, date:this.todayDate, type:'Vacations To Take',
-      status:this.attAdjudjment.status, description:"<tr><td style='color:white;background-color:#003B71'>RELATED DATE:</td><td>" + this.activeVacation.took_date + "</td></tr>" + 
+      status:this.activeVacation.status, description:"<tr><td style='color:white;background-color:#003B71'>RELATED DATE:</td><td>" + this.activeVacation.took_date + "</td></tr>" + 
       "<tr><td style='color:white;background-color:#003B71'>COUNT:</td><td>" + this.activeVacation.count + "</td></tr>" + 
-      "<tr><td style='color:white;background-color:#003B71'>TIME BEFORE:</td><td>" + this.activeVacation.notes + "</td></tr>"}).subscribe((str2:string)=>{
+      "<tr><td style='color:white;background-color:#003B71'>NOTES:</td><td>" + this.activeVacation.notes + "</td></tr>"}).subscribe((str2:string)=>{
       })
       this.complete_adjustment = true;
       this.getVacations();
@@ -549,7 +549,12 @@ export class ApprovalRequestComponent implements OnInit {
     this.apiService.insertLeaves(this.activeLeave).subscribe((_str: string) => {
       this.complete_adjustment = true;
       this.getLeaves();
-      window.alert("Leave successfuly recorded.");
+      this.apiService.sendNotification({id:this.workingEmployee.idemployees, date:this.todayDate, type:'Attendance Justification',
+      status:this.attAdjudjment.status, description:"<tr><td style='color:white;background-color:#003B71'>START PERIOD:</td><td>" + this.activeLeave.start + "</td></tr>" + 
+      "<tr><td style='color:white;background-color:#003B71'>END PERIOD:</td><td>" + this.activeLeave.end + "</td></tr>" + 
+      "<tr><td style='color:white;background-color:#003B71'>TYPE:</td><td>" + this.activeLeave.motive + "</td></tr>"}).subscribe((str2:string)=>{
+        window.alert("Leave successfuly recorded.");
+      })
     })
   }
 
