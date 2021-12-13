@@ -407,6 +407,11 @@ export class ApprovalRequestComponent implements OnInit {
 
   insertVacation() {
     this.apiService.insertVacations(this.activeVacation).subscribe((str: any) => {
+      this.apiService.sendNotification({id:this.workingEmployee.idemployees, date:this.todayDate, type:'Vacations To Take',
+      status:this.attAdjudjment.status, description:"<tr><td style='color:white;background-color:#003B71'>RELATED DATE:</td><td>" + this.activeVacation.took_date + "</td></tr>" + 
+      "<tr><td style='color:white;background-color:#003B71'>COUNT:</td><td>" + this.activeVacation.count + "</td></tr>" + 
+      "<tr><td style='color:white;background-color:#003B71'>TIME BEFORE:</td><td>" + this.activeVacation.notes + "</td></tr>"}).subscribe((str2:string)=>{
+      })
       this.complete_adjustment = true;
       this.getVacations();
     })
