@@ -236,7 +236,7 @@ export class ApprovalRequestComponent implements OnInit {
 
   getAttAdjustemt() {
     this.editAdj = false;
-    this.apiService.getAttAdjustments({ id: this.workingEmployee.idemployees }).subscribe((adj: attendences_adjustment[]) => {
+    this.apiService.getAttAdjustments({ id: this.workingEmployee.id_profile }).subscribe((adj: attendences_adjustment[]) => {
 
       this.showAttAdjustments = [];
       if (adj.length >= 16) {
@@ -478,7 +478,7 @@ export class ApprovalRequestComponent implements OnInit {
       let ld: leavesAction = new leavesAction;
       f = this.addDays(f, 1);
       ld.dates = (f.getFullYear().toString() + '-' + String(f.getMonth() + 1).padStart(2, '0') + '-' + String(f.getDate()).padStart(2,'0'));
-      ld.action = 'PENDING';
+      ld.action = 'REQUESTED';
       this.leaveDates.push(ld);
     }
   }
@@ -503,14 +503,14 @@ export class ApprovalRequestComponent implements OnInit {
       leave = this.fillLeave();
       for (let i = 0; i < this.leaveDates.length; i++) {
         let ld: leavesAction = this.leaveDates[i];
-        if (ld.action=='PENDING') {
+        if (ld.action=='REQUESTED') {
           start = (f.getFullYear().toString() + '-' + String(f.getMonth() + 1).padStart(2, '0') + '-' + String(f.getDate()).padStart(2,'0'));
 
           if ((leave.start == null) || (leave.start.trim() == '')) {
             leave.start = start;
           }
 
-          leave.status = 'PENDING';
+          leave.status = 'REQUESTED';
 
         } else {
           f = this.addDays(f, -1);
@@ -524,7 +524,7 @@ export class ApprovalRequestComponent implements OnInit {
         }
         end = (f.getFullYear().toString() + '-' + String(f.getMonth() + 1).padStart(2, '0') + '-' + String(f.getDate()).padStart(2,'0'));
         f = this.addDays(f, 1);
-        if ((i==this.leaveDates.length-1) && (ld.action=='PENDING')) {
+        if ((i==this.leaveDates.length-1) && (ld.action=='REQUESTED')) {
           leave.end = end;
           leavesNew.push(leave);
         }
@@ -850,6 +850,10 @@ export class ApprovalRequestComponent implements OnInit {
     this.apiService.getAdvances(this.actuallProc).subscribe((adv: advances) => {
       this.actualAdvance = adv;
     })
+  }
+
+  showMessage() {
+    window.alert("This action must pass the corresponding approval process, prior to its application.");
   }
 
 }

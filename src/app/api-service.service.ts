@@ -91,6 +91,11 @@ export class ApiServiceService {
     return this.httpClient.post<attendences_adjustment[]>(`${this.PHP_API_SERVER}/phpscripts/getJustifications.php`, str);
   }
 
+  getAttJustificationsBySup(str:any){
+    return this.httpClient.post<attendences_adjustment[]>(`${this.PHP_API_SERVER}/phpscripts/getJustificationsBySup.php`, str);
+  }
+
+
   getAttAllAdjustments(str:any){
     return this.httpClient.post<attendences_adjustment[]>(`${this.PHP_API_SERVER}/phpscripts/getAttAllAdjustment.php`, str);
   }

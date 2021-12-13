@@ -255,7 +255,7 @@ export class ConfirmAprovalComponent implements OnInit {
 
   getAttAdjustemt(all: boolean) {
     this.editAdj = false;
-    this.apiService.getAttAdjustments({ id: '0' }).subscribe((adj: attendences_adjustment[]) => {
+    this.apiService.getAttJustificationsBySup({ id: this.supEmployee.id_profile }).subscribe((adj: attendences_adjustment[]) => {
       this.showAttAdjustments = adj;
       console.log(this.showAttAdjustments);
     })
