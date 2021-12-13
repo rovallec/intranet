@@ -95,7 +95,7 @@
                 </div>
                 <div class="row" style="margin:0%; padding:0%; border-top: solid 1px #F9423A;">
                     <p style="font-size: 10px; color:gray;">
-                        {{ articles[1].author }} | {{ articles[1].date }}
+                        {{ articles[1].author }} | {{ articles[1].date | date: 'mediumDate' }}
                     </p>
                 </div>
             </div>
@@ -123,7 +123,7 @@
                 </div>
                 <div class="row" style="margin:0%; padding:0%; border-top: solid 1px #F9423A;">
                     <p style="font-size: 10px; color:gray;">
-                        {{ articles[2].author }} | {{ articles[2].date }}
+                        {{ articles[2].author }} | {{ articles[2].date | date: 'mediumDate' }}
                     </p>
                 </div>
             </div>
@@ -151,7 +151,7 @@
                 </div>
                 <div class="row" style="margin:0%; padding:0%; border-top: solid 1px #F9423A;">
                     <p style="font-size: 10px; color:gray;">
-                        {{ articles[3].author }} | {{ articles[3].date }}
+                        {{ articles[3].author }} | {{ articles[3].date | date: 'mediumDate' }}
                     </p>
                 </div>
             </div>
@@ -183,7 +183,7 @@
             </div>
             <div class="row" style="margin:0%; padding:0%; border-top: solid 1px #F9423A;">
                 <p style="font-size: 10px; color:gray;">
-                    {{ articles[4].author }} | {{ articles[4].date }}
+                    {{ articles[4].author }} | {{ articles[4].date | date: 'mediumDate' }}
                 </p>
             </div>
         </div>
@@ -211,7 +211,7 @@
             </div>
             <div class="row" style="margin:0%; padding:0%; border-top: solid 1px #F9423A;">
                 <p style="font-size: 10px; color:gray;">
-                    {{ articles[5].author }} | {{ articles[5].date }}
+                    {{ articles[5].author }} | {{ articles[5].date | date: 'mediumDate' }}
                 </p>
             </div>
         </div>
@@ -239,7 +239,7 @@
             </div>
             <div class="row" style="margin:0%; padding:0%; border-top: solid 1px #F9423A;">
                 <p style="font-size: 10px; color:gray;">
-                    {{ articles[6].author }} | {{ articles[6].date }}
+                    {{ articles[6].author }} | {{ articles[6].date | date: 'mediumDate' }}
                 </p>
             </div>
         </div>
@@ -252,7 +252,7 @@
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="card-title" id="st-setPatronoLabel" style="color:#003b71;font-family: 'Montserrat'er;">
-                    {{selected_article.header + ": " + selected_article.byline }}
+                    {{selected_article.header } <span *ngIf="selected_article.byline!==null||selected_article.byline!=''">{{ ": " + selected_article.byline }}</span>
                 </h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
@@ -275,7 +275,7 @@
                 </div>
               </div>
             <div class="modal-footer d-flex">
-                <div class="mr-auto" *ngIf="selected_article.url!==''">
+                <div class="mr-auto" *ngIf="selected_article.url!==''||selected_article.url!==null">
                     Link:
                     <a class="link-primary" style="color:#003b71; font-size: 12px;font-family: 'Montserrat'er;"
                         [href]="selected_article.url">

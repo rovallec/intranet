@@ -31,40 +31,54 @@
             style="text-align:center; cursor: pointer;">{{site}}</a>
         </div>
       </div>
-      <button class="btn hover_blue" style=" font-size: 14px;" *ngIf="getAuth()" routerLink="./"
-        (click)="logOut()">
-        LOG OUT
-      </button>
-      <form class="form-inline" *ngIf="!getAuth()">
-        <div class="dropdown">
-          <button class="btn dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true"
-            aria-expanded="false"
-            style="border-radius: 10px; background-color: #003b71; color: white;  min-width:100px; max-width:115px;">
-            SIGN IN
-          </button>
-          <div class="d-flex" style="width:1vw">
-            <form class="dropdown-menu p-2 row" aria-labelledby="dropdownMenuButton"
-              style="margin-left:-200%; background-color: #edeeee; min-width: 245px;">
-              <div class="form-group" style="margin-top:25px">
-                <label for="exampleDropdownFormEmail2" class="col-md-3 col-form-label"
-                  style="font-size: 12px;">USERNAME</label>
-                <input class="form-control col-sm-9" id="exampleDropdownFormEmail2" [(ngModel)]="username"
-                  [ngModelOptions]="{standalone: true}">
-              </div>
-              <div class="form-group" style="margin-top:25px">
-                <label for="exampleDropdownFormEmail2" class="col-md-3 col-form-label"
-                  style="font-size: 12px;">PASSWORD</label>
-                <input type="password" class="form-control col-sm-9" id="exampleDropdownFormEmail2"
-                  [(ngModel)]="password" [ngModelOptions]="{standalone: true}">
-              </div>
-              <div class="d-flex justify-content-center" style="margin-top:25px">
-                <button type="submit" class="btn hover_blue" style="font-size: 12px;"
-                  (click)="login()" data-toggle="dropdown">LOG IN</button>
-              </div>
-            </form>
-          </div>
+      <div class="dropdown">
+        <button class="btn hover_blue dropdown-toggle" style=" font-size: 14px;" *ngIf="getAuth()" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          PROFILE
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="margin-left: -50px;" *ngIf="getAuth()">
+          <a class="dropdown-item" (click)="logOut()" routerLink="./">
+            LOG OUT
+          </a>
+          <a class="dropdown-item" (click)="approval_request()" routerLink="./approval">
+            MY PROFILE
+          </a>
+          <a class="dropdown-item" (click)="confirm_approval()" routerLink="./confirm-aproval" *ngIf="canApprove">
+            MY GROUP
+          </a>
         </div>
-      </form>
+
+
+        <form class="form-inline" *ngIf="!getAuth()">
+          <div class="dropdown">
+            <button class="btn dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true"
+              aria-expanded="false"
+              style="border-radius: 10px; background-color: #003b71; color: white;  min-width:100px; max-width:115px;">
+              SIGN IN
+            </button>
+            <div class="d-flex" style="width:1vw">
+              <form class="dropdown-menu p-2 row" aria-labelledby="dropdownMenuButton"
+                style="margin-left:-200%; background-color: #edeeee; min-width: 245px;">
+                <div class="form-group" style="margin-top:25px">
+                  <label for="exampleDropdownFormEmail2" class="col-md-3 col-form-label"
+                    style="font-size: 12px;">USERNAME</label>
+                  <input class="form-control col-sm-9" id="exampleDropdownFormEmail2" [(ngModel)]="username"
+                    [ngModelOptions]="{standalone: true}">
+                </div>
+                <div class="form-group" style="margin-top:25px">
+                  <label for="exampleDropdownFormEmail2" class="col-md-3 col-form-label"
+                    style="font-size: 12px;">PASSWORD</label>
+                  <input type="password" class="form-control col-sm-9" id="exampleDropdownFormEmail2"
+                    [(ngModel)]="password" [ngModelOptions]="{standalone: true}">
+                </div>
+                <div class="d-flex justify-content-center" style="margin-top:25px">
+                  <button type="submit" class="btn hover_blue" style="font-size: 12px;"
+                    (click)="login()" data-toggle="dropdown">LOG IN</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </form>
+      </div>
     </div>
   </div>
 </nav>
@@ -101,7 +115,7 @@
         <a class="hover_gray" routerLink="/re-homepage">Recruitment</a>
       </div>
       <div class="p-2" class="hover_gray">
-        <a class="hover_gray" routerLink="#">Workforce</a>
+        <a class="hover_gray" routerLink="/wf-homepage">Workforce</a>
       </div>
     </div>
   </nav>
@@ -152,7 +166,7 @@
             <div class="row col-md-12" style="margin:0%; padding:0%; border-top: solid 1px #F9423A; margin-top:5px;">
               <div class="ml-auto"  >
               <p style="font-size: 10px; color:gray;">
-                    {{ article.author }} | {{ article.date }}
+                    {{ article.author }} | {{ article.date | date: 'mediumDate' }}
                 </p>
               </div>
             </div>

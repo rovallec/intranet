@@ -10,6 +10,7 @@ export class Articles {
     date:string;
     url:string
     origin:string;
+    label: string;
 
     constructor(){
         this.id = null;
@@ -23,5 +24,6 @@ export class Articles {
         this.date = null;
         this.url = null;
         this.origin = null;
+        this.label = null;
     }
 }

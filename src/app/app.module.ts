@@ -14,6 +14,8 @@ import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 import { HttpClientModule } from '@angular/common/http';
 import { ChangePasswordComponent } from './change-password/change-password.component';
+import { ApprovalRequestComponent } from './approval-request/approval-request.component';
+import { ConfirmAprovalComponent } from './confirm-aproval/confirm-aproval.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +25,8 @@ import { ChangePasswordComponent } from './change-password/change-password.compo
     HrHomepageComponent,
     LocationHomepageComponent,
     ChangePasswordComponent,
+    ApprovalRequestComponent,
+    ConfirmAprovalComponent,
   ],
   imports: [
     BrowserModule,

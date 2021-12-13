@@ -4,6 +4,7 @@ import { Articles } from '../articles';
 import { AuthServiceService } from '../auth-service.service';
 import { ActivatedRoute } from "@angular/router";
 import { ApiServiceService } from '../api-service.service';
+import { isNullOrUndefined } from 'is-what';
 
 @Component({
   selector: 'app-hr-homepage',
@@ -18,74 +19,47 @@ export class HrHomepageComponent implements OnInit {
   articles: Articles[] = [];
   img_foot: string = 'Intranet Forms';
   img_date:string = 'June 16, 2021';
-  
+  origin: string = 'Manila';
+
   ngOnInit(): void {
-    let artDefault: Articles = {
-      id: '0',
-      location:"",
-      header:"More Content Soon",
-      byline: "",
-      multimedia:"./assets/soon.png",
-      fragment: "",
-      article:"",
-      author:'',
-      date:'June 2, 2021',
-      url: '',
-      origin: 'Manila'
-    };
+    let artDefault: Articles = this.apiService.artDefault;
+    artDefault.origin = this.origin;
+
+    for (let index = 0; index < 7; index++) {
+      this.articles[index] = artDefault;
+    }
 
     if(this.routes.snapshot.url.toString().includes('hr-homepage')){
       artDefault.location = 'Human Resources';
-       
     }else if(this.routes.snapshot.url.toString().includes('admin-homepage')){
       artDefault.location = 'Admin';
-      
     }else if(this.routes.snapshot.url.toString().includes('marketing-homepage')){
       artDefault.location = 'Marketing';
-      ;    
     }else if(this.routes.snapshot.url.toString().includes('ops-homepage')){
       artDefault.location = 'Operations';
-
     }else if(this.routes.snapshot.url.toString().includes('re-homepage')){
       artDefault.location =  'Recruitment';
+    }else if(this.routes.snapshot.url.toString().includes('wf-homepage')){
+      artDefault.location = 'Workforce';
     }
 
-    this.getPost(artDefault);    
+    this.selected_article = artDefault;
+    this.getPost(this.selected_article);
   }
 
   getPost(art: Articles) {
-    let artDefault: Articles = {
-      id: '0',
-      location:"",
-      header:"More Content Soon",
-      byline: "",
-      multimedia:"./assets/soon.png",
-      fragment: "",
-      article:"",
-      author:'',
-      date:'June 2, 2021',
-      url: '',
-      origin: 'Manila'
-    };
-     
     this.apiService.getPost(art).subscribe((posts: Articles[]) => {
-      this.articles = posts;
-    })    
-
-    if (this.articles.length == 0) {
-      for (let index = 0; index < 7; index++) {
-        this.articles[index] = artDefault;
+      if ((posts==null) || (posts==[]) || (posts.length==0)) {
+        this.articles = [];
+        this.articles.push(this.selected_article);
+      } else {
+        this.articles = posts;
       }
-    }
+    })
   }
 
-  setArticlesFragment(str:string){
-    let ss:string = str.substr(0, 180 + str.substr(179, str.length).search(' '));
-    if(str.length > 180){
-      ss = ss.substr(0,ss.length - 1) + '...';
-    }else{
-      ss = ss;
-    }
+  setArticlesFragment(str:string): string{
+    let ss:string = this.apiService.setArticlesFragment(str);
     return ss;
   }
 
