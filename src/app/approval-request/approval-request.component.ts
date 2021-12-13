@@ -613,7 +613,7 @@ export class ApprovalRequestComponent implements OnInit {
   insertAdjustment() {
     this.apiService.insertAttJustification(this.attAdjudjment).subscribe((str: string) => {
       if(str.indexOf("|")==0) {
-        console.log(str);
+        this.apiService.sendNotification({id:this.workingEmployee.idemployees, date:this.todayDate, type:'Attendance Justification', status:this.attAdjudjment.status})
       }
       this.complete_adjustment = true;
       this.getAttendences(this.todayDate);
