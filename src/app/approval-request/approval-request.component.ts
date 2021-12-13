@@ -549,8 +549,8 @@ export class ApprovalRequestComponent implements OnInit {
     this.apiService.insertLeaves(this.activeLeave).subscribe((_str: string) => {
       this.complete_adjustment = true;
       this.getLeaves();
-      this.apiService.sendNotification({id:this.workingEmployee.idemployees, date:this.todayDate, type:'Attendance Justification',
-      status:this.attAdjudjment.status, description:"<tr><td style='color:white;background-color:#003B71'>START PERIOD:</td><td>" + this.activeLeave.start + "</td></tr>" + 
+      this.apiService.sendNotification({id:this.workingEmployee.idemployees, date:this.todayDate, type:'Leave Setup',
+      status:this.activeLeave.status, description:"<tr><td style='color:white;background-color:#003B71'>START PERIOD:</td><td>" + this.activeLeave.start + "</td></tr>" + 
       "<tr><td style='color:white;background-color:#003B71'>END PERIOD:</td><td>" + this.activeLeave.end + "</td></tr>" + 
       "<tr><td style='color:white;background-color:#003B71'>TYPE:</td><td>" + this.activeLeave.motive + "</td></tr>"}).subscribe((str2:string)=>{
         window.alert("Leave successfuly recorded.");
