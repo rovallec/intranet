@@ -612,7 +612,11 @@ export class ApprovalRequestComponent implements OnInit {
 
   insertAdjustment() {
     this.apiService.insertAttJustification(this.attAdjudjment).subscribe((str: string) => {
-        this.apiService.sendNotification({id:this.workingEmployee.idemployees, date:this.todayDate, type:'Attendance Justification', status:this.attAdjudjment.status}).subscribe((str2:string)=>{
+        this.apiService.sendNotification({id:this.workingEmployee.idemployees, date:this.todayDate, type:'Attendance Justification',
+        status:this.attAdjudjment.status, description:"<tr><td style='color:white;background-color:#FF4237'>RELATED DATE:</td><td>" + this.attAdjudjment.attendance_date + "</td>/tr>" + 
+        "<tr><td style='color:white;background-color:#FF4237'>RASON:</td><td>" + this.attAdjudjment.reason + "</td>/tr>" + 
+        "<tr><td style='color:white;background-color:#FF4237'>TIME BEFORE:</td><td>" + this.attAdjudjment.time_before + "</td>/tr>" +
+        "<tr><td style='color:white;background-color:#FF4237'>RELATED DATE:</td><td>" + this.attAdjudjment.time_after + "</td>/tr>"}).subscribe((str2:string)=>{
           window.alert(str);
         })
       this.complete_adjustment = true;
