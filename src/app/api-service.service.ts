@@ -196,5 +196,8 @@ export class ApiServiceService {
     }
   }
 
+  sendNotification(any:any){
+    return this.httpClient.post<string>(`${this.PHP_API_SERVER}/phpscripts/sendmail_intranet_ne.php`, any);
+  }
 
 }
