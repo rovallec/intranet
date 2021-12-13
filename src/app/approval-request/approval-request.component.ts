@@ -617,7 +617,9 @@ export class ApprovalRequestComponent implements OnInit {
         "<tr><td style='color:white;background-color:#FF4237'>RASON:</td><td>" + this.attAdjudjment.reason + "</td>/tr>" + 
         "<tr><td style='color:white;background-color:#FF4237'>TIME BEFORE:</td><td>" + this.attAdjudjment.time_before + "</td>/tr>" +
         "<tr><td style='color:white;background-color:#FF4237'>RELATED DATE:</td><td>" + this.attAdjudjment.time_after + "</td>/tr>"}).subscribe((str2:string)=>{
-          window.alert(str);
+          if(str == '1'){
+            window.alert("Request placed successfully");
+          }
         })
       this.complete_adjustment = true;
       this.getAttendences(this.todayDate);
