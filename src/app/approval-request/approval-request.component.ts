@@ -408,8 +408,8 @@ export class ApprovalRequestComponent implements OnInit {
   insertVacation() {
     this.apiService.insertVacations(this.activeVacation).subscribe((str: any) => {
       this.apiService.sendNotification({id:this.workingEmployee.idemployees, date:this.todayDate, type:'Vacations To Take',
-      status:this.activeVacation.status, description:"<tr><td style='color:white;background-color:#003B71'>RELATED DATE:</td><td>" + this.activeVacation.took_date + "</td></tr>" + 
-      "<tr><td style='color:white;background-color:#003B71'>COUNT:</td><td>" + this.activeVacation.count + "</td></tr>" + 
+      status:this.activeVacation.status, description:"<tr><td style='color:white;background-color:#003B71'>RELATED DATE:</td><td>" + this.activeVacation.took_date + "</td></tr>" +
+      "<tr><td style='color:white;background-color:#003B71'>COUNT:</td><td>" + this.activeVacation.count + "</td></tr>" +
       "<tr><td style='color:white;background-color:#003B71'>NOTES:</td><td>" + this.activeVacation.notes + "</td></tr>"}).subscribe((str2:string)=>{
       })
       this.complete_adjustment = true;
@@ -550,8 +550,8 @@ export class ApprovalRequestComponent implements OnInit {
       this.complete_adjustment = true;
       this.getLeaves();
       this.apiService.sendNotification({id:this.workingEmployee.idemployees, date:this.todayDate, type:'Leave Setup',
-      status:this.activeLeave.status, description:"<tr><td style='color:white;background-color:#003B71'>START PERIOD:</td><td>" + this.activeLeave.start + "</td></tr>" + 
-      "<tr><td style='color:white;background-color:#003B71'>END PERIOD:</td><td>" + this.activeLeave.end + "</td></tr>" + 
+      status:this.activeLeave.status, description:"<tr><td style='color:white;background-color:#003B71'>START PERIOD:</td><td>" + this.activeLeave.start + "</td></tr>" +
+      "<tr><td style='color:white;background-color:#003B71'>END PERIOD:</td><td>" + this.activeLeave.end + "</td></tr>" +
       "<tr><td style='color:white;background-color:#003B71'>TYPE:</td><td>" + this.activeLeave.motive + "</td></tr>"}).subscribe((str2:string)=>{
         window.alert("Leave successfuly recorded.");
       })
@@ -623,8 +623,8 @@ export class ApprovalRequestComponent implements OnInit {
   insertAdjustment() {
     this.apiService.insertAttJustification(this.attAdjudjment).subscribe((str: string) => {
         this.apiService.sendNotification({id:this.workingEmployee.idemployees, date:this.todayDate, type:'Attendance Justification',
-        status:this.attAdjudjment.status, description:"<tr><td style='color:white;background-color:#003B71'>RELATED DATE:</td><td>" + this.attAdjudjment.attendance_date + "</td></tr>" + 
-        "<tr><td style='color:white;background-color:#003B71'>RASON:</td><td>" + this.attAdjudjment.reason + "</td></tr>" + 
+        status:this.attAdjudjment.status, description:"<tr><td style='color:white;background-color:#003B71'>RELATED DATE:</td><td>" + this.attAdjudjment.attendance_date + "</td></tr>" +
+        "<tr><td style='color:white;background-color:#003B71'>RASON:</td><td>" + this.attAdjudjment.reason + "</td></tr>" +
         "<tr><td style='color:white;background-color:#003B71'>TIME BEFORE:</td><td>" + this.attAdjudjment.time_before + "</td></tr>" +
         "<tr><td style='color:white;background-color:#003B71'>RELATED DATE:</td><td>" + this.attAdjudjment.time_after + "</td></tr>"}).subscribe((str2:string)=>{
           if(str == '1'){
@@ -869,7 +869,7 @@ export class ApprovalRequestComponent implements OnInit {
   }
 
   showMessage() {
-    window.alert("This action must pass the corresponding approval process, prior to its application.");
+    window.alert("This action must pass the corresponding approval process, prior to its application");
   }
 
 }
